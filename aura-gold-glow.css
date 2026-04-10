@@ -1,0 +1,52 @@
+/* AURA Infrastructure | Gold-Glow Protocol v1.0
+  Brand: Bethel Edison (DeFi x Music x Faith)
+*/
+
+:root {
+  /* The AURA Palette */
+  --aura-gold: #D4AF37;
+  --aura-glow: rgba(212, 175, 55, 0.4);
+  --aura-bg: #0A0A0A; /* Deep Space Black */
+  --aura-text: #F5F5F5;
+  --aura-accent: #FFD700;
+}
+
+body {
+  background-color: var(--aura-bg);
+  color: var(--aura-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* The Signature Glow Effect */
+.gold-glow-card {
+  border: 1px solid var(--aura-gold);
+  border-radius: 12px;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.8);
+  box-shadow: 0 0 20px var(--aura-glow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gold-glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px var(--aura-gold);
+}
+
+/* Typography for the Terminal Aesthetic */
+h1, h2, h3 {
+  color: var(--aura-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px var(--aura-glow);
+}
+
+/* DeFi/Terminal Accent */
+.terminal-text {
+  font-family: 'Fira Code', monospace;
+  color: var(--aura-accent);
+  background: rgba(255, 215, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  }
