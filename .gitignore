@@ -1,48 +1,23 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# --- CUSTOM AURA SECURITY OVERRIDES ---
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-
-# Configuration
-wp-config.php
-
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# 1. PROTECT SECRETS (Highest Priority)
+.env
+secrets.txt
+config.json
+api-keys.md
 *.log
 
-# htaccess
-/.htaccess
+# 2. OFFLINE MOBILE DRAFTS
+# Prevents phone junk from cluttering your professional repo.
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# 3. CUSTOM MEDIA
+# If you store music stems or large video drafts, they stay local.
+*.mp3
+*.wav
+*.mp4
