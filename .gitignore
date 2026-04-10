@@ -1,23 +1,26 @@
-# --- CUSTOM AURA SECURITY OVERRIDES ---
-
-# 1. PROTECT SECRETS (Highest Priority)
+# --- 1. AURA SECURITY SHIELD (PRIORITY) ---
 .env
 secrets.txt
 config.json
 api-keys.md
 *.log
-
-# 2. OFFLINE MOBILE DRAFTS
-# Prevents phone junk from cluttering your professional repo.
 *.tmp
 *.bak
-*~
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# 3. CUSTOM MEDIA
-# If you store music stems or large video drafts, they stay local.
-*.mp3
-*.wav
-*.mp4
+# --- 2. STANDARD WORDPRESS CORE RULES ---
+/wp-admin/
+/wp-includes/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-content/uploads/
+wp-config.php
+.htaccess
+index.php
+license.txt
+readme.html
+wp-*.php
+xmlrpc.php
