@@ -1,0 +1,187 @@
+<?php
+/**
+ * The template for displaying the footer
+ * Integrated with AURA GOLD-GLOW ARCHITECTURE v2.6
+ * Brand: Bethel Edison (Architecture of Sound & Code)
+ */
+?>
+        </div> </div> <?php get_template_part( 'template-parts/footer/footer-instagram' ); ?>
+
+    <footer id="aura-footer" class="aura-footer-master">
+        <div id="edge-runner" class="edge-glow"></div>
+        
+        <div class="footer-bg-effects">
+            <div class="gold-dust"></div>
+        </div>
+
+        <div class="footer-inner">
+            <div class="brand-centerpiece">
+                <h2 class="glitter-name">BETHEL EDISON</h2>
+                <div class="brand-line"></div>
+                <span class="brand-tag">ARCHITECTURE OF SOUND & CODE</span>
+            </div>
+
+            <nav class="linear-nav">
+                <div class="nav-track">
+                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="aura-link">About</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="aura-link">Contact</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/register' ) ); ?>" class="aura-link">Join Us</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/podcast-questboard' ) ); ?>" class="aura-link">Podcast Questions</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/blog' ) ); ?>" class="aura-link">Blog</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/affiliates' ) ); ?>" class="aura-link">Affiliates</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>" class="aura-link legal">Privacy</a>
+                    <span class="nav-sep">/</span>
+                    <a href="<?php echo esc_url( home_url( '/terms' ) ); ?>" class="aura-link legal">Terms</a>
+                </div>
+            </nav>
+
+            <div class="footer-bottom-meta">
+                <div class="os-version">AURA_OS_V2.6 // SOVEREIGN_MODE</div>
+                <p class="copy-text">&copy; <?php echo date('Y'); ?> BETHEL EDISON. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <?php get_template_part('template-parts/sticky-playlist/content-playlist'); ?>
+
+<style>
+/* --- AURA MASTER FOOTER STYLING --- */
+.aura-footer-master {
+    background: #010103;
+    padding: 80px 20px 40px;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 204, 0, 0.15);
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.footer-bg-effects {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 204, 0, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.brand-centerpiece { position: relative; margin-bottom: 50px; text-align: center; }
+
+.glitter-name {
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 10px;
+    background: linear-gradient(90deg, #fff, #ffcc00, #fff, #ffd700, #fff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glitter-flow 5s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 204, 0, 0.4));
+}
+
+@keyframes glitter-flow { to { background-position: 200% center; } }
+
+.gold-dust {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; height: 100%;
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.12) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.brand-line { height: 1px; width: 80px; background: #ffcc00; margin: 12px auto; box-shadow: 0 0 10px #ffcc00; }
+.brand-tag { font-family: monospace; font-size: 0.6rem; color: #444; letter-spacing: 4px; display: block; }
+
+.linear-nav {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.nav-track { display: flex; white-space: nowrap; align-items: center; gap: 18px; }
+
+.aura-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.aura-link:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 12px #ffcc00;
+    transform: translateY(-2px);
+}
+
+.nav-sep { color: #222; font-family: monospace; }
+.aura-link.legal { color: #555; font-size: 0.75rem; text-transform: uppercase; }
+
+.footer-bottom-meta {
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    padding-top: 30px;
+}
+
+.copy-text { color: #444; font-size: 0.75rem; letter-spacing: 2px; }
+.os-version { font-family: monospace; font-size: 0.55rem; color: #1a1a1a; letter-spacing: 3px; }
+
+.edge-glow {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #ffcc00 0%, transparent 75%);
+    filter: blur(25px);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .linear-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; }
+    .linear-nav::-webkit-scrollbar { display: none; }
+    .glitter-name { letter-spacing: 5px; }
+}
+</style>
+
+<script>
+/* --- AURA EDGE-RUNNER LOGIC --- */
+document.addEventListener('DOMContentLoaded', () => {
+    const glow = document.getElementById('edge-runner');
+    const footer = document.getElementById('aura-footer');
+    if(!glow || !footer) return;
+    
+    let pos = 0;
+    function moveGlow() {
+        const w = footer.offsetWidth;
+        const h = footer.offsetHeight;
+        const p = 2 * (w + h);
+        pos = (pos + 2.5) % p; 
+        
+        let x, y;
+        if (pos < w) { x = pos; y = 0; } 
+        else if (pos < w + h) { x = w; y = pos - w; } 
+        else if (pos < 2 * w + h) { x = w - (pos - (w + h)); y = h; } 
+        else { x = 0; y = h - (pos - (2 * w + h)); }
+        
+        glow.style.left = (x - 60) + 'px';
+        glow.style.top = (y - 60) + 'px';
+        requestAnimationFrame(moveGlow);
+    }
+    moveGlow();
+});
+</script>
+
+<?php wp_footer(); ?>
+</body>
+</html>
