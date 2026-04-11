@@ -1,0 +1,322 @@
+<div class="aura-music-hero-block">   <style>     .aura-music-hero-block {       background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);       padding: 110px 30px;       border: 2px solid rgba(212, 175, 55, 0.3);       border-radius: 40px;       text-align: center;       position: relative;       overflow: hidden;       margin-bottom: 60px;       box-shadow: 0 0 60px rgba(212, 175, 55, 0.15);       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added for consistency */     }          /* Signature 5-Stop Gold Gradient & Shimmer - Applied to BETHEL EDISON */     .be-title-v5 {       font-size: clamp(2.2rem, 9vw, 5rem); /* Adjusted slightly for longer text */       font-weight: 900;       line-height: 1;       margin: 0;       text-transform: uppercase;       background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);       background-size: 200% auto;       -webkit-background-clip: text;       -webkit-text-fill-color: transparent;       animation: goldGlimmer 4s linear infinite, entrySlide 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;       position: relative;       z-index: 3;     }          @keyframes goldGlimmer { to { background-position: 200% center; } }          @keyframes entrySlide {       0% { transform: scale(0.8) translateY(20px); opacity: 0; }       100% { transform: scale(1) translateY(0); opacity: 1; }     }          /* The Aura Glow Pulse - Applied to Aura Angels Music */     .sonic-marker {       display: inline-block;       margin-top: 30px;       color: #fff;       font-size: 0.85rem;       text-transform: uppercase;       letter-spacing: 7px;       font-weight: bold;       position: relative;       z-index: 3;       padding: 8px 25px;       border: 1px solid rgba(212, 175, 55, 0.6);       border-radius: 50px;       background: rgba(212, 175, 55, 0.05);       box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);       animation: auraPulse 3s ease-in-out infinite;     }          @keyframes auraPulse {       0%, 100% { opacity: 0.7; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); transform: scale(1); }       50% { opacity: 1; box-shadow: 0 0 35px #d4af37; color: #fcf6ba; transform: scale(1.02); }     }          /* The Background Sonic Field (Notes, Waves, Gold Dust) */     .sonic-particles {       position: absolute;       top: 0; left: 0; width: 100%; height: 100%;       z-index: 1;     }          .aura-particle {       position: absolute;       background-size: contain;       background-repeat: no-repeat;       animation: auraRise 7s linear infinite;       opacity: 0;     }          @keyframes auraRise {       0% { transform: translateY(110%) rotate(0deg) scale(0.4); opacity: 0; }       20% { opacity: 0.6; }       80% { opacity: 0.6; }       100% { transform: translateY(-20%) rotate(180deg) scale(1.2); opacity: 0; }     }          /* Particle Designs: Gold Note, Wave, and Shine */     .p-note-gold {        width: 22px; height: 22px;       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>');       animation-duration: 8s;       filter: drop-shadow(0 0 8px #d4af37);     }          .p-wave-gold {       width: 35px; height: 35px;       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23bf953f" stroke-width="2"><path d="M2 12c.6.6 1.4 1 2.4 1 1 0 1.8-.4 2.4-1 .6-.6 1.4-1 2.4-1 1 0 1.8.4 2.4 1 .6.6 1.4 1 2.4 1 1 0 1.8-.4 2.4-1 .6-.6 1.4-1 2.4-1s1.8.4 2.4 1"/></svg>');       animation-duration: 12s;     }          .p-shine {       width: 15px; height: 15px;       background: #fcf6ba;       border-radius: 50%;       filter: blur(4px);       animation-duration: 5s;     }   </style>      <div class="sonic-particles">     <div class="aura-particle p-note-gold" style="left:15%; animation-delay:0s;"></div>     <div class="aura-particle p-wave-gold" style="left:30%; animation-delay:3s;"></div>     <div class="aura-particle p-shine" style="left:45%; animation-delay:1.5s;"></div>     <div class="aura-particle p-note-gold" style="left:65%; animation-delay:5s;"></div>     <div class="aura-particle p-wave-gold" style="left:80%; animation-delay:1s;"></div>     <div class="aura-particle p-shine" style="left:5%; animation-delay:4s;"></div>     <div class="aura-particle p-note-gold" style="left:90%; animation-delay:2s;"></div>     <div class="aura-particle p-shine" style="left:55%; animation-delay:6s;"></div>   </div>      <h1 class="be-title-v5">Bethel Edison</h1>   <span class="sonic-marker">Aura Angels Music</span> </div>
+
+<header class="be-music-cornerstone">
+    <div class="sonic-grid-overlay"></div>
+    <div class="cornerstone-container">
+        <div class="status-row">
+            <div class="live-signal">
+                <span class="signal-bar"></span>
+                <span class="signal-bar"></span>
+                <span class="signal-bar"></span>
+                <span class="signal-text">FREQUENCY_ACTIVE_2026</span>
+            </div>
+            <div class="identity-tag">BETHEL EDISON</div>
+        </div>
+        <h1 class="main-music-title">
+            MU<span>S</span>IC
+        </h1>
+        <div class="music-infrastructure">
+            <div class="gold-block"></div>
+            <p>The core infrastructure for <strong>The Aura Angels</strong>. <br>Restorative themes, UK Rap influence, and the sound of 2026.</p>
+        </div>
+        <div class="music-specs">
+            <div class="spec-item"><span>GENRE:</span> GOSPEL POP/RNB</div>
+            <div class="spec-divider"></div>
+            <div class="spec-item"><span>ORIGIN:</span> NIGERIA / GLOBAL</div>
+            <div class="spec-divider"></div>
+            <div class="spec-item"><span>STATUS:</span> VERIFIED_ARTIST</div>
+        </div>
+    </div>
+</header>
+
+<style>
+    .be-music-cornerstone {
+        --gold: #ff9900;
+        --deep-dark: #05050a;
+        
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        background: var(--deep-dark);
+        padding: 140px 0 100px 0;
+        overflow: hidden;
+        border-bottom: 5px solid var(--gold); /* Heavy sharp bottom */
+    }
+
+    /* Grid Overlay with a subtle "Sound Wave" feel */
+    .sonic-grid-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(rgba(255, 153, 0, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 153, 0, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(to bottom, black 60%, transparent);
+    }
+
+    .cornerstone-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .status-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .live-signal {
+        display: flex;
+        align-items: flex-end;
+        gap: 3px;
+    }
+
+    .signal-bar {
+        width: 4px;
+        background: var(--gold);
+        height: 10px;
+        animation: eq-pulse 1.2s infinite ease-in-out;
+    }
+
+    .signal-bar:nth-child(2) { height: 18px; animation-delay: 0.2s; }
+    .signal-bar:nth-child(3) { height: 12px; animation-delay: 0.4s; }
+
+    .signal-text {
+        font-family: 'Inter', monospace;
+        font-size: 0.7rem;
+        color: var(--gold);
+        letter-spacing: 3px;
+        margin-left: 10px;
+        font-weight: 900;
+    }
+
+    .identity-tag {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.65rem;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.2);
+        padding: 4px 12px;
+        letter-spacing: 2px;
+        font-weight: 800;
+    }
+
+    .main-music-title {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-size: clamp(5rem, 20vw, 12rem);
+        font-weight: 900;
+        color: #ffffff;
+        margin: 0;
+        line-height: 0.75;
+        letter-spacing: -8px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .main-music-title span {
+        color: var(--gold);
+        text-shadow: 0 0 50px rgba(255, 153, 0, 0.6);
+    }
+
+    .music-infrastructure {
+        margin-top: 50px;
+        display: flex;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    .gold-block {
+        width: 10px;
+        height: 60px;
+        background: var(--gold);
+        box-shadow: 10px 10px 0px rgba(255, 153, 0, 0.1);
+    }
+
+    .music-infrastructure p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        color: #fff;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .music-infrastructure p strong { color: var(--gold); font-weight: 900; }
+
+    .music-specs {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        border-top: 1px solid rgba(255,153,0,0.2);
+        padding-top: 30px;
+    }
+
+    .spec-item {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        color: #888;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .spec-item span { color: var(--gold); margin-right: 5px; }
+
+    .spec-divider {
+        width: 1px;
+        height: 15px;
+        background: rgba(255,153,0,0.3);
+    }
+
+    @keyframes eq-pulse {
+        0%, 100% { height: 10px; }
+        50% { height: 20px; }
+    }
+
+    @media (max-width: 768px) {
+        .be-music-cornerstone { padding: 80px 0 60px 0; }
+        .main-music-title { letter-spacing: -3px; }
+        .music-infrastructure p { font-size: 1.1rem; }
+        .music-specs { flex-direction: column; gap: 10px; }
+        .spec-divider { display: none; }
+    }
+</style>
+
+<div class="be-artist-full-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Full Width Force Reset */
+        .be-artist-full-width {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #090913;
+            overflow-x: hidden;
+            padding: 40px 0;
+        }
+
+        .be-artist-widget {
+            --bg-dark: #090913;
+            --card-bg: #14142b;
+            --text-white: #ffffff;
+            --text-blue: #37bcf9;
+            --border-color: #2c2c44;
+            --hover-accent: #1c1c3d;
+
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        .be-header { 
+            width: 100%; 
+            padding-top: 60%; 
+            background-image: linear-gradient(to bottom, rgba(9, 9, 19, 0) 50%, rgba(9, 9, 19, 1) 100%), 
+                              url('https://lh3.googleusercontent.com/u/0/d/1ExiK25lqehH70tNMvmNQERDj1YNV4doU=w1000'); 
+            background-size: cover; 
+            background-position: center 20%; 
+            position: relative; 
+        }
+
+        .be-artist-name { 
+            position: absolute; 
+            bottom: 15px; 
+            width: 100%; 
+            text-align: center; 
+            font-size: 1.8rem; 
+            font-weight: 900; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .name-blue { color: var(--text-blue); }
+        .name-white { color: var(--text-white); }
+
+        .be-content { padding: 25px; }
+
+        .be-spotify-top { margin-bottom: 25px; }
+
+        .be-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .be-link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--card-bg);
+            color: var(--text-white);
+            text-decoration: none;
+            padding: 15px 5px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .be-link-item:hover { 
+            border-color: var(--text-blue); 
+            background-color: var(--hover-accent);
+            transform: translateY(-2px);
+        }
+
+        .be-link-item i { font-size: 1.6rem; margin-bottom: 8px; color: var(--text-blue); }
+        .be-link-item span { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .be-apple-bottom { border-top: 1px solid var(--border-color); padding-top: 20px; }
+        .embed-label { font-size: 0.8rem; color: var(--text-blue); margin-bottom: 10px; text-transform: uppercase; font-weight: bold; text-align: center; display: block; }
+
+        @media (max-width: 480px) {
+            .be-links { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .be-artist-name { font-size: 1.4rem; }
+        }
+    </style>
+
+    <div class="be-artist-widget">
+        <div class="be-header">
+            <div class="be-artist-name">
+                <span class="name-blue">BETHEL</span> <span class="name-white">EDISON</span>
+            </div>
+        </div>
+
+        <div class="be-content">
+            <div class="be-spotify-top">
+                <span class="embed-label">Featured Playlist</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6eQnL8ROG9rNmjV9qF4I8l?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <nav class="be-links">
+                <a href="https://music.apple.com/us/artist/bethel-edison/1770194173?ls" class="be-link-item"><i class="fa-brands fa-apple"></i><span>Apple</span></a>
+                <a href="https://open.spotify.com/artist/6eQnL8ROG9rNmjV9qF4I8l?si=ihvhe_IoQ02mMSgTpBSgOg" class="be-link-item"><i class="fa-brands fa-spotify"></i><span>Spotify</span></a>
+                <a href="https://tidal.com/artist/50650975/u" class="be-link-item"><i class="fa-solid fa-music"></i><span>Tidal</span></a>
+                <a href="https://music.amazon.com/artists/B0DHT9RS8L/bethel-edison" class="be-link-item"><i class="fa-brands fa-amazon"></i><span>Amazon</span></a>
+                <a href="https://www.deezer.com/en/artist/283326531" class="be-link-item"><i class="fa-brands fa-deezer"></i><span>Deezer</span></a>
+                <a href="https://youtube.com/@realbeeed" class="be-link-item"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+                <a href="https://instagram.com/realbeeed" class="be-link-item"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                <a href="https://tiktok.com/@realbeeed" class="be-link-item"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
+                <a href="https://snapchat.com/add/realbeeed" class="be-link-item"><i class="fa-brands fa-snapchat"></i><span>Snapchat</span></a>
+                <a href="https://facebook.com/realbeeed" class="be-link-item"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
+                <a href="https://threads.net/@realbeeed" class="be-link-item"><i class="fa-brands fa-threads"></i><span>Threads</span></a>
+                <a href="https://x.com/irealbethel" class="be-link-item"><i class="fa-brands fa-x-twitter"></i><span>X</span></a>
+            </nav>
