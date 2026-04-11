@@ -4,25 +4,894 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AURA Terminal | Bethel Edison</title>
-    
-    <link rel="stylesheet" href="aura-gold-glow.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { background: #05050a; margin: 0; padding: 0; font-family: 'Inter', sans-serif; color: #fff; overflow-x: hidden; }
+        
+        /* MARKET TERMINAL SECTION */
+        .aura-terminal-section { padding: 60px 20px; text-align: center; border-bottom: 1px solid #1a1a2e; }
+        .aura-terminal-box { max-width: 450px; margin: 0 auto; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,153,0,0.15); text-align: left; }
+        .aura-status-dot { width: 10px; height: 10px; background: #00ff88; border-radius: 50%; display: inline-block; margin-right: 12px; box-shadow: 0 0 12px #00ff88; animation: aura-blink 1.8s infinite; }
+        @keyframes aura-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .price-row { display: flex; justify-content: space-between; border-bottom: 1px solid #1a1a2e; padding: 12px 0; font-size: 14px; }
+        .price-value { font-family: 'Courier New', monospace; font-weight: 900; transition: color 0.3s; }
+
+        /* FOOTER & BRANDING */
+        .aura-footer { background: #090913; padding: 80px 20px; text-align: center; }
+        .aura-title { color: #ff9900; font-size: 2.4rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; font-weight: 900; }
+        .aura-logo { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #ff9900; margin-bottom: 30px; padding: 5px; background: #090913; box-shadow: 0 0 20px rgba(255,153,0,0.3); }
+        
+        /* ACTION BUTTONS */
+        .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 30px 0; }
+        .aura-btn { padding: 15px 25px; border-radius: 10px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 13px; transition: 0.3s; display: inline-block; }
+        .btn-gold { background: #ff9900; color: #000 !important; }
+        .btn-white { background: #fff; color: #000 !important; }
+        .btn-outline { border: 2px solid #ff9900; color: #ff9900 !important; }
+        .aura-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255,153,0,0.4); }
+
+        /* 9-ICON SOCIAL BAR */
+        .social-bar { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 40px; }
+        .social-bar a { 
+            color: #fff; 
+            font-size: 1.4rem; 
+            width: 45px; 
+            height: 45px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            background: #14142b; 
+            transition: all 0.3s ease; 
+            text-decoration: none;
+        }
+
+        /* Specific Hover Effects */
+        .social-bar a.yt:hover { background: #FF0000; box-shadow: 0 0 15px #FF0000; }
+        .social-bar a.ig:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); box-shadow: 0 0 15px #d6249f; }
+        .social-bar a.tk:hover { background: #000; box-shadow: 0 0 15px #00f2ea; border: 1px solid #ff0050; }
+        .social-bar a.fb:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
+        .social-bar a.th:hover { background: #000; box-shadow: 0 0 15px #fff; }
+        .social-bar a.tw:hover { background: #000; box-shadow: 0 0 15px #ff9900; }
+        .social-bar a.sc:hover { background: #FFFC00; color: #000 !important; box-shadow: 0 0 15px #FFFC00; }
+        .social-bar a.tg:hover { background: #0088cc; box-shadow: 0 0 15px #0088cc; }
+        .social-bar a.gh:hover { background: #333; box-shadow: 0 0 15px #fff; }
+
+        .social-bar a:hover { transform: translateY(-5px); }
+    </style>
 </head>
 <body>
 
-    <main class="gold-glow-card" style="margin: 50px auto; max-width: 800px;">
-        <header>
-            <h1>AURA TERMINAL</h1>
-            <p class="terminal-text">Status: [ ONLINE ]</p>
-        </header>
+    <div class="aura-terminal-section">
+        <div class="aura-terminal-box">
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <span class="aura-status-dot"></span>
+                <span style="font-size: 10px; letter-spacing: 2px; color: #ff9900; font-weight: 900;">AURA_MARKET_ALPHA</span>
+            </div>
+            <div class="price-row"><span>BTC/USDT</span><span class="price-value">$71,922.50</span></div>
+            <div class="price-row"><span>ETH/USDT</span><span class="price-value">$2,195.12</span></div>
+            <div class="price-row"><span>BNB/USDT</span><span class="price-value">$608.48</span></div>
+            <div class="price-row"><span>SOL/USDT</span><span class="price-value">$85.38</span></div>
+            <div class="price-row" style="border:none; color:#ff9900;"><span>PI/USDT</span><span class="price-value">$0.1674</span></div>
+        </div>
+    </div>
 
-        <section id="manifesto">
-            <p>Intersection of <strong>DeFi</strong>, <strong>Music</strong>, and <strong>Faith</strong>.</p>
-            <div id="live-clock" class="terminal-text">Initializing clock...</div>
-        </section>
-    </main>
+    <div class="aura-footer">
+        <h2 class="aura-title">Join the AURA Angels</h2>
+        <img src="https://drive.google.com/thumbnail?id=17YYQHmHRlVfRW-qWRQpgAwQUQaXqlUuw&sz=w600" class="aura-logo" alt="Logo">
+        
+        <div class="btn-group">
+            <a href="https://discord.gg/NJ4pavgAJN" class="aura-btn btn-white">Discord</a>
+            <a href="https://paystack.shop/pay/xllyug2dso" class="aura-btn btn-gold">Unlock VIP</a>
+            <a href="https://whatsapp.com/channel/0029Vb6PqYW7IUYNTjpFwq0G" class="aura-btn btn-outline">WhatsApp</a>
+            <a href="https://t.me/auraguardians" class="aura-btn btn-outline">Telegram</a>
+        </div>
 
-    <script src="aura-logic.js"></script>
+        <div class="social-bar">
+            <a href="https://youtube.com/@realbeeed" class="yt" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://instagram.com/realbeeed" class="ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@realbeeed" class="tk" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://facebook.com/realbeeed" class="fb" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://threads.net/@realbeeed" class="th" title="Threads"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://x.com/irealbethel" class="tw" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.snapchat.com/add/realbeeed" class="sc" title="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="https://t.me/irealbethel" class="tg" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://github.com/betheledison" class="gh" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Pseudo-Live Jitter for Market Data
+        setInterval(() => {
+            const prices = document.querySelectorAll('.price-value');
+            const p = prices[Math.floor(Math.random() * prices.length)];
+            p.style.color = "#00ff88";
+            setTimeout(() => p.style.color = "#fff", 800);
+        }, 3000);
+    </script>
 </body>
 </html>
+<div class="be-timer-full-breakout">
+    <style>
+        /* Full Width Force Reset */
+        .be-timer-full-breakout {
+            --gold: #ff9900;
+            --bg-dark: #090913;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: var(--bg-dark);
+            padding: 60px 0;
+            overflow-x: hidden;
+            color: #ffffff;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            text-align: center;
+        }
+
+        .be-timer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .timer-header {
+            font-size: 1.1rem;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .timer-unit {
+            display: flex;
+            flex-direction: column;
+            min-width: 90px;
+        }
+
+        .timer-number {
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 153, 0, 0.3);
+        }
+
+        .timer-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #bbbbbb;
+            margin-top: 10px;
+        }
+
+        .quest-btn {
+            display: inline-block;
+            padding: 16px 45px;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none !important;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quest-btn:hover {
+            background-color: var(--gold);
+            color: #000 !important;
+            box-shadow: 0 0 25px rgba(255, 153, 0, 0.5);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .timer-number { font-size: 2.5rem; }
+            .timer-unit { min-width: 70px; }
+            .timer-display { gap: 10px; }
+            .timer-header { font-size: 0.9rem; letter-spacing: 3px; }
+        }
+    </style>
+
+    <div class="be-timer-content">
+        <div class="timer-header">Stories Before The Music</div>
+        
+        <div class="timer-display" id="be-timer-main">
+            <div class="timer-unit">
+                <span class="timer-number" id="d-main">00</span>
+                <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-number" id="h-main">00</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-number" id="m-main">00</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-number" id="s-main">00</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+        </div>
+
+        <a href="https://betheledison.com/podcast-questboard" class="quest-btn">Submit Your Questions →</a>
+    </div>
+
+    <script>
+        // Target: Friday, April 17, 2026, at 06:00:00
+        const targetMain = new Date("April 17, 2026 06:00:00").getTime();
+
+        const updateMainTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetMain - now;
+
+            if (distance < 0) {
+                clearInterval(updateMainTimer);
+                document.getElementById("be-timer-main").innerHTML = "<h2 style='color:#ff9900; font-size: 2.5rem;'>EPISODE OUT NOW</h2>";
+                return;
+            }
+
+            document.getElementById("d-main").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById("h-main").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById("m-main").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById("s-main").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }, 1000);
+    </script>
+</div>
+
+<div class="aura-podcast-breakout">
+    <div class="aura-podcast-container">
+        
+        <!-- Header Section -->
+        <div class="podcast-header">
+            <div class="on-air-tag">
+                <span class="pulse-ring"></span>
+                <span class="tag-text">ON AIR // RESTORATIVE_SIGNAL</span>
+            </div>
+            <!-- UPDATED: Main Clickable Title -->
+            <a href="https://betheledison.com/podcasts" style="text-decoration: none !important;">
+                <h2 class="podcast-main-title clickable-aura-title">Stories Before The Music</h2>
+            </a>
+            <p class="podcast-tagline">Architecture of Sound & Code — Hosted by Bethel Edison</p>
+        </div>
+
+        <!-- Spotify Live Player Embed -->
+        <div class="spotify-live-frame">
+            <iframe 
+                style="border-radius:20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);" 
+                src="https://open.spotify.com/embed/show/5DGVb7rWmPncJ8QkMvpwt2?utm_source=generator&theme=0" 
+                width="100%" 
+                height="232" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Navigation Shortcut -->
+        <div class="podcast-footer">
+            <a href="https://betheledison.com/podcast-questboard" class="quest-link">
+                <i class="fa-solid fa-lifeboat"></i> SUBMIT A QUESTION FOR THE NEXT EPISODE →
+            </a>
+        </div>
+
+    </div>
+
+    <style>
+        /* ADDED: Hover effect for the clickable title */
+        .clickable-aura-title {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .clickable-aura-title:hover {
+            color: #ff9900 !important;
+            text-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
+        }
+
+        /* FULL WIDTH BREAKOUT */
+        .aura-podcast-breakout {
+            --aura-gold: #ff9900;
+            --aura-deep: #07070c;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: var(--aura-deep);
+            padding: 80px 0;
+            display: block;
+            clear: both;
+            overflow: hidden;
+            border-top: 1px solid #111;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .aura-podcast-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        /* HEADER & TAGS */
+        .on-air-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 153, 0, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .tag-text {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--aura-gold);
+            text-transform: uppercase;
+        }
+
+        .pulse-ring {
+            width: 8px;
+            height: 8px;
+            background: var(--aura-gold);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 10px var(--aura-gold);
+            animation: aura-pulse-broadcast 2s infinite;
+        }
+
+        @keyframes aura-pulse-broadcast {
+            0% { transform: scale(0.9); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.5; }
+            100% { transform: scale(0.9); opacity: 1; }
+        }
+
+        .podcast-main-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0 0 10px 0;
+            line-height: 1;
+        }
+
+        .podcast-tagline {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        /* PLAYER FRAME */
+        .spotify-live-frame {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.4s ease;
+        }
+        
+        .spotify-live-frame:hover {
+            transform: translateY(-5px);
+        }
+
+        /* FOOTER LINK */
+        .podcast-footer {
+            margin-top: 40px;
+        }
+
+        .quest-link {
+            color: #444;
+            text-decoration: none !important;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .quest-link:hover {
+            color: var(--aura-gold);
+            letter-spacing: 3px;
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 600px) {
+            .aura-podcast-breakout { padding: 50px 0; }
+            .podcast-main-title { font-size: 1.8rem; }
+        }
+    </style>
+</div>
+
+<div class="be-aura-sales-card">
+    <div class="aura-card-inner">
+        <div class="aura-status-bar">
+            <span class="status-dot"></span>
+            <span class="status-text">SIGNAL STATUS: OPERATIONAL // V2.6</span>
+        </div>
+
+        <h2 class="aura-product-title">THE AURA STRATEGY</h2>
+        <p class="aura-product-tagline">The Global Creator’s Manual for USD Sovereignty & Digital Architecture</p>
+        
+        <div class="aura-divider"></div>
+
+        <ul class="aura-specs">
+            <li><i class="fa-solid fa-check"></i> Cleva & Binance Global Setup</li>
+            <li><i class="fa-solid fa-check"></i> V2.6 Terminal Web Blueprints</li>
+            <li><i class="fa-solid fa-check"></i> The Miraculous Signal Mindset</li>
+        </ul>
+
+        <div class="aura-action-zone">
+            <div class="aura-price-container">
+                <div class="aura-price js-price-pulse" id="auraPrice">
+                    <span class="currency">$</span>25 <span class="ngn-alt">/ 38,000 NGN</span>
+                </div>
+            </div>
+            
+            <a href="https://paystack.shop/pay/the-aura-strategy" class="be-aura-button" target="_blank">
+                DOWNLOAD THE ARCHITECTURE <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://betheledison.com/shop" class="be-aura-store-button">
+                GO TO STORE <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 1. THE CARD CONTAINER */
+.be-aura-sales-card {
+    background: #05050a;
+    border: 2px solid #ff9900;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 20px rgba(255, 153, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 2. THE STATUS BAR */
+.aura-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+    animation: pulse 2s infinite;
+}
+.status-text {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #ff9900;
+}
+
+/* 3. TEXT STYLES */
+.aura-product-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    letter-spacing: -1px;
+}
+.aura-product-tagline {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.aura-divider {
+    height: 1px;
+    background: linear-gradient(90deg, #ff9900 0%, transparent 100%);
+    margin-bottom: 30px;
+}
+
+/* 4. SPECS LIST */
+.aura-specs {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.aura-specs li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.aura-specs i { color: #ff9900; }
+
+/* 5. PRICE - THE GREEN ATTENTION ZONE */
+.aura-price-container {
+    margin-bottom: 10px;
+}
+.aura-price {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #00ff88; /* HIGH VISIBILITY GREEN */
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+.ngn-alt { 
+    font-size: 1.1rem; 
+    color: #00ff88; 
+    opacity: 0.6; 
+    font-weight: 400; 
+    margin-left: 5px;
+}
+
+/* 6. BUTTONS */
+.aura-action-zone {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.be-aura-button {
+    background: #ff9900;
+    color: #000000 !important;
+    text-decoration: none !important;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(255, 153, 0, 0.3);
+}
+
+.be-aura-store-button {
+    background: transparent;
+    color: #ff9900 !important;
+    border: 1px solid #ff9900;
+    text-decoration: none !important;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* JS TRIGGERED GLITCH CLASS */
+.aura-glitch-active {
+    text-shadow: 2px 0 #ff9900, -2px 0 #00ffff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+    .be-aura-sales-card { padding: 25px; margin: 20px; }
+    .aura-product-title { font-size: 1.8rem; }
+    .aura-price { font-size: 2rem; }
+}
+</style>
+
+<script>
+// JS EFFECT: SIGNAL FLICKER
+// Adds a "Terminal Glitch" to the price every few seconds to draw attention
+setInterval(() => {
+    const price = document.getElementById('auraPrice');
+    if(price) {
+        price.classList.add('aura-glitch-active');
+        
+        setTimeout(() => {
+            price.classList.remove('aura-glitch-active');
+        }, 150); // Quick flicker
+    }
+}, 3000); // Repeat every 3 seconds
+</script>
+
+<div class="be-breakout-wrapper">
+    <div class="be-tools-full-width">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+            /* THE FORCE FIX: BREAKOUT OF THEME BOX */
+            .be-breakout-wrapper {
+                width: 100vw !important;
+                position: relative !important;
+                left: 50% !important;
+                right: 50% !important;
+                margin-left: -50vw !important;
+                margin-right: -50vw !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                box-sizing: border-box !important;
+                padding: 0 10px; /* Slight breathing room for mobile */
+            }
+
+            .be-tools-full-width {
+                background: #14142b;
+                border: 1px solid #2c2c44;
+                border-radius: 20px;
+                padding: 25px 20px;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                width: 100% !important;
+                max-width: 1200px !important; /* Cap it on large screens so it stays clean */
+                transition: 0.3s ease;
+                box-sizing: border-box;
+                z-index: 5;
+            }
+
+            .be-tools-full-width:hover {
+                border-color: #ff9900;
+                box-shadow: 0 10px 40px rgba(255, 153, 0, 0.2);
+            }
+
+            .widget-header {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #2c2c44;
+                padding-bottom: 15px;
+            }
+
+            .widget-header i { color: #ff9900; font-size: 1.4rem; }
+            .widget-header h3 {
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                margin: 0;
+            }
+
+            .tools-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Automatically makes rows/columns based on screen size */
+                gap: 12px;
+            }
+
+            .tool-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #090913;
+                padding: 15px 20px;
+                border-radius: 12px;
+                text-decoration: none !important;
+                border: 1px solid transparent;
+                transition: 0.3s;
+            }
+
+            .tool-info { display: flex; align-items: center; gap: 12px; }
+            .tool-info span { color: #fff; font-weight: 700; font-size: 0.9rem; }
+
+            .tool-tag {
+                font-size: 0.65rem;
+                color: #ff9900;
+                background: rgba(255, 153, 0, 0.1);
+                padding: 2px 8px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            .tool-item:hover {
+                border-color: #ff9900;
+                transform: translateY(-3px);
+                background: #1a1a35;
+            }
+
+            .view-all-link {
+                display: block;
+                text-align: center;
+                margin-top: 25px;
+                color: #ff9900;
+                text-decoration: none;
+                font-size: 0.8rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                transition: 0.3s;
+            }
+
+            .view-all-link:hover { letter-spacing: 3px; }
+
+            /* MOBILE FIX FOR S24 */
+            @media (max-width: 600px) {
+                .tools-list { grid-template-columns: 1fr; }
+                .be-tools-full-width { border-radius: 0; border-left: none; border-right: none; }
+            }
+        </style>
+
+        <div class="widget-header">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Tools I Use</h3>
+        </div>
+
+        <div class="tools-list">
+            <a href="https://www.getcleva.com/refer/BETH341" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Cleva Banking</span>
+                    <div class="tool-tag">USD</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="https://roqqu.sng.link/F336c/rb1jy/r_190ccff6b2" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Roqqu Exchange</span>
+                    <div class="tool-tag">Fiat</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0040GWR5NC" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Binance Pro</span>
+                    <div class="tool-tag">Crypto</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="https://chipper.cash/invite/H5BWG" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Chipper Cash</span>
+                    <div class="tool-tag">Cards</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+
+        <a href="https://betheledison.com/affiliates" class="view-all-link">View Full Strategy →</a>
+    </div>
+</div>
+
+<div class="aura-news-container">
+    <div class="aura-live-tag">
+        <span class="pulse-dot"></span>
+        <span class="live-text">AURA // DIVINE_SIGNAL</span>
+    </div>
+
+    <div class="aura-ticker-wrap">
+        <div class="aura-ticker-move">
+            <span class="aura-scripture">
+                <span class="verse-ref">PSALMS 145:18 MSG</span> 
+                God’s there, listening for all who pray, for all who pray and mean it.
+            </span>
+            <span class="aura-scripture">
+                <span class="verse-ref">PSALMS 145:18 MSG</span> 
+                God’s there, listening for all who pray, for all who pray and mean it.
+            </span>
+        </div>
+    </div>
+
+    <style>
+        .aura-news-container {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: #000;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            height: 50px;
+            font-family: 'Inter', sans-serif;
+            z-index: 999;
+        }
+
+        .aura-live-tag {
+            background: #ff9900;
+            color: #000;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: 900;
+            font-size: 10px;
+            letter-spacing: 2px;
+            z-index: 10;
+            white-space: nowrap;
+            box-shadow: 10px 0 20px rgba(0,0,0,0.5);
+        }
+
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            background: #000;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: aura-pulse 1.5s infinite;
+        }
+
+        @keyframes aura-pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .aura-ticker-wrap {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: #090913;
+        }
+
+        .aura-ticker-move {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker-slide 30s linear infinite; /* Adjusted speed for shorter scripture length */
+        }
+
+        .aura-scripture {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding-right: 150px; /* Space between loops */
+            text-transform: uppercase;
+        }
+
+        .verse-ref {
+            color: #ff9900;
+            font-weight: 900;
+            margin-right: 15px;
+            text-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+        }
+
+        @keyframes ticker-slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Pause on Hover */
+        .aura-ticker-wrap:hover .aura-ticker-move {
+            animation-play-state: paused;
+        }
+
+        @media (max-width: 768px) {
+            .aura-live-tag { padding: 0 10px; font-size: 8px; }
+            .aura-scripture { font-size: 12px; }
+        }
+    </style>
+    </div>
