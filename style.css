@@ -1,81 +1,85 @@
-/* 1. FORCE FOOTER CONTAINER TO BREAK OUT */#footer-widgets, .footer-nav-widgets-wrapper, .site-footer .container, .footer-widgets-container {    max-width: 100% !important;    width: 100% !important;    padding-left: 0 !important;    padding-right: 0 !important;    margin: 0 !important;    display: block !important;}
-/* 2. FORCE FOOTER 1 TO FULL WIDTH */#footer-widgets .footer-widget-1, .footer-column-1, .widget-column-1,[class*="footer-widget-"] {    width: 100vw !important;    max-width: 100vw !important;    flex: 0 0 100% !important;    display: flex !important;    flex-direction: column !important;    align-items: center !important; /* STRICT CENTER */    justify-content: center !important;    float: none !important;    margin: 0 auto !important;    padding: 0 !important;    left: 50% !important;    right: 50% !important;    margin-left: -50vw !important;    margin-right: -50vw !important;    position: relative !important;}
-/* 3. FORCE EVERY INDIVIDUAL WIDGET TO CENTER */#footer-widgets .footer-widget-1 .widget, .footer-column-1 .widget,.aura-footer-master {    width: 100% !important;    max-width: 1200px !important; /* Keeps content from getting too wide on Desktop */    margin-left: auto !important;    margin-right: auto !important;    text-align: center !important;    display: block !important;    box-sizing: border-box !important;}
-/* 4. MOBILE RESPONSIVE TWEAK (S24 & Others) */@media (max-width: 768px) {    #footer-widgets .footer-widget-1 .widget {        max-width: 95% !important;        padding: 10px !important;    }}
-/* 5. AURA TERMINAL SPECIFIC ALIGNMENT */.be-registration-wrapper, .aura-footer-master {    margin-top: 20px !important;    margin-bottom: 20px !important;}
-/* Force Crypto Pop-up Visibility */.nx-notification, .tp-notification {     z-index: 99999 !important; /* Ensure it stays on top */    background: #0B0F14 !important; /* Obsidian Base */    border: 2px solid #FFD700 !important; /* Solid Gold Frame */    border-radius: 12px !important;}.nx-notification-title, .tp-notification-title {    color: #FFD700 !important; /* Gold Text */    font-weight: 900 !important;    text-transform: uppercase;}
-/* AURA UNIVERSAL IMAGE PROTOCOL v3.1 */
-/* 1. Reset container to ensure proper layering */
-.entry-content img, 
-.post-archive img, 
-.aura-blog-feed img,
-.attachment-post-thumbnail {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    
-    /* CURVED BUT NOT TOO ROUND (8px-12px is the AURA spec) */
-    border-radius: 12px !important; 
-    
-    /* THE GOLD-GLOW BASE */
-    border: 2px solid #ff9900 !important;
-    box-shadow: 0 0 20px rgba(255, 153, 0, 0.4), 
-                0 0 5px rgba(255, 153, 0, 0.2) inset !important;
-    
-    /* Ensure glitter logic applies to the container, not just the image */
-    transition: box-shadow 0.3s ease-in-out;
-    z-index: 1;
+/*
+Theme Name: ScapeRock (AURA Integrated)
+Author: Catch Themes / Bethel Edison
+Description: ScapeRock Music Theme integrated with AURA Infrastructure protocols.
+*/
+
+/* --- LAYER 1: THEME FOUNDATION (ScapeRock Core) --- */
+
+.section-title, .color-scheme-rockmusic .post-wrapper .entry-title {
+	font-family: "Courgette", cursive;
 }
 
-/* 2. THE MOVING GLITTER EFFECT */
-/* This pseudo-element creates the moving particle mask over the image */
-.entry-content .wp-block-image::after,
-.entry-content .wp-caption::after,
-.aura-img-wrap::after { /* AURA specific class if using custom containers */
+/* Link and Navigation Hover Logic */
+a:hover, a:focus, .main-navigation a:hover, .main-navigation a:focus {
+	color: #5252f2;
+}
+
+/* Button & UI Defaults */
+.button, button, input[type="submit"] {
+	background-image: linear-gradient(to right, #5252f2, #279fff);
+}
+
+/* --- LAYER 2: CUSTOM ARCHITECTURE (Bethel Edison Alignment) --- */
+
+/* 1. FOOTER & CONTAINER BREAKOUT PROTOCOL */
+#footer-widgets, .footer-nav-widgets-wrapper, .site-footer .container, .footer-widgets-container {    
+    max-width: 100% !important;    
+    width: 100% !important;    
+    padding: 0 !important;    
+    margin: 0 !important;    
+    display: block !important;
+}
+
+/* 2. STRICT CENTER ALIGNMENT FOR WIDGETS */
+#footer-widgets .footer-widget-1, .footer-column-1, .widget-column-1 {    
+    width: 100vw !important;    
+    display: flex !important;    
+    flex-direction: column !important;    
+    align-items: center !important; 
+    justify-content: center !important;    
+    margin: 0 auto !important;    
+}
+
+/* 3. MOBILE OPTIMIZATION (Galaxy A06 / View) */
+@media (max-width: 768px) {    
+    #footer-widgets .footer-widget-1 .widget {        
+        max-width: 95% !important;        
+        padding: 10px !important;    
+    }
+}
+
+/* --- LAYER 3: AURA BRANDING (Gold-Glow Protocol) --- */
+
+/* AURA UNIVERSAL IMAGE PROTOCOL v3.1 */
+.entry-content img, .post-archive img, .aura-blog-feed img {
+    position: relative;
+    border-radius: 12px !important; 
+    border: 2px solid #ff9900 !important;
+    box-shadow: 0 0 20px rgba(255, 153, 0, 0.4) !important;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* GLITTER SHIMMER EFFECT */
+.entry-content .wp-block-image::after, .aura-img-wrap::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* Glitter base texture (using a CSS radial gradient noise) */
-    background-image: 
-        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.2) 1px, transparent 1px),
-        radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-        radial-gradient(circle at 90% 90%, rgba(255, 215, 0, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px, 30px 30px, 15px 15px;
-    
-    /* Maintain curved edges from the image */
-    border-radius: 12px;
-    
-    /* Make the effect 'shimmer' by blending */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
     mix-blend-mode: color-dodge;
-    
-    /* Animation Stream */
     animation: aura-glitter-drift 6s linear infinite;
-    pointer-events: none; /* User can still click the image */
-    opacity: 0.8;
-    z-index: 2;
-}
-/* 3. Interaction Glow Boost on Hover */
-.entry-content img:hover, 
-.post-archive img:hover {
-    box-shadow: 0 0 35px rgba(255, 153, 0, 0.7), 
-                0 0 10px rgba(255, 153, 0, 0.4) inset !important;
 }
 
-/* 4. ANIMATION DEFINE: DRIVING THE GLITTER STREAM */
 @keyframes aura-glitter-drift {
-    0% {
-        background-position: 0px 0px, 0px 0px, 0px 0px;
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 0.5; /* Shimmer variance */
-    }
-    100% {
-        background-position: 100px 100px, -50px 100px, 50px -100px;
-        opacity: 0.8;
-    }
+    0% { background-position: 0px 0px; opacity: 0.8; }
+    100% { background-position: 100px 100px; opacity: 0.8; }
 }
+
+/* CRYPTO NOTIFICATION OVERRIDE */
+.nx-notification, .tp-notification {     
+    z-index: 99999 !important;
+    background: #0B0F14 !important; 
+    border: 2px solid #FFD700 !important;
+    border-radius: 12px !important;
+    }
