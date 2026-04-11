@@ -1,0 +1,154 @@
+<div class="be-contact-full-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Full Width Reset */
+        .be-contact-full-width {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #090913;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Community Hero Section */
+        .aura-section {
+            background: linear-gradient(145deg, #0d0d1f 0%, #090913 100%);
+            padding: 80px 10%;
+            text-align: center;
+            border-bottom: 1px solid #2c2c44;
+        }
+        
+        .aura-title { 
+            color: #ff9900; 
+            font-size: 2.8rem; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 20px rgba(255, 153, 0, 0.3);
+        }
+
+        .aura-hero-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid #ff9900;
+            margin: 0 auto 30px;
+            padding: 5px;
+            background: #090913;
+            box-shadow: 0 0 25px rgba(255, 153, 0, 0.4);
+            display: block;
+        }
+        
+        .aura-description { 
+            max-width: 850px; 
+            margin: 0 auto 40px; 
+            color: #ccc; 
+            font-size: 1.1rem; 
+        }
+
+        /* All Socials Horizontal Bar */
+        .social-bar-full {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            max-width: 950px; /* Widened slightly for the extra icon */
+            padding: 20px;
+            background: rgba(20, 20, 43, 0.5);
+            border-radius: 50px;
+            border: 1px solid #2c2c44;
+        }
+
+        .social-bar-full a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #14142b;
+            text-decoration: none !important;
+        }
+
+        /* Brand Colors on Hover */
+        .social-bar-full a.yt:hover { background: #FF0000; box-shadow: 0 0 15px #FF0000; }
+        .social-bar-full a.ig:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 0 15px #dc2743; }
+        .social-bar-full a.tk:hover { background: #000000; border: 1px solid #ff0050; box-shadow: 0 0 15px #00f2ea; }
+        .social-bar-full a.fb:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
+        .social-bar-full a.th:hover { background: #000; box-shadow: 0 0 15px #fff; }
+        .social-bar-full a.tw:hover { background: #000; box-shadow: 0 0 15px #ff9900; }
+        .social-bar-full a.sc:hover { background: #FFFC00; color: #000 !important; box-shadow: 0 0 15px #FFFC00; }
+        .social-bar-full a.tg:hover { background: #0088cc; box-shadow: 0 0 15px #0088cc; }
+        /* GitHub Custom Hover */
+        .social-bar-full a.gh:hover { background: #333; box-shadow: 0 0 15px #ffffff; color: #fff !important; }
+
+        .social-bar-full a:hover { transform: translateY(-5px); }
+
+        /* Premium Buttons */
+        .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        
+        .aura-btn { 
+            padding: 16px 28px; 
+            border-radius: 12px; 
+            font-weight: 900; 
+            text-decoration: none !important; 
+            transition: all 0.3s ease; 
+            text-transform: uppercase; 
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .btn-gold { background: #ff9900; color: #000 !important; }
+        .btn-white { background: #fff; color: #000 !important; }
+        .btn-outline { border: 2px solid #ff9900; color: #ff9900 !important; background: transparent; }
+        
+        .aura-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(255, 153, 0, 0.4); }
+
+        @media (max-width: 850px) {
+            .aura-title { font-size: 2rem; }
+            .social-bar-full { border-radius: 20px; gap: 15px; padding: 15px; }
+        }
+    </style>
+
+    <div class="aura-section">
+        <h2 class="aura-title">Join the AURA Angels</h2>
+        
+        <img src="https://drive.google.com/thumbnail?id=17YYQHmHRlVfRW-qWRQpgAwQUQaXqlUuw&sz=w600" class="aura-hero-logo" alt="AURA Angels Logo">
+
+        <p class="aura-description">
+            A faith-centered movement for artists, traders, and believers. Engage in conversations around worship culture, crypto strategy, and spiritual growth.
+        </p>
+        
+        <div class="btn-group">
+            <a href="https://discord.gg/NJ4pavgAJN" class="aura-btn btn-white">Enter Discord</a>
+            <a href="https://paystack.shop/pay/xllyug2dso" class="aura-btn btn-gold">Unlock AURA-VIP</a>
+            <a href="https://whatsapp.com/channel/0029Vb6PqYW7IUYNTjpFwq0G" class="aura-btn btn-outline">WhatsApp Channel</a>
+            <a href="https://t.me/auraguardians" class="aura-btn btn-outline">Telegram Group</a>
+        </div>
+
+        <div class="social-bar-full">
+            <a href="https://youtube.com/@realbeeed" class="yt" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://instagram.com/realbeeed" class="ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@realbeeed" class="tk" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://facebook.com/realbeeed" class="fb" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://threads.net/@realbeeed" class="th" title="Threads"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://x.com/irealbethel" class="tw" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.snapchat.com/add/realbeeed" class="sc" title="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="https://t.me/irealbethel" class="tg" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://github.com/betheledison" class="gh" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+</div>
