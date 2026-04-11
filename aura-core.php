@@ -1,42 +1,51 @@
 <?php
-/*
- * SCAPEROCK CHILD THEME - AURA SYSTEM v7.0 (FORCE TOP-LEVEL PAINT)
- * Optimized for Bethel Edison Emezie / Acode Mobile Environment
+/**
+ * AURA SYSTEM v7.0 - CORE INFRASTRUCTURE
+ * Optimized for Bethel Edison (Architecture of Sound & Code)
+ * * This file acts as the "Engine Room" for the AURA Terminal.
  */
 
+// Prevent direct access to the file
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 /**
- * 1. ENQUEUE STYLES
- * Connects the ScapeShot parent and Scaperock child styles correctly.
+ * 1. ENQUEUE STYLES & ASSETS
+ * Bridges the ScapeRock theme with the AURA Gold-Glow Protocol.
  */
-function scaperock_enqueue_styles() {
+function aura_infrastructure_enqueue_assets() {
+    // Standard Theme Styles
     wp_enqueue_style( 'scapeshot-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'scaperock-style', get_stylesheet_directory_uri() . '/style.css', array( 'scapeshot-style' ) );
+    
+    // AURA System Assets from GitHub Repo
+    wp_enqueue_style( 'aura-gold-glow', get_stylesheet_directory_uri() . '/aura-gold-glow.css', array(), '1.0.0' );
 }
-add_action( 'wp_enqueue_scripts', 'scaperock_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'aura_infrastructure_enqueue_assets' );
 
 /**
- * 2. LOAD STICKY PLAYLIST COMPONENT
+ * 2. STICKY PLAYLIST INTEGRATION
+ * Maintains the music-first focus of the ScapeRock environment.
  */
-if ( file_exists( trailingslashit( get_stylesheet_directory() ) . 'inc/customizer/sticky-playlist.php' ) ) {
-    require trailingslashit( get_stylesheet_directory() ) . 'inc/customizer/sticky-playlist.php';
+$sticky_playlist_path = trailingslashit( get_stylesheet_directory() ) . 'inc/customizer/sticky-playlist.php';
+if ( file_exists( $sticky_playlist_path ) ) {
+    require $sticky_playlist_path;
 }
 
 /**
- * 3. CORE COMPONENT - GENERATES THE HTML & CSS
- * This generates the Terminal/Widget and Floating Navigation.
+ * 3. AURA WIDGET & TERMINAL GENERATOR
+ * Generates the GPU-accelerated interface for the AURA Terminal.
  */
-function get_be_aura_core() {
+function get_be_aura_core_interface() {
     ob_start(); ?>
     <style id="aura-critical-css">
-        /* THE NUCLEAR OPTION: Isolation from theme layers */
+        /* GPU ACCELERATION & LAYER ISOLATION */
         #be-aura-widget, #be-floating-nav { 
             position: fixed !important; 
             z-index: 999999999 !important; 
-            display: block !important;
             visibility: visible !important;
             opacity: 1 !important;
-            pointer-events: auto !important;
-            /* Force GPU rendering for instant appearance */
             transform: translateZ(0);
             -webkit-transform: translateZ(0);
         }
@@ -50,7 +59,7 @@ function get_be_aura_core() {
             border-radius: 24px; 
             padding: 20px; 
             box-shadow: 0 40px 80px rgba(0,0,0,0.9); 
-            transition: all 0.4s ease; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         }
 
         #be-aura-widget.is-collapsed { 
@@ -76,10 +85,7 @@ function get_be_aura_core() {
             width: 100% !important; 
             height: 100% !important; 
             position: absolute !important; 
-            top: 0; 
-            left: 0; 
-            padding: 0 !important; 
-            margin: 0 !important; 
+            top: 0; left: 0; padding: 0 !important;
         }
 
         #be-aura-widget:not(.is-collapsed) .aura-toggle-circle { 
@@ -93,60 +99,7 @@ function get_be_aura_core() {
             border-radius: 50% !important; 
         }
 
-        #toggleIcon { 
-            color: #000 !important; 
-            font-size: 22px !important; 
-            line-height: 1 !important; 
-            margin: 0 !important; 
-            display: inline-block !important; 
-        }
-
-        #be-floating-nav { 
-            bottom: 40px !important; 
-            left: 50% !important; 
-            transform: translateX(-50%) !important; 
-            width: 95% !important; 
-            max-width: 520px !important; 
-        }
-
-        .aura-pill-nav { 
-            background: #fff !important; 
-            display: flex !important; 
-            justify-content: space-evenly !important; 
-            align-items: center !important; 
-            padding: 12px 6px !important; 
-            border-radius: 100px !important; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important; 
-            border: 1px solid #ddd !important; 
-        }
-
-        .aura-pill-item { 
-            display: flex !important; 
-            flex-direction: column !important; 
-            align-items: center !important; 
-            text-decoration: none !important; 
-            color: #111 !important; 
-            flex: 1 !important; 
-        }
-
-        .aura-pill-item i { font-size: 18px !important; margin-bottom: 2px !important; }
-        .aura-pill-item span { font-size: 9px !important; font-weight: 900 !important; text-transform: uppercase !important; }
-        
-        .pill-icon-wrap { position: relative; }
-        .pill-dot { 
-            position: absolute; 
-            top: -4px; 
-            right: -6px; 
-            width: 10px; 
-            height: 10px; 
-            background: #ff3b30; 
-            border-radius: 50%; 
-            border: 2px solid #fff; 
-            animation: aura-flash 1.5s infinite; 
-        }
-
-        @keyframes aura-flash { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
-        
+        /* MOBILE OPTIMIZATION for Galaxy A06 / View */
         @media (max-width: 480px) { 
             #be-aura-widget:not(.is-collapsed) { width: 92% !important; left: 4% !important; } 
         }
@@ -154,40 +107,35 @@ function get_be_aura_core() {
 
     <div id="be-aura-widget" class="is-collapsed">
         <div class="aura-inner-content">
-            <span class="aura-title">DIVINE ECHOES // BETHEL EDISON</span>
-            <div class="be-apple-container">
+            <span class="aura-title" style="color:#fff; font-family:monospace; font-size:10px; letter-spacing:2px;">DIVINE ECHOES // BETHEL EDISON</span>
+            <div class="be-apple-container" style="margin-top:15px;">
                 <iframe allow="autoplay" frameborder="0" height="185" style="width:100%;border-radius:12px;overflow:hidden;" src="https://embed.music.apple.com/us/album/divine-echoes-single/1770195144?ls=1&theme=dark"></iframe>
             </div>
         </div>
         <button class="aura-toggle-circle" onclick="toggleAuraWidget()" aria-label="Toggle Player">
-            <i id="toggleIcon" class="fa-solid fa-music"></i>
+            <i id="toggleIcon" class="fa-solid fa-music" style="color:#000;"></i>
         </button>
     </div>
 
     <script id="aura-logic">
     function toggleAuraWidget() {
-        var w = document.getElementById('be-aura-widget'), i = document.getElementById('toggleIcon');
+        const w = document.getElementById('be-aura-widget'), i = document.getElementById('toggleIcon');
         if(!w) return;
         w.classList.toggle('is-collapsed');
         i.className = w.classList.contains('is-collapsed') ? 'fa-solid fa-music' : 'fa-solid fa-minus';
     }
     
-    // High-speed repositioning logic
+    // Forced Body Injection for High-Z-Index Priority
     (function() {
-        const move = () => {
+        const inject = () => {
             const body = document.body;
-            if (body) {
-                const widget = document.getElementById('be-aura-widget');
-                const nav = document.getElementById('be-floating-nav');
-                if(widget) body.appendChild(widget);
-                if(nav) body.appendChild(nav);
-            }
+            const widget = document.getElementById('be-aura-widget');
+            if(body && widget) body.appendChild(widget);
         };
         if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", move);
-        } else { move(); }
-        // Force secondary check for themes with slow DOM injection
-        setTimeout(move, 500);
+            document.addEventListener("DOMContentLoaded", inject);
+        } else { inject(); }
+        setTimeout(inject, 600);
     })();
     </script>
     <?php
@@ -195,24 +143,21 @@ function get_be_aura_core() {
 }
 
 /**
- * 4. THE INJECTION: We hook into 'wp_body_open' (WordPress 5.2+) 
- * This puts the code at the VERY TOP of the <body> tag.
+ * 4. SYSTEM INJECTION
+ * Forces the AURA logic to fire at the start of the body.
  */
 add_action('wp_body_open', function() {
-    echo get_be_aura_core();
+    echo get_be_aura_core_interface();
 });
 
-/**
- * 5. FALLBACKS
- */
-// Shortcode support: [be_aura_system]
-add_shortcode('be_aura_system', function() { return get_be_aura_core(); });
-
-// Final Safety Hook (if wp_body_open is missing in the theme)
+// Fallback for themes missing the wp_body_open hook
 add_action('wp_footer', function() {
     if (!did_action('wp_body_open')) {
-        echo get_be_aura_core();
+        echo get_be_aura_core_interface();
     }
 }, 1);
 
-?>
+/**
+ * 5. SHORTCODE [aura_terminal]
+ */
+add_shortcode('aura_terminal', 'get_be_aura_core_interface');
