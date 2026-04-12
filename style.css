@@ -1,0 +1,85 @@
+/*
+Theme Name: ScapeRock (AURA Integrated)
+Author: Catch Themes / Bethel Edison
+Description: ScapeRock Music Theme integrated with AURA Infrastructure protocols.
+*/
+
+/* --- LAYER 1: THEME FOUNDATION (ScapeRock Core) --- */
+
+.section-title, .color-scheme-rockmusic .post-wrapper .entry-title {
+	font-family: "Courgette", cursive;
+}
+
+/* Link and Navigation Hover Logic */
+a:hover, a:focus, .main-navigation a:hover, .main-navigation a:focus {
+	color: #5252f2;
+}
+
+/* Button & UI Defaults */
+.button, button, input[type="submit"] {
+	background-image: linear-gradient(to right, #5252f2, #279fff);
+}
+
+/* --- LAYER 2: CUSTOM ARCHITECTURE (Bethel Edison Alignment) --- */
+
+/* 1. FOOTER & CONTAINER BREAKOUT PROTOCOL */
+#footer-widgets, .footer-nav-widgets-wrapper, .site-footer .container, .footer-widgets-container {    
+    max-width: 100% !important;    
+    width: 100% !important;    
+    padding: 0 !important;    
+    margin: 0 !important;    
+    display: block !important;
+}
+
+/* 2. STRICT CENTER ALIGNMENT FOR WIDGETS */
+#footer-widgets .footer-widget-1, .footer-column-1, .widget-column-1 {    
+    width: 100vw !important;    
+    display: flex !important;    
+    flex-direction: column !important;    
+    align-items: center !important; 
+    justify-content: center !important;    
+    margin: 0 auto !important;    
+}
+
+/* 3. MOBILE OPTIMIZATION (Galaxy A06 / View) */
+@media (max-width: 768px) {    
+    #footer-widgets .footer-widget-1 .widget {        
+        max-width: 95% !important;        
+        padding: 10px !important;    
+    }
+}
+
+/* --- LAYER 3: AURA BRANDING (Gold-Glow Protocol) --- */
+
+/* AURA UNIVERSAL IMAGE PROTOCOL v3.1 */
+.entry-content img, .post-archive img, .aura-blog-feed img {
+    position: relative;
+    border-radius: 12px !important; 
+    border: 2px solid #ff9900 !important;
+    box-shadow: 0 0 20px rgba(255, 153, 0, 0.4) !important;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* GLITTER SHIMMER EFFECT */
+.entry-content .wp-block-image::after, .aura-img-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    mix-blend-mode: color-dodge;
+    animation: aura-glitter-drift 6s linear infinite;
+}
+
+@keyframes aura-glitter-drift {
+    0% { background-position: 0px 0px; opacity: 0.8; }
+    100% { background-position: 100px 100px; opacity: 0.8; }
+}
+
+/* CRYPTO NOTIFICATION OVERRIDE */
+.nx-notification, .tp-notification {     
+    z-index: 99999 !important;
+    background: #0B0F14 !important; 
+    border: 2px solid #FFD700 !important;
+    border-radius: 12px !important;
+    }

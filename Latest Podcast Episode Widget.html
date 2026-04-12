@@ -1,0 +1,167 @@
+<div class="aura-podcast-breakout">
+    <div class="aura-podcast-container">
+        
+        <!-- Header Section -->
+        <div class="podcast-header">
+            <div class="on-air-tag">
+                <span class="pulse-ring"></span>
+                <span class="tag-text">ON AIR // RESTORATIVE_SIGNAL</span>
+            </div>
+            <!-- UPDATED: Main Clickable Title -->
+            <a href="https://betheledison.com/podcasts" style="text-decoration: none !important;">
+                <h2 class="podcast-main-title clickable-aura-title">Stories Before The Music</h2>
+            </a>
+            <p class="podcast-tagline">Architecture of Sound & Code — Hosted by Bethel Edison</p>
+        </div>
+
+        <!-- Spotify Live Player Embed -->
+        <div class="spotify-live-frame">
+            <iframe 
+                style="border-radius:20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);" 
+                src="https://open.spotify.com/embed/show/5DGVb7rWmPncJ8QkMvpwt2?utm_source=generator&theme=0" 
+                width="100%" 
+                height="232" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Navigation Shortcut -->
+        <div class="podcast-footer">
+            <a href="https://betheledison.com/podcast-questboard" class="quest-link">
+                <i class="fa-solid fa-lifeboat"></i> SUBMIT A QUESTION FOR THE NEXT EPISODE →
+            </a>
+        </div>
+
+    </div>
+
+    <style>
+        /* ADDED: Hover effect for the clickable title */
+        .clickable-aura-title {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .clickable-aura-title:hover {
+            color: #ff9900 !important;
+            text-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
+        }
+
+        /* FULL WIDTH BREAKOUT */
+        .aura-podcast-breakout {
+            --aura-gold: #ff9900;
+            --aura-deep: #07070c;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: var(--aura-deep);
+            padding: 80px 0;
+            display: block;
+            clear: both;
+            overflow: hidden;
+            border-top: 1px solid #111;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .aura-podcast-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        /* HEADER & TAGS */
+        .on-air-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 153, 0, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .tag-text {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--aura-gold);
+            text-transform: uppercase;
+        }
+
+        .pulse-ring {
+            width: 8px;
+            height: 8px;
+            background: var(--aura-gold);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 10px var(--aura-gold);
+            animation: aura-pulse-broadcast 2s infinite;
+        }
+
+        @keyframes aura-pulse-broadcast {
+            0% { transform: scale(0.9); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.5; }
+            100% { transform: scale(0.9); opacity: 1; }
+        }
+
+        .podcast-main-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0 0 10px 0;
+            line-height: 1;
+        }
+
+        .podcast-tagline {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        /* PLAYER FRAME */
+        .spotify-live-frame {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.4s ease;
+        }
+        
+        .spotify-live-frame:hover {
+            transform: translateY(-5px);
+        }
+
+        /* FOOTER LINK */
+        .podcast-footer {
+            margin-top: 40px;
+        }
+
+        .quest-link {
+            color: #444;
+            text-decoration: none !important;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .quest-link:hover {
+            color: var(--aura-gold);
+            letter-spacing: 3px;
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 600px) {
+            .aura-podcast-breakout { padding: 50px 0; }
+            .podcast-main-title { font-size: 1.8rem; }
+        }
+    </style>
+</div>

@@ -1,0 +1,26 @@
+# --- 1. AURA SECURITY SHIELD (PRIORITY) ---
+.env
+secrets.txt
+config.json
+api-keys.md
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# --- 2. STANDARD WORDPRESS CORE RULES ---
+/wp-admin/
+/wp-includes/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-content/uploads/
+wp-config.php
+.htaccess
+index.php
+license.txt
+readme.html
+wp-*.php
+xmlrpc.php

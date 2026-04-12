@@ -1,0 +1,140 @@
+<div class="be-timer-full-breakout">
+    <style>
+        /* Full Width Force Reset */
+        .be-timer-full-breakout {
+            --gold: #ff9900;
+            --bg-dark: #090913;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: var(--bg-dark);
+            padding: 60px 0;
+            overflow-x: hidden;
+            color: #ffffff;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            text-align: center;
+        }
+
+        .be-timer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .timer-header {
+            font-size: 1.1rem;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .timer-unit {
+            display: flex;
+            flex-direction: column;
+            min-width: 90px;
+        }
+
+        .timer-number {
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 153, 0, 0.3);
+        }
+
+        .timer-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #bbbbbb;
+            margin-top: 10px;
+        }
+
+        .quest-btn {
+            display: inline-block;
+            padding: 16px 45px;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none !important;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quest-btn:hover {
+            background-color: var(--gold);
+            color: #000 !important;
+            box-shadow: 0 0 25px rgba(255, 153, 0, 0.5);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .timer-number { font-size: 2.5rem; }
+            .timer-unit { min-width: 70px; }
+            .timer-display { gap: 10px; }
+            .timer-header { font-size: 0.9rem; letter-spacing: 3px; }
+        }
+    </style>
+
+    <div class="be-timer-content">
+        <div class="timer-header">Stories Before The Music</div>
+        
+        <div class="timer-display" id="be-timer-main">
+            <div class="timer-unit">
+                <span class="timer-number" id="d-main">00</span>
+                <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-number" id="h-main">00</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-number" id="m-main">00</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-unit">
+                <span class="timer-number" id="s-main">00</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+        </div>
+
+        <a href="https://betheledison.com/podcast-questboard" class="quest-btn">Submit Your Questions →</a>
+    </div>
+
+    <script>
+        // Target: Friday, April 17, 2026, at 06:00:00
+        const targetMain = new Date("April 17, 2026 06:00:00").getTime();
+
+        const updateMainTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetMain - now;
+
+            if (distance < 0) {
+                clearInterval(updateMainTimer);
+                document.getElementById("be-timer-main").innerHTML = "<h2 style='color:#ff9900; font-size: 2.5rem;'>EPISODE OUT NOW</h2>";
+                return;
+            }
+
+            document.getElementById("d-main").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById("h-main").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById("m-main").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById("s-main").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }, 1000);
+    </script>
+</div>

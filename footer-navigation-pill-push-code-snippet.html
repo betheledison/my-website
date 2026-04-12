@@ -1,0 +1,48 @@
+<div id="be-floating-nav" style="position: fixed !important; bottom: 100px !important; left: 50% !important; transform: translateX(-50%) translateY(0) !important; z-index: 2147483647 !important; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; width: 95% !important; max-width: 520px !important; opacity: 1 !important;">
+    <div class="aura-pill-nav" style="background: #ffffff !important; display: flex !important; justify-content: space-evenly !important; align-items: center !important; padding: 12px 6px !important; border-radius: 100px !important; box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important; border: 1px solid #ddd !important;">
+        <a href="/music" class="aura-pill-item"><i class="fa-solid fa-music"></i><span>Music</span></a>
+        <a href="/podcasts" class="aura-pill-item"><i class="fa-solid fa-microphone-lines"></i><span>Podcasts</span></a>
+        <a href="/videos" class="aura-pill-item"><i class="fa-solid fa-play"></i><span>Videos</span></a>
+        <a href="/blog" class="aura-pill-item"><i class="fa-solid fa-bullhorn"></i><span>Updates</span></a>
+        <a href="/affiliates" class="aura-pill-item">
+            <div class="pill-icon-wrap"><i class="fa-solid fa-screwdriver-wrench"></i><span class="pill-dot"></span></div>
+            <span>Affiliates</span>
+        </a>
+    </div>
+</div>
+
+<script>
+(function() {
+    let lastScrollY = window.scrollY;
+    const nav = document.getElementById('be-floating-nav');
+
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // If scrolling down and past the header (100px)
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // HIDE: Push it down and fade out
+                nav.style.setProperty('transform', 'translateX(-50%) translateY(200px)', 'important');
+                nav.style.setProperty('opacity', '0', 'important');
+                nav.style.setProperty('pointer-events', 'none', 'important');
+            } else {
+                // SHOW: Pull it back up
+                nav.style.setProperty('transform', 'translateX(-50%) translateY(0)', 'important');
+                nav.style.setProperty('opacity', '1', 'important');
+                nav.style.setProperty('pointer-events', 'auto', 'important');
+            }
+            
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+    }
+})();
+</script>
+
+<style>
+.aura-pill-item { display: flex !important; flex-direction: column !important; align-items: center !important; text-decoration: none !important; color: #111 !important; flex: 1 !important; font-family: sans-serif; }
+.aura-pill-item i { font-size: 18px !important; margin-bottom: 2px !important; }
+.aura-pill-item span { font-size: 9px !important; font-weight: 900 !important; text-transform: uppercase !important; }
+.pill-dot { position: absolute; top: -4px; right: -6px; width: 10px; height: 10px; background: #ff3b30; border-radius: 50%; border: 2px solid #fff; animation: aura-flash 1.5s infinite; }
+@keyframes aura-flash { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+</style>

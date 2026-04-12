@@ -1,0 +1,203 @@
+<header class="be-podcast-header">     <div class="podcast-scanner-line"></div>     <div class="podcast-container">         <div class="podcast-meta">             <div class="meta-item">                 <span class="meta-label">SIGNAL:</span>                 <span class="meta-value">ENCRYPTED_VOICE</span>             </div>             <div class="meta-divider"></div>             <div class="meta-item">                 <span class="meta-label">SOURCE:</span>                 <span class="meta-value">BETHEL EDISON AND OTHER SPEAKERS</span>             </div>         </div>         <div class="podcast-title-wrapper">             <h1 class="podcast-main-title">POD<span>CAST</span></h1>             <div class="on-air-badge">                 <span class="record-dot"></span>                 ON AIR             </div>         </div>         S it good as i added all 6<div class="podcast-desc">             <div class="gold-vertical-accent"></div>             <p>Discussing the <strong>intersection</strong> of Music Business, Blockchain Infrastructure, and the Digital Creator Economy in 2026.</p>         </div>     </div> </header> <style>     .be-podcast-header {         --gold: #ff9900;         --dark-bg: #05050a;                  width: 100vw;         position: relative;         left: 50%;         right: 50%;         margin-left: -50vw;         margin-right: -50vw;         background: var(--dark-bg);         padding: 100px 0 80px 0;         overflow: hidden;         border-bottom: 1px solid rgba(255, 153, 0, 0.3);         /* Strictly sharp edges */     }     /* Moving Scanner Effect */     .podcast-scanner-line {         position: absolute;         top: 0;         left: -100%;         width: 100%;         height: 2px;         background: linear-gradient(90deg, transparent, var(--gold), transparent);         animation: podcast-scan 4s linear infinite;         opacity: 0.5;     }     .podcast-container {         max-width: 1000px;         margin: 0 auto;         padding: 0 30px;         position: relative;         z-index: 5;     }     .podcast-meta {         display: flex;         gap: 20px;         margin-bottom: 30px;         opacity: 0.6;     }     .meta-item {         font-family: 'Inter', monospace;         font-size: 0.65rem;         letter-spacing: 2px;     }     .meta-label { color: var(--gold); font-weight: 900; }     .meta-value { color: #fff; }     .meta-divider {         width: 1px;         height: 10px;         background: rgba(255, 153, 0, 0.4);         align-self: center;     }     .podcast-title-wrapper {         position: relative;         display: inline-block;         margin-bottom: 40px;     }     .podcast-main-title {         font-family: 'Inter', sans-serif;         font-size: clamp(3.5rem, 15vw, 9rem); /* Fully Responsive */         font-weight: 900;         color: #ffffff;         margin: 0;         line-height: 0.9;         letter-spacing: -4px;         text-transform: uppercase;     }     .podcast-main-title span {         color: transparent;         -webkit-text-stroke: 2px var(--gold);         text-shadow: 0 0 20px rgba(255, 153, 0, 0.2);     }     .on-air-badge {         position: absolute;         top: -10px;         right: -20px;         background: #ff0000;         color: #fff;         font-family: 'Inter', sans-serif;         font-size: 0.6rem;         font-weight: 900;         padding: 4px 10px;         display: flex;         align-items: center;         gap: 6px;         letter-spacing: 1px;     }     .record-dot {         width: 6px;         height: 6px;         background: #fff;         animation: podcast-blink 1s infinite;     }     .podcast-desc {         display: flex;         gap: 20px;         max-width: 600px;     }     .gold-vertical-accent {         width: 4px;         height: auto;         background: var(--gold);         box-shadow: 0 0 15px var(--gold);     }     .podcast-desc p {         font-family: 'Inter', sans-serif;         font-size: 1.25rem;         line-height: 1.5;         color: #fff;         margin: 0;     }     .podcast-desc p strong { color: var(--gold); }     @keyframes podcast-scan {         0% { left: -100%; }         100% { left: 100%; }     }     @keyframes podcast-blink {         0%, 100% { opacity: 1; }         50% { opacity: 0; }     }     @media (max-width: 768px) {         .be-podcast-header { padding: 60px 0 40px 0; }         .podcast-meta { flex-direction: column; gap: 5px; }         .meta-divider { display: none; }         .podcast-main-title { letter-spacing: -2px; }         .on-air-badge { top: -20px; right: 0; }         .podcast-desc p { font-size: 1.05rem; }     } </style>
+
+<div class="be-podcast-full-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Full Width Force Reset */
+        .be-podcast-full-width {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #090913;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            padding: 40px 0;
+        }
+
+        .be-podcast-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .episode-row {
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            border-bottom: 1px solid #1a1a2e;
+            padding-bottom: 60px;
+        }
+
+        .episode-text { text-align: left; }
+        .episode-meta { color: #ff9900; font-weight: 900; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase; }
+        .episode-title { font-size: 2.2rem; color: #fff; margin-bottom: 15px; line-height: 1.2; font-weight: 800; }
+        .episode-desc { color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px; }
+
+        .apple-embed-container {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            background: #111;
+            border: 1px solid #2c2c44;
+        }
+
+        @media (max-width: 900px) {
+            .episode-row { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+            .episode-text { text-align: center; }
+            .episode-title { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="be-podcast-container">
+        <div class="episode-row">
+            <div class="episode-text">
+                <p class="episode-meta">Featured Story</p>
+                <h2 class="episode-title">The Miraculous Signal: Beyond the Terminal</h2>
+                <p class="episode-desc">Bethel Edison explores the source code of miracles and the divine strategy needed to build global infrastructure. Learn how to align your faith with professional execution.</p>
+            </div>
+            <div class="apple-embed-container">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/ng/podcast/the-miraculous-signal-beyond-the-terminal-divine/id1865680431?i=1000759018967&theme=dark"></iframe>
+            </div>
+        </div>
+
+        <div class="episode-row">
+            <div class="episode-text">
+                <p class="episode-meta">Episode 04</p>
+                <h2 class="episode-title">Spotting Real Opportunities in the Market</h2>
+                <p class="episode-desc">Practical ways to identify profitable opportunities in music, business, and digital finance while staying grounded in faith and purpose.</p>
+            </div>
+            <div class="apple-embed-container">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/ng/podcast/spotting-real-opportunities-in-the-market-before/id1865680431?i=1000753506796&theme=dark"></iframe>
+            </div>
+        </div>
+
+        <div class="episode-row">
+            <div class="episode-text">
+                <p class="episode-meta">Episode 03</p>
+                <h2 class="episode-title">Building Quietly While Everything Else Moves</h2>
+                <p class="episode-desc">A solo conversation about building alone, staying consistent without noise, and making progress without rushing the process.</p>
+            </div>
+            <div class="apple-embed-container">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/ng/podcast/building-quietly-while-everything-else-keeps-moving/id1865680431?i=1000747342383&theme=dark"></iframe>
+            </div>
+        </div>
+
+        <div class="episode-row">
+            <div class="episode-text">
+                <p class="episode-meta">Episode 02</p>
+                <h2 class="episode-title">Real Conversation: Music, Money, Faith</h2>
+                <p class="episode-desc">An honest discussion on daily habits, managing finances as a creative, and staying visible without burning out.</p>
+            </div>
+            <div class="apple-embed-container">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/ng/podcast/real-conversation-on-music-money-faith-and-growth-no/id1865680431?i=1000744396961&theme=dark"></iframe>
+            </div>
+        </div>
+
+        <div class="episode-row">
+            <div class="episode-text">
+                <p class="episode-meta">Episode 01</p>
+                <h2 class="episode-title">Stories Before The Music</h2>
+                <p class="episode-desc">The narrative that sets the stage. Bethel Edison takes you behind the creative process to share the purpose that shaped his sound.</p>
+            </div>
+            <div class="apple-embed-container">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/ng/podcast/stories-before-the-music/id1865680431?i=1000743487713&theme=dark"></iframe>
+            </div>
+        </div>
+
+        <div class="episode-row" style="border-bottom: none;">
+            <div class="episode-text">
+                <p class="episode-meta">Trailer</p>
+                <h2 class="episode-title">Before The Music: Series Intro</h2>
+                <p class="episode-desc">The beginning of a journey where faith meets creativity and the stories behind the songs finally have a home.</p>
+            </div>
+            <div class="apple-embed-container">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/ng/podcast/before-the-music/id1865680431?i=1000743412587&theme=dark"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .be-footer-cta {
+        background: #14142b;
+        padding: 80px 20px;
+        text-align: center;
+        border-radius: 30px;
+        border: 1px solid #ff9900;
+        margin-top: 80px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    .be-footer-cta h2 {
+        color: #ff9900;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+
+    .be-footer-cta p {
+        color: #fff;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+        opacity: 0.9;
+    }
+
+    /* Responsive Gold-Glow Button */
+    .gold-glow-btn {
+        display: inline-block;
+        background: #ff9900;
+        color: #000 !important;
+        padding: 20px 50px;
+        border-radius: 50px;
+        font-weight: 900;
+        text-decoration: none !important;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 1.1rem;
+        position: relative;
+        transition: all 0.3s ease;
+        border: 2px solid #ff9900;
+        box-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
+        animation: subtlePulse 3s infinite;
+    }
+
+    .gold-glow-btn:hover {
+        background: transparent;
+        color: #ff9900 !important;
+        box-shadow: 0 0 35px rgba(255, 153, 0, 0.7);
+        transform: translateY(-5px);
+    }
+
+    @keyframes subtlePulse {
+        0% { box-shadow: 0 0 15px rgba(255, 153, 0, 0.4); }
+        50% { box-shadow: 0 0 25px rgba(255, 153, 0, 0.6); }
+        100% { box-shadow: 0 0 15px rgba(255, 153, 0, 0.4); }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 600px) {
+        .be-footer-cta h2 { font-size: 1.8rem; letter-spacing: 3px; }
+        .gold-glow-btn {
+            padding: 16px 35px;
+            font-size: 0.9rem;
+            width: 80%; /* Takes up more space on small screens */
+        }
+    }
+</style>
+
+<div class="be-footer-cta">
+    <h2>Sign up for our updates</h2>
+    <p>Get exclusive stories, early access to segments, and private community updates directly from Bethel Edison.</p>
+    
+    <a href="https://betheledison.com/register" class="gold-glow-btn">
+        Sign Up Now
+    </a>
+</div>

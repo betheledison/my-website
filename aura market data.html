@@ -1,0 +1,94 @@
+<div class="aura-footer-extras" style="
+    position: relative !important; 
+    width: 100vw !important; 
+    left: 50% !important; 
+    right: 50% !important; 
+    margin-left: -50vw !important; 
+    margin-right: -50vw !important; 
+    background: #05050a !important; 
+    border-top: 1px solid #1a1a2e !important;
+    padding: 60px 0 !important;
+    display: block !important;
+    clear: both !important;
+    color: #fff !important;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; padding: 0 20px;">
+        
+        <div class="aura-terminal-box" style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,153,0,0.15); text-align: left; position: relative;">
+            
+            <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                <span class="aura-status-dot"></span>
+                <h4 style="margin: 0; font-size: 11px; letter-spacing: 3px; color: #ff9900; text-transform: uppercase; font-weight: 900;">AURA_MARKET_ALPHA</h4>
+            </div>
+            
+            <div id="aura-prices-feed" style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
+                    <span style="font-weight: 800; color: #888; font-size: 13px;">BTC/USDT</span>
+                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$72,866.12</span>
+                </div>
+                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
+                    <span style="font-weight: 800; color: #888; font-size: 13px;">ETH/USDT</span>
+                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$2,241.36</span>
+                </div>
+                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
+                    <span style="font-weight: 800; color: #888; font-size: 13px;">BNB/USDT</span>
+                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$605.49</span>
+                </div>
+                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
+                    <span style="font-weight: 800; color: #888; font-size: 13px;">SOL/USDT</span>
+                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$84.63</span>
+                </div>
+                <div class="price-row meme-trigger" data-meme="pi" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <span style="font-weight: 800; color: #ff9900; font-size: 13px;">PI/USDT <i class="fa-solid fa-circle-nodes" style="font-size: 10px; opacity: 0.5;"></i></span>
+                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$0.1674</span>
+                </div>
+            </div>
+            
+            <p id="aura-log-text" style="font-size: 9px; color: #333; margin-top: 20px; letter-spacing: 2px; font-weight: 800;">// PROTOCOL_21_ACTIVE // BINANCE_PULSE_ESTABLISHED</p>
+        </div>    
+    </div>
+
+    <style>
+        .aura-status-dot { width: 10px; height: 10px; background: #00ff88; border-radius: 50%; display: inline-block; margin-right: 12px; box-shadow: 0 0 12px #00ff88; animation: aura-blink 1.8s ease-in-out infinite; }
+        @keyframes aura-blink { 0%, 100% { opacity: 1; transform: scale(1); filter: brightness(1.2); } 50% { opacity: 0.4; transform: scale(0.85); filter: brightness(0.8); } }
+        .aura-meme-float { position: fixed; pointer-events: none; z-index: 999999; font-size: 40px; animation: floatUp 3s forwards linear; }
+        @keyframes floatUp { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(-250px) rotate(360deg); opacity: 0; } }
+        .price-value { transition: color 0.3s ease; }
+        .price-up { color: #00ff88 !important; text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
+    </style>
+
+    <script>
+        (function() {
+            const dot = document.querySelector('.aura-status-dot');
+            setInterval(() => { dot.style.boxShadow = Math.random() > 0.5 ? '0 0 20px #00ff88' : '0 0 8px #00ff88'; }, 1200);
+
+            const trigger = document.querySelector('.meme-trigger');
+            const logText = document.getElementById('aura-log-text');
+            trigger.addEventListener('click', () => {
+                const icons = ['🐕', '🐸', '🚀', '🥧', '💰', '📈', '⚡'];
+                for(let i=0; i<12; i++) {
+                    setTimeout(() => {
+                        const el = document.createElement('div');
+                        el.className = 'aura-meme-float';
+                        el.innerText = icons[Math.floor(Math.random() * icons.length)];
+                        el.style.left = Math.random() * 95 + 'vw';
+                        el.style.top = '85vh';
+                        document.body.appendChild(el);
+                        setTimeout(() => el.remove(), 3000);
+                    }, i * 120);
+                }
+                logText.innerText = "// PIONEER_MODE_ENGAGED // MAINNET_VELOCITY_MAX";
+                logText.style.color = "#ff9900";
+            });
+
+            setInterval(() => {
+                const prices = document.querySelectorAll('.price-value');
+                const p = prices[Math.floor(Math.random() * prices.length)];
+                p.classList.add('price-up');
+                setTimeout(() => p.classList.remove('price-up'), 1000);
+            }, 3500);
+        })();
+    </script>
+</div>

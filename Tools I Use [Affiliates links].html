@@ -1,0 +1,157 @@
+<div class="be-breakout-wrapper">
+    <div class="be-tools-full-width">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+            /* THE FORCE FIX: BREAKOUT OF THEME BOX */
+            .be-breakout-wrapper {
+                width: 100vw !important;
+                position: relative !important;
+                left: 50% !important;
+                right: 50% !important;
+                margin-left: -50vw !important;
+                margin-right: -50vw !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                box-sizing: border-box !important;
+                padding: 0 10px; /* Slight breathing room for mobile */
+            }
+
+            .be-tools-full-width {
+                background: #14142b;
+                border: 1px solid #2c2c44;
+                border-radius: 20px;
+                padding: 25px 20px;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                width: 100% !important;
+                max-width: 1200px !important; /* Cap it on large screens so it stays clean */
+                transition: 0.3s ease;
+                box-sizing: border-box;
+                z-index: 5;
+            }
+
+            .be-tools-full-width:hover {
+                border-color: #ff9900;
+                box-shadow: 0 10px 40px rgba(255, 153, 0, 0.2);
+            }
+
+            .widget-header {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #2c2c44;
+                padding-bottom: 15px;
+            }
+
+            .widget-header i { color: #ff9900; font-size: 1.4rem; }
+            .widget-header h3 {
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                margin: 0;
+            }
+
+            .tools-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Automatically makes rows/columns based on screen size */
+                gap: 12px;
+            }
+
+            .tool-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #090913;
+                padding: 15px 20px;
+                border-radius: 12px;
+                text-decoration: none !important;
+                border: 1px solid transparent;
+                transition: 0.3s;
+            }
+
+            .tool-info { display: flex; align-items: center; gap: 12px; }
+            .tool-info span { color: #fff; font-weight: 700; font-size: 0.9rem; }
+
+            .tool-tag {
+                font-size: 0.65rem;
+                color: #ff9900;
+                background: rgba(255, 153, 0, 0.1);
+                padding: 2px 8px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            .tool-item:hover {
+                border-color: #ff9900;
+                transform: translateY(-3px);
+                background: #1a1a35;
+            }
+
+            .view-all-link {
+                display: block;
+                text-align: center;
+                margin-top: 25px;
+                color: #ff9900;
+                text-decoration: none;
+                font-size: 0.8rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                transition: 0.3s;
+            }
+
+            .view-all-link:hover { letter-spacing: 3px; }
+
+            /* MOBILE FIX FOR S24 */
+            @media (max-width: 600px) {
+                .tools-list { grid-template-columns: 1fr; }
+                .be-tools-full-width { border-radius: 0; border-left: none; border-right: none; }
+            }
+        </style>
+
+        <div class="widget-header">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Tools I Use</h3>
+        </div>
+
+        <div class="tools-list">
+            <a href="https://www.getcleva.com/refer/BETH341" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Cleva Banking</span>
+                    <div class="tool-tag">USD</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="https://roqqu.sng.link/F336c/rb1jy/r_190ccff6b2" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Roqqu Exchange</span>
+                    <div class="tool-tag">Fiat</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0040GWR5NC" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Binance Pro</span>
+                    <div class="tool-tag">Crypto</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="https://chipper.cash/invite/H5BWG" class="tool-item" target="_blank">
+                <div class="tool-info">
+                    <span>Chipper Cash</span>
+                    <div class="tool-tag">Cards</div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+
+        <a href="https://betheledison.com/affiliates" class="view-all-link">View Full Strategy →</a>
+    </div>
+</div>

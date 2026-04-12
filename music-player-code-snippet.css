@@ -1,0 +1,19 @@
+/* 1. SHRINK THE MUSIC PLAYER (COLLAPSED STATE) */#be-aura-widget.is-collapsed {    /* MATCHING MENU DRAWER SIZE */    width: 50px !important;    height: 50px !important;    min-width: 50px !important;    min-height: 50px !important;        /* ALIGNMENT SYNC (75px Down / 20px Side) */    top: 75px !important;    left: 20px !important;        /* STYLE SYNC */    border-radius: 50% !important;    background: #ff9900 !important;    padding: 0 !important;    display: flex !important;    align-items: center !important;    justify-content: center !important;    border: none !important;    box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;}
+
+
+/* 2. ADJUST THE MUSIC ICON SIZE */#be-aura-widget.is-collapsed #toggleIcon {    font-size: 1.2rem !important; /* Slightly smaller to fit the 50px circle */    margin: 0 !important;    line-height: 1 !important;    color: #000 !important;}
+
+
+/* 3. ENSURE MENU DRAWER MATCHES EXACTLY */.ast-mobile-menu-trigger, .main-header-menu-toggle,.ast-button-wrap {    width: 50px !important;    height: 50px !important;    min-width: 50px !important;    min-height: 50px !important;    top: 75px !important;    right: 20px !important;    background-color: #ff9900 !important;    border-radius: 50% !important;    display: flex !important;    align-items: center !important;    justify-content: center !important;    border: none !important;    padding: 0 !important;}
+
+/* 4. SYNC THE MENU ICON SIZE */.ast-mobile-menu-trigger .ast-icon,.ast-icon.icon-menu-bars svg {    width: 22px !important;    height: 22px !important;    fill: #000 !important;}
+
+/* 1. UNIVERSAL SIZE LOCK: 56PX DIAMETER */#be-aura-widget.is-collapsed,.ast-mobile-menu-trigger,.main-header-menu-toggle,.ast-button-wrap {    /* ABSOLUTE DIMENSIONS */    width: 56px !important;    height: 56px !important;    min-width: 56px !important;    min-height: 56px !important;    max-width: 56px !important;    max-height: 56px !important;        /* HORIZONTAL ALIGNMENT (75px Down) */    top: 75px !important;    position: fixed !important;        /* VISUAL STYLE SYNC */    background: #ff9900 !important;    background-color: #ff9900 !important;    border-radius: 50% !important;    display: flex !important;    align-items: center !important;    justify-content: center !important;    padding: 0 !important;    margin: 0 !important;    border: none !important;    box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;    z-index: 2147483647 !important;}
+
+/* 2. PLAYER POSITION (LEFT) */#be-aura-widget.is-collapsed {    left: 20px !important;}
+
+/* 3. MENU POSITION (RIGHT) */.ast-mobile-menu-trigger,.main-header-menu-toggle {    right: 20px !important;}
+
+/* 4. ICON WEIGHT SYNC (24PX) *//* This ensures the music note and hamburger lines look identical in size */#be-aura-widget #toggleIcon,#be-aura-widget i,.ast-mobile-menu-trigger .ast-icon,.ast-icon.icon-menu-bars svg {    width: 24px !important;    height: 24px !important;    font-size: 24px !important;    line-height: 24px !important;    fill: #000 !important;    color: #000 !important;    display: flex !important;    align-items: center !important;    justify-content: center !important;    margin: 0 auto !important;}
+
+/* 5. KILL THEME OVERRIDES */.ast-button-wrap .menu-toggle {    padding: 0 !important;}

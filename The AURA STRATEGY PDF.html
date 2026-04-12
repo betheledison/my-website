@@ -1,0 +1,202 @@
+<div class="be-aura-sales-card">
+    <div class="aura-card-inner">
+        <div class="aura-status-bar">
+            <span class="status-dot"></span>
+            <span class="status-text">SIGNAL STATUS: OPERATIONAL // V2.6</span>
+        </div>
+
+        <h2 class="aura-product-title">THE AURA STRATEGY</h2>
+        <p class="aura-product-tagline">The Global Creator’s Manual for USD Sovereignty & Digital Architecture</p>
+        
+        <div class="aura-divider"></div>
+
+        <ul class="aura-specs">
+            <li><i class="fa-solid fa-check"></i> Cleva & Binance Global Setup</li>
+            <li><i class="fa-solid fa-check"></i> V2.6 Terminal Web Blueprints</li>
+            <li><i class="fa-solid fa-check"></i> The Miraculous Signal Mindset</li>
+        </ul>
+
+        <div class="aura-action-zone">
+            <div class="aura-price-container">
+                <div class="aura-price js-price-pulse" id="auraPrice">
+                    <span class="currency">$</span>25 <span class="ngn-alt">/ 38,000 NGN</span>
+                </div>
+            </div>
+            
+            <a href="https://paystack.shop/pay/the-aura-strategy" class="be-aura-button" target="_blank">
+                DOWNLOAD THE ARCHITECTURE <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://betheledison.com/shop" class="be-aura-store-button">
+                GO TO STORE <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 1. THE CARD CONTAINER - SET TO FULL EXPANSION */
+.be-aura-sales-card {
+    background: #05050a;
+    border: 2px solid #ff9900;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%; /* Spans full width */
+    margin: 20px 0; /* Aligns to start, no 'auto' centering */
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 20px rgba(255, 153, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* 2. THE STATUS BAR */
+.aura-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+    animation: pulse 2s infinite;
+}
+.status-text {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #ff9900;
+}
+
+/* 3. TEXT STYLES */
+.aura-product-title {
+    font-size: clamp(1.8rem, 5vw, 3.5rem); /* Scales with screen width */
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    letter-spacing: -1px;
+}
+.aura-product-tagline {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.aura-divider {
+    height: 1px;
+    background: linear-gradient(90deg, #ff9900 0%, transparent 100%);
+    margin-bottom: 30px;
+}
+
+/* 4. SPECS LIST */
+.aura-specs {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.aura-specs li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.aura-specs i { color: #ff9900; }
+
+/* 5. PRICE */
+.aura-price-container {
+    margin-bottom: 15px;
+}
+.aura-price {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #00ff88;
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+.ngn-alt { 
+    font-size: 1.1rem; 
+    color: #00ff88; 
+    opacity: 0.6; 
+    font-weight: 400; 
+    margin-left: 5px;
+}
+
+/* 6. BUTTONS */
+.aura-action-zone {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.be-aura-button {
+    background: #ff9900;
+    color: #000000 !important;
+    text-decoration: none !important;
+    padding: 22px 30px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.be-aura-store-button {
+    background: transparent;
+    color: #ff9900 !important;
+    border: 1px solid #ff9900;
+    text-decoration: none !important;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* HOVER EFFECTS */
+.be-aura-button:hover {
+    transform: translateY(-3px);
+    background: #ffaa22;
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.aura-glitch-active {
+    text-shadow: 2px 0 #ff9900, -2px 0 #00ffff;
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .be-aura-sales-card { padding: 25px; }
+}
+</style>
+
+<script>
+setInterval(() => {
+    const price = document.getElementById('auraPrice');
+    if(price) {
+        price.classList.add('aura-glitch-active');
+        setTimeout(() => {
+            price.classList.remove('aura-glitch-active');
+        }, 120);
+    }
+}, 3500);
+</script>

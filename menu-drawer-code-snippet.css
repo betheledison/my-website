@@ -1,0 +1,52 @@
+/* 1. THE FORCE OVERRIDE - TARGETING THE DRAWER */.ast-mobile-popup-drawer, .menu-drawer-container, .elementor-menu-cart__container, .mobile-menu-open,#ast-mobile-popup,.off-canvas-sidebar {    display: block !important;    /* THE MAXIMUM INTEGER POSSIBLE */    z-index: 2147483647 !important;     position: fixed !important;    /* GPU LIFT: 1px higher than the player's 9999px */    transform: translateZ(10000px) !important;     /* SOLID SKIN: Blocks the player from showing through */    background-color: #05050a !important;     visibility: visible !important;}
+
+
+/* 2. THE OVERLAY (THE DARK BACKGROUND BEHIND MENU) */.ast-mobile-popup-overlay, .menu-overlay, .drawer-backdrop {    z-index: 2147483646 !imortant; /* Just below the drawer, but above the player */    background-color: rgba(0, 0, 0, 0.9) !important;    backdrop-filter: blur(10px) !important;    transform: translateZ(9999px) !important;}
+
+
+/* 3. NEUTRALIZING THE PLAYER WHEN MENU IS ACTIVE *//* If your menu adds a class to the <body> when open, use this to hide the player */body.ast-main-header-nav-open #be-aura-widget,body.menu-open #be-aura-widget,body.off-canvas-active #be-aura-widget {    opacity: 0.2 !important; /* Dims the player so menu is the focus */    pointer-events: none !important;}/* FORCE SOLID SKIN - ZERO TRANSPARENCY */.ast-mobile-popup-drawer, .ast-mobile-popup-inner,.menu-drawer-container, .mobile-menu-wrapper,#ast-mobile-popup,.off-canvas-sidebar,.elementor-menu-cart__container {    /* PURE OBSIDIAN - NO GHOSTING */    background-color: #05050a !important;     background: #05050a !important;        /* KILL ALL TRANSPARENCY EFFECTS */    opacity: 1 !important;    backdrop-filter: none !important;    -webkit-backdrop-filter: none !important;        /* THE TITANIUM DEPTH LOCK */    z-index: 2147483647 !important;    transform: translateZ(10001px) !important;    box-shadow: 20px 0 50px rgba(0,0,0,1) !important;}
+
+
+/* ENSURE THE INDIVIDUAL MENU ITEMS ALSO HAVE SOLID BACKGROUNDS */.ast-mobile-popup-content, .main-navigation ul, .menu-drawer-inner {    background-color: #05050a !important;    opacity: 1 !important;}
+
+
+/* THE OVERLAY (THE SPACE NEXT TO THE MENU) */.ast-mobile-popup-overlay, .menu-overlay, .drawer-backdrop {    /* Keep this dark but slightly see-through so the user knows they can click out */    background-color: rgba(0, 0, 0, 0.95) !important;    backdrop-filter: blur(15px) !important;    z-index: 2147483646 !important;    transform: translateZ(10000px) !important;}
+
+
+/* 1. THE NUCLEAR STRIKE ON TRANSPARENCY */#ast-mobile-popup,.ast-mobile-popup-drawer,.ast-mobile-popup-inner,.ast-mobile-popup-content,.menu-drawer-container,.off-canvas-sidebar,.mobile-menu-wrapper {    /* KILL ALL SEE-THROUGH EFFECTS */    background-color: #05050a !important;     background: #05050a !important;    background-image: none !important;    backdrop-filter: none !important;    -webkit-backdrop-filter: none !important;    opacity: 1 !important;        
+	
+	
+	/* 2. THE TITANIUM LAYER LOCK */    /* This matches the Player and Pill's maximum possible priority */    z-index: 2147483647 !important;     position: fixed !important;    /* Force GPU to render this 1px closer to the user than the Pill */    transform: translateZ(10001px) !important;        /* REMOVE GLOWS THAT LOOK LIKE LEAKING LIGHT */    box-shadow: none !important;    border: none !important;}
+
+
+/* 3. FORCE EVERY CHILD ELEMENT TO BE SOLID *//* This ensures no "ghosting" from the links or sub-menus */.ast-mobile-popup-content *, .main-navigation ul, .main-navigation li,.ast-mobile-nav-menu-wrapper {    background-color: #05050a !important;    background: #05050a !important;    opacity: 1 !important;    color: #ff9900 !important; /* Aura Gold for text visibility */}
+
+
+/* 4. THE OVERLAY (THE DARKNESS NEXT TO THE MENU) */.ast-mobile-popup-overlay,.menu-overlay {    /* Near-perfect black to hide the pill/player behind it */    background-color: rgba(0, 0, 0, 0.99) !important;     backdrop-filter: blur(30px) !important;    z-index: 2147483646 !important;    transform: translateZ(10000px) !important;    opacity: 1 !important;}
+
+
+/* COMPLETELY REMOVE THE MENU DRAWER & TRIGGER BUTTON */.menu-toggle, .ast-mobile-menu-trigger, #ast-mobile-header-menu,#ast-mobile-popup,.ast-mobile-popup-drawer,.ast-mobile-popup-overlay {    display: none !important;    visibility: hidden !important;    pointer-events: none !important;    height: 0 !important;    width: 0 !important;    opacity: 0 !important;    position: absolute !important;    left: -9999px !important; /* Send it off-screen */}
+
+
+/* RECLAIM HEADER SPACE (Optional) *//* This ensures your logo or site title centers perfectly now that the menu is gone */.site-header-section.site-header-menu-section {    display: none !important;}
+
+
+.site-header, #masthead {    background-color: #05050a !important; /* Solid Obsidian */    border-bottom: 1px solid #ff9900; /* Gold accent line */    position: relative !important;    z-index: 100 !important; /* Stays behind the Player/Pill */}
+
+
+/* 1. KILL THE GOLD LINE PASSING THROUGH THE PLAYER */.site-header, #masthead, .ast-primary-header-bar, .main-header-bar {    border-bottom: none !important;    box-shadow: none !important;    background-color: #05050a !important;}
+
+
+/* 2. REMOVE THE SECONDARY HEADER WRAPPER (THE SOURCE OF THE LINE) */.header-main-layout-1, .ast-header-break-point .main-header-bar {    border: none !important;}
+
+/* 3. FINAL MENU REMOVAL (FORCE CLEANUP) *//* This removes the orange menu circle on the right entirely */.ast-mobile-menu-trigger, .main-header-menu-toggle,.ast-button-wrap {    display: none !important;    visibility: hidden !important;}
+
+/* 4. RE-CENTER THE TOP BAR TEXT (Optional) *//* Since the menu is gone, this ensures your "Intensive Deployment" text looks balanced */.site-below-header-wrap {    border-top: none !important;}
+
+/* 1. THE VERTICAL ALIGNMENT (THE PUSH DOWN) */.ast-mobile-menu-trigger, .main-header-menu-toggle,.ast-button-wrap {    /* LOCK TO THE 75PX LINE TO MATCH PLAYER */    position: fixed !important;    top: 75px !important;     right: 20px !important; /* Balanced with Player's 20px left */        /* 2. THE DIMENSION LOCK (MATCHING PLAYER SIZE) */    width: 60px !important;    height: 60px !important;    min-width: 60px !important;    min-height: 60px !important;        /* 3. THE STYLE SYNC */    background-color: #ff9900 !important;    border-radius: 50% !important;    display: flex !important;    align-items: center !important;    justify-content: center !important;    z-index: 2147483647 !important;    margin: 0 !important;    padding: 0 !important;    box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;    border: none !important;}
+
+/* 4. ICON CENTERING */.ast-mobile-menu-trigger .ast-icon,.ast-icon.icon-menu-bars svg {    fill: #000 !important;    color: #000 !important;    width: 28px !important;    height: 28px !important;    margin: 0 !important;}
+
+/* 5. PREVENT HEADER FROM OVERLAPPING THE TRIGGER */.site-header, #masthead {    z-index: 100 !important;}
+
+/* 6. HIDE ANY REDUNDANT MENU BUTTONS LEFT IN THE HEADER */.site-header-section.site-header-menu-section {    opacity: 0 !important;    pointer-events: none !important;}
