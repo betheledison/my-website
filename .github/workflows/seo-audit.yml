@@ -1,0 +1,28 @@
+name: AURA Weekly SEO Audit
+
+on:
+  schedule:
+    # Runs at 00:00 every Sunday night (UTC)
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # This allows you to run it manually anytime for a test
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install requests beautifulsoup4
+
+    - name: Run SEO Auditor
+      # This points to the script location you shared earlier
+      run: python "AURA TERMINAL V2.6/seo_auditor.py"
