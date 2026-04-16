@@ -30,3 +30,9 @@ This repository serves as a **Technical Ledger** for the Bethel Edison brand. It
 
 ---
 © 2026 BETHEL EDISON // SIGNAL CONTROL. All systems active.
+
+## 💰 Monetization Roadmap (Phase 2)
+- [ ] **Gating:** Lock Category 111 for "Aura Angel" members only.
+- [ ] **Vault:** Release the 9/21 MA Trading Manual & Bot Lite Code.
+- [ ] **Analytics:** Implement weekly performance reports via Pydroid automation.
+- [ ] **Community:** Launch private Discord/Telegram for signal discussion.
