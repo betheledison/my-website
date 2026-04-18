@@ -1,4 +1,4 @@
-# ⚡ AURA TERMINAL // Bethel Edison Infrastructure
+ ⚡ AURA TERMINAL // Bethel Edison Infrastructure
 
 Welcome to the central repository for the **AURA digital ecosystem**. This project houses the technical framework, custom UI protocols, and decentralized utility scripts powering the [betheledison.com](https://betheledison.com) platform.
 
@@ -25,14 +25,16 @@ This repository serves as a **Technical Ledger** for the Bethel Edison brand. It
 - [ ] **Phase 2:** VIP Assets - Deploy gated tools and signal bots for subscribers.
 - [ ] **Phase 3:** Scaling - Migrate high-traffic Pydroid scripts to cloud hosting.
 
+## 💰 Monetization Roadmap (Phase 2)
+- [ ] **Gating:** Lock Category 111 for "Aura Angel" members only.
+- [ ] **Vault:** Release the 9/21 MA Trading Manual & Bot Lite Code.
+- [ ] **Analytics:** Implement weekly performance reports via Pydroid automation.
+- [ ] **Community:** Launch private Discord/Telegram for signal discussion.
+
 ## 📡 Protocol Note
 > "Before you trust, you have to listen. But unless Christ’s Word is preached, there’s nothing to listen to." — **Romans 10:17**
 
 ---
 © 2026 BETHEL EDISON // SIGNAL CONTROL. All systems active.
 
-## 💰 Monetization Roadmap (Phase 2)
-- [ ] **Gating:** Lock Category 111 for "Aura Angel" members only.
-- [ ] **Vault:** Release the 9/21 MA Trading Manual & Bot Lite Code.
-- [ ] **Analytics:** Implement weekly performance reports via Pydroid automation.
-- [ ] **Community:** Launch private Discord/Telegram for signal discussion.
+
