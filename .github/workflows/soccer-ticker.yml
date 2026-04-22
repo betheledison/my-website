@@ -1,0 +1,21 @@
+name: AURA Soccer Ticker Update
+on:
+  schedule:
+    - cron: '0 */2 * * *' # Runs every 2 hours
+  workflow_dispatch: # Allows you to run it manually from your phone
+
+jobs:
+  update-ticker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run Bot
+        env:
+          WP_APP_PASS: ${{ secrets.WP_APP_PASS }}
+        run: python "AURA TERMINAL V2.6/soccer_ticker_bot.py"
