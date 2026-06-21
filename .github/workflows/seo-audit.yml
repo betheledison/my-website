@@ -9,8 +9,15 @@ on:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    
+    # Grants write permission to actions so it can refresh the 60-day inactivity timer
+    permissions:
+      actions: write
 
     steps:
+    - name: Prevent workflow from being disabled
+      uses: liskin/gh-workflow-keepalive@v1
+
     - name: Checkout Code
       uses: actions/checkout@v4
 
