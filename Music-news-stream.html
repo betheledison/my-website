@@ -1,0 +1,160 @@
+<header class="be-stream-cornerstone">     <div class="digital-noise-overlay"></div>     <div class="cornerstone-container">                  <div class="stream-header-top">             <div class="transmission-code">                 <span class="code-label">X-SIGNAL:</span>                 <span class="code-value" id="signal-hex">0xBE_2026_AUR</span>             </div>             <div class="live-rec">                 <span class="rec-dot"></span>                 <span>STREAMING_LIVE</span>             </div>         </div>         <div class="title-architecture">             <span class="title-bg-ghost">NEWS</span>             <h1 class="main-stream-title">                 STRE<span>A</span>M             </h1>         </div>         <div class="stream-data-bar">             <div class="data-block">                 <span class="data-label">BUFFER_STATUS</span>                 <div class="progress-track"><div class="progress-fill"></div></div>             </div>             <div class="data-block">                 <span class="data-label">BITRATE</span>                 <span class="data-value">920 KBPS</span>             </div>             <div class="data-block">                 <span class="data-label">LATENCY</span>                 <span class="data-value">0.02ms</span>             </div>         </div>         <div class="music-infrastructure">             <div class="glow-pillar"></div>             <p>The real-time narrative layer for <strong>The Aura Angels</strong>. <br>Direct frequency for global news, cultural architecture, and sonic updates.</p>         </div>         <div class="music-specs">             <div class="spec-item"><span>ENGINE:</span> MEDIA_CORE_v3</div>             <div class="spec-divider"></div>             <div class="spec-item"><span>FREQUENCY:</span> 44.1kHz</div>             <div class="spec-divider"></div>             <div class="spec-item"><span>ACCESS:</span> PUBLIC_ENCRYPTED</div>         </div>     </div> </header> <style>     .be-stream-cornerstone {         --gold: #ff9900;         --deep-dark: #05050a;         --border-muted: rgba(255, 153, 0, 0.2);                  width: 100vw;         position: relative;         left: 50%;         right: 50%;         margin-left: -50vw;         margin-right: -50vw;         background: var(--deep-dark);         padding: 120px 0 80px 0;         overflow: hidden;         border-bottom: 2px solid var(--gold);     }     .digital-noise-overlay {         position: absolute;         top: 0; left: 0; width: 100%; height: 100%;         background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');         opacity: 0.1;         pointer-events: none;     }     .cornerstone-container {         max-width: 1200px;         margin: 0 auto;         padding: 0 40px;         position: relative;         z-index: 5;     }     .stream-header-top {         display: flex;         justify-content: space-between;         margin-bottom: 20px;         font-family: 'Inter', monospace;     }     .transmission-code { font-size: 0.65rem; letter-spacing: 2px; }     .code-label { color: #555; }     .code-value { color: var(--gold); font-weight: 900; }     .live-rec {         display: flex;         align-items: center;         gap: 8px;         font-size: 0.65rem;         font-weight: 900;         letter-spacing: 2px;         color: #fff;     }     .rec-dot {         width: 8px; height: 8px;         background: #ff0000;         border-radius: 50%;         animation: rec-pulse 1s infinite;     }     /* Title Styling */     .title-architecture { position: relative; display: inline-block; width: 100%; }     .title-bg-ghost {         position: absolute;         top: -40px;         left: -10px;         font-size: 8rem;         font-weight: 900;         color: rgba(255, 255, 255, 0.03);         letter-spacing: 20px;         z-index: -1;         user-select: none;     }     .main-stream-title {         font-family: 'Inter', sans-serif;         font-size: clamp(4rem, 18vw, 11rem);         font-weight: 900;         color: #fff;         margin: 0;         line-height: 0.8;         letter-spacing: -6px;         text-transform: uppercase;     }     .main-stream-title span {         color: var(--gold);         position: relative;         text-shadow: 0 0 40px rgba(255, 153, 0, 0.4);     }     /* Data Bar */     .stream-data-bar {         display: flex;         gap: 40px;         margin-top: 30px;         padding: 15px 0;         border-bottom: 1px solid var(--border-muted);     }     .data-block { display: flex; flex-direction: column; gap: 5px; }     .data-label { font-size: 0.55rem; color: #555; font-weight: 800; letter-spacing: 1px; }     .data-value { font-family: monospace; font-size: 0.8rem; color: var(--gold); font-weight: 700; }     .progress-track { width: 100px; height: 4px; background: #222; position: relative; }     .progress-fill { width: 75%; height: 100%; background: var(--gold); animation: load-bar 3s infinite; }     /* Infrastructure Section */     .music-infrastructure {         margin-top: 40px;         display: flex;         gap: 25px;         align-items: flex-start;     }     .glow-pillar {         width: 4px;         height: 70px;         background: var(--gold);         box-shadow: 0 0 20px var(--gold);     }     .music-infrastructure p {         font-family: 'Inter', sans-serif;         font-size: 1.4rem;         line-height: 1.4;         color: #fff;         margin: 0;         font-weight: 400;     }     .music-infrastructure p strong { color: var(--gold); font-weight: 900; }     .music-specs {         margin-top: 40px;         display: flex;         gap: 30px;         padding-top: 20px;     }     .spec-item { font-size: 0.7rem; color: #888; font-weight: 800; letter-spacing: 1px; }     .spec-item span { color: var(--gold); margin-right: 5px; }     .spec-divider { width: 1px; height: 12px; background: #333; }     @keyframes rec-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }     @keyframes load-bar { 0% { width: 10%; } 50% { width: 90%; } 100% { width: 10%; } }     @media (max-width: 768px) {         .be-stream-cornerstone { padding: 60px 0; }         .stream-data-bar { gap: 20px; }         .progress-track { width: 60px; }         .music-infrastructure p { font-size: 1rem; }         .title-bg-ghost { font-size: 4rem; top: -20px; }         .music-specs { flex-direction: column; gap: 10px; }         .spec-divider { display: none; }     } </style> <script>     // Randomized Hex Signal Generator for that "Live Data" feel     function updateSignal() {         const hex = Math.random().toString(16).substr(2, 6).toUpperCase();         const el = document.getElementById('signal-hex');         if(el) el.innerText = `0xBE_${hex}_AUR`;     }     setInterval(updateSignal, 3000); </script>accesskey
+<div style="background:#05050a; color:#fff; width:100% !important; margin:0; padding:0;">
+        
+        <style>
+            .aura-full-container { background:#05050a; padding:20px 10px; width:100% !important; margin:0; }
+            .aura-grid { 
+                display: grid; 
+                grid-template-columns: repeat(4, 1fr); 
+                gap: 20px; 
+                width: 100%; 
+                max-width: 100%;
+            }
+            .aura-tile { 
+                background: #0d0d16; 
+                border: 1px solid #1a1a2e; 
+                border-radius: 8px;
+                overflow: hidden;
+                transition: transform 0.3s, border 0.3s;
+                display: flex;
+                flex-direction: column;
+            }
+            .aura-tile:hover { transform: translateY(-8px); border-color: #ff9900; box-shadow: 0 10px 20px rgba(255,153,0,0.2); }
+            
+            .aura-img-wrapper {
+                width: 100%;
+                height: 160px;
+                overflow: hidden;
+                border-bottom: 2px solid #ff9900;
+            }
+            .aura-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s;
+            }
+            .aura-tile:hover .aura-img { transform: scale(1.1); }
+            
+            .aura-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+            
+            @media (max-width: 1200px) { .aura-grid { grid-template-columns: repeat(3, 1fr); } }
+            @media (max-width: 900px) { .aura-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 600px) { .aura-grid { grid-template-columns: 1fr; } }
+        </style>
+        <div class="aura-full-container"><div class="aura-grid">
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://www.cnet.com/wp-content/uploads/sites/2/Piers-Morgan-Tilly-Norwood-Tim-Conti.jpg" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// CNET</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">AI ‘ACTRESS’ TILLY NORWOOD GLITCHES ON LIVE TV IN SURREAL NIGHTMARE</h4>
+                    </div>
+                    <a href="https://www.cnet.com/tech/services-and-software/tilly-norwood-ai-actress-speaks-cantonese-live-interview-glitch/" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://images.theconversation.com/files/761004/original/file-20260920-50-r4v30x.jpg?ixlib=rb-4.1.1&rect=0%2C417%2C5000%2C2500&q=45&auto=format&w=1356&h=668&fit=crop" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// THE CONVERSATION AFRICA</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">APPLE’S NEW WATCHES ARE ALWAYS LISTENING</h4>
+                    </div>
+                    <a href="https://theconversation.com/apples-new-watches-are-always-listening-292117" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://files.ozbargain.com.au/n/62/975962l.jpg?h=8fb38679" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// OZBARGAIN.COM.AU</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">SONY WIRELESS NOISE CANCELLING HEADPHONES WH1000XM5SA $299.99 @ COSTCO WHOLESALE</h4>
+                    </div>
+                    <a href="https://www.ozbargain.com.au/node/975962" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://www.tubefilter.com/wp-content/uploads/2026/09/respondemesta-yt.jpg" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// TUBEFILTER</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">TOP 50 MOST SUBSCRIBED YOUTUBE CHANNELS WORLDWIDE • WEEK OF 09/20/2026</h4>
+                    </div>
+                    <a href="https://www.tubefilter.com/2026/09/21/top-50-most-subscribed-youtube-channels-week-of-09-20-2026/" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://i.dailymail.com/1s/2026/09/21/22/111386009-0-image-m-17_1790027151276.jpg" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// DAILYMAIL.COM</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">CRIMINAL RECORDS: CROOK MADE £2.7MILLION FROM FAKE VINYLS OF ARTISTS LIKE THE BEATLES AND MADONNA</h4>
+                    </div>
+                    <a href="https://www.dailymail.com/news/article-16148697/Crook-fake-vinyls-Beatles-Madonna.html" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4484x2522+1+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F21%2F2c%2F937298b34796926281647a2c883b%2F9b77ab7f-7121-467b-9823-b1b1acaec0c9.jpg" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// NPR</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">'THEY TOUCH EVERYTHING': SYLVAN ESSO CONFRONTS THE SPOTIFY DILEMMA, AGAIN</h4>
+                    </div>
+                    <a href="https://www.npr.org/2026/09/21/g-s1-144309/sylvan-esso-spotify-streaming-ow-infinity" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://www.lawyersgunsmoneyblog.com/wp-content/uploads/2026/09/Father_Yod.jpg" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// LAWYERSGUNSMONEYBLOG.COM</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">TRUMP’S APPROVAL RATING HITS ALL-TIME LOW, AND IS NOW AMONG THE WORST IN HISTORY</h4>
+                    </div>
+                    <a href="https://www.lawyersgunsmoneyblog.com/2026/09/trumps-approval-rating-hits-all-time-low-and-is-now-among-the-worst-in-history" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://bossip.com/wp-content/uploads/sites/28/2026/09/image-collage-44.jpg?quality=80&strip=all&w=1680&crop=0,0,100,960px" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// BOSSIP</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">NO LIMIT LESSONS: MASTER P TELLS RICKEY SMILEY HE ‘LOST HIMSELF’ TAKING CARE OF OTHERS, GIVES UPDATE ON C-MURDER</h4>
+                    </div>
+                    <a href="https://bossip.com/4633768/master-p-rickey-smiley-for-real/" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://www.attackmagazine.com/wp-content/uploads/2026/09/Attack-Mag-QA-Feature-Images-Mike-Taylor-2.png" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// ATTACKMAGAZINE.COM</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; font-family:monospace; font-weight:600;">MIKE TAYLOR: “TOO MUCH ANALYSIS CAUSES PARALYSIS”</h4>
+                    </div>
+                    <a href="https://www.attackmagazine.com/features/qa/mike-taylor-too-much-analysis-causes-paralysis/" target="_blank" style="color:#00ff88; text-decoration:none; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; border:1px solid #1a1a2e; padding:10px; text-align:center; border-radius:4px; margin-top:15px; display:block; transition:0.3s;">OPEN_INTELLIGENCE_LOG</a>
+                </div>
+            </div>
+            <div class="aura-tile">
+                <div class="aura-img-wrapper">
+                    <img src="https://live-production.wcms.abc-cdn.net.au/f145efaf139664de2cf40cd20a669af9?impolicy=wcms_watermark_news&cropH=2813&cropW=5000&xPos=0&yPos=0&width=862&height=485&imformat=generic" class="aura-img" loading="lazy">
+                </div>
+                <div class="aura-body">
+                    <div>
+                        <span style="color:#ff9900; font-size:9px; letter-spacing:2px; font-weight:bold;">// ABC NEWS (AU)</span>
+                        <h4 style="color:#ffffff !important; margin:10px 0; font-size:13px; line-height:1.4; f
