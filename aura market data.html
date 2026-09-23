@@ -1,94 +1,137 @@
-<div class="aura-footer-extras" style="
-    position: relative !important; 
-    width: 100vw !important; 
-    left: 50% !important; 
-    right: 50% !important; 
-    margin-left: -50vw !important; 
-    margin-right: -50vw !important; 
-    background: #05050a !important; 
-    border-top: 1px solid #1a1a2e !important;
-    padding: 60px 0 !important;
-    display: block !important;
-    clear: both !important;
-    color: #fff !important;
-    font-family: 'Inter', sans-serif;
-    overflow: hidden;
-">
-    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; padding: 0 20px;">
-        
-        <div class="aura-terminal-box" style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,153,0,0.15); text-align: left; position: relative;">
-            
-            <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                <span class="aura-status-dot"></span>
-                <h4 style="margin: 0; font-size: 11px; letter-spacing: 3px; color: #ff9900; text-transform: uppercase; font-weight: 900;">AURA_MARKET_ALPHA</h4>
-            </div>
-            
-            <div id="aura-prices-feed" style="display: flex; flex-direction: column; gap: 15px;">
-                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
-                    <span style="font-weight: 800; color: #888; font-size: 13px;">BTC/USDT</span>
-                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$72,866.12</span>
-                </div>
-                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
-                    <span style="font-weight: 800; color: #888; font-size: 13px;">ETH/USDT</span>
-                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$2,241.36</span>
-                </div>
-                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
-                    <span style="font-weight: 800; color: #888; font-size: 13px;">BNB/USDT</span>
-                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$605.49</span>
-                </div>
-                <div class="price-row" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a2e; padding-bottom: 12px;">
-                    <span style="font-weight: 800; color: #888; font-size: 13px;">SOL/USDT</span>
-                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$84.63</span>
-                </div>
-                <div class="price-row meme-trigger" data-meme="pi" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
-                    <span style="font-weight: 800; color: #ff9900; font-size: 13px;">PI/USDT <i class="fa-solid fa-circle-nodes" style="font-size: 10px; opacity: 0.5;"></i></span>
-                    <span class="price-value" style="font-family: 'Courier New', monospace; color: #fff; font-weight: 900;">$0.1674</span>
-                </div>
-            </div>
-            
-            <p id="aura-log-text" style="font-size: 9px; color: #333; margin-top: 20px; letter-spacing: 2px; font-weight: 800;">// PROTOCOL_21_ACTIVE // BINANCE_PULSE_ESTABLISHED</p>
-        </div>    
+<style>
+    .aura-full-width-wrapper {
+        --aura-bg: #090913;
+        --aura-accent: #ff9900;
+        --aura-text: #ffffff;
+        --aura-up: #00ff88;
+        --aura-down: #ff3e3e;
+        background: var(--aura-bg);
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding: 60px 0;
+        box-sizing: border-box;
+        border-top: 2px solid var(--aura-accent);
+        border-bottom: 2px solid var(--aura-accent);
+        overflow: hidden;
+        z-index: 99;
+    }
+
+    .aura-content { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .aura-content h2 { color: var(--aura-accent); text-align: center; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 30px; font-size: 1.6rem; }
+
+    .aura-table { width: 100%; border-collapse: collapse; background: rgba(255, 255, 255, 0.03); border-radius: 12px; overflow: hidden; }
+    .aura-table th { background: rgba(255, 153, 0, 0.15); color: var(--aura-accent); text-align: left; padding: 18px; font-size: 0.8rem; text-transform: uppercase; }
+    .aura-table td { padding: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 1.1rem; font-weight: 600; color: #fff; }
+
+    .price-cell { font-family: monospace; transition: all 0.3s ease; }
+    .aura-up-flash { color: var(--aura-up) !important; text-shadow: 0 0 10px var(--aura-up); }
+    .aura-down-flash { color: var(--aura-down) !important; text-shadow: 0 0 10px var(--aura-down); }
+    
+    .aura-btn-area { display: flex; justify-content: center; margin-top: 35px; }
+    .aura-vip-link { background: var(--aura-accent); color: var(--aura-bg) !important; text-decoration: none !important; padding: 18px 50px; border-radius: 8px; font-weight: 900; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--aura-accent); }
+    .aura-vip-link:hover { background: transparent; color: var(--aura-accent) !important; box-shadow: 0 0 25px rgba(255,153,0,0.4); }
+
+    @media (max-width: 500px) { .aura-table th:nth-child(3), .aura-table td:nth-child(3) { display: none; } }
+</style>
+
+<div class="aura-full-width-wrapper">
+    <div class="aura-content">
+        <h2>Aura Live Market</h2>
+        <table class="aura-table">
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Price (USD)</th>
+                    <th>24H</th>
+                </tr>
+            </thead>
+            <tbody id="aura-live-body"></tbody>
+        </table>
+        <div class="aura-btn-area">
+            <a href="http://betheledison.com/vip-zone" class="aura-vip-link">Enter VIP Zone</a>
+        </div>
     </div>
-
-    <style>
-        .aura-status-dot { width: 10px; height: 10px; background: #00ff88; border-radius: 50%; display: inline-block; margin-right: 12px; box-shadow: 0 0 12px #00ff88; animation: aura-blink 1.8s ease-in-out infinite; }
-        @keyframes aura-blink { 0%, 100% { opacity: 1; transform: scale(1); filter: brightness(1.2); } 50% { opacity: 0.4; transform: scale(0.85); filter: brightness(0.8); } }
-        .aura-meme-float { position: fixed; pointer-events: none; z-index: 999999; font-size: 40px; animation: floatUp 3s forwards linear; }
-        @keyframes floatUp { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(-250px) rotate(360deg); opacity: 0; } }
-        .price-value { transition: color 0.3s ease; }
-        .price-up { color: #00ff88 !important; text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); }
-    </style>
-
-    <script>
-        (function() {
-            const dot = document.querySelector('.aura-status-dot');
-            setInterval(() => { dot.style.boxShadow = Math.random() > 0.5 ? '0 0 20px #00ff88' : '0 0 8px #00ff88'; }, 1200);
-
-            const trigger = document.querySelector('.meme-trigger');
-            const logText = document.getElementById('aura-log-text');
-            trigger.addEventListener('click', () => {
-                const icons = ['🐕', '🐸', '🚀', '🥧', '💰', '📈', '⚡'];
-                for(let i=0; i<12; i++) {
-                    setTimeout(() => {
-                        const el = document.createElement('div');
-                        el.className = 'aura-meme-float';
-                        el.innerText = icons[Math.floor(Math.random() * icons.length)];
-                        el.style.left = Math.random() * 95 + 'vw';
-                        el.style.top = '85vh';
-                        document.body.appendChild(el);
-                        setTimeout(() => el.remove(), 3000);
-                    }, i * 120);
-                }
-                logText.innerText = "// PIONEER_MODE_ENGAGED // MAINNET_VELOCITY_MAX";
-                logText.style.color = "#ff9900";
-            });
-
-            setInterval(() => {
-                const prices = document.querySelectorAll('.price-value');
-                const p = prices[Math.floor(Math.random() * prices.length)];
-                p.classList.add('price-up');
-                setTimeout(() => p.classList.remove('price-up'), 1000);
-            }, 3500);
-        })();
-    </script>
 </div>
+
+<script>
+(function() {
+    const coins = {
+        'BTCUSDT': { name: 'Bitcoin', cg: 'bitcoin' },
+        'ETHUSDT': { name: 'Ethereum', cg: 'ethereum' },
+        'SOLUSDT': { name: 'Solana', cg: 'solana' },
+        'BNBUSDT': { name: 'Binance', cg: 'binancecoin' },
+        'PIUSDT': { name: 'Pi Network', cg: 'pi-network' }
+    };
+
+    const tbody = document.getElementById('aura-live-body');
+    
+    // Build Table Rows Immediately
+    Object.keys(coins).forEach(symbol => {
+        tbody.innerHTML += `
+            <tr id="row-${symbol}">
+                <td><strong>${symbol.replace('USDT','')}</strong> <small style="color:#666; margin-left:5px;">${coins[symbol].name}</small></td>
+                <td class="price-cell" id="val-${symbol}">Connecting...</td>
+                <td id="pct-${symbol}">--</td>
+            </tr>
+        `;
+    });
+
+    // Strategy 1: The WebSocket (Primary for High Speed)
+    function startWebSocket() {
+        const stream = Object.keys(coins).filter(s => s !== 'PIUSDT').map(s => `${s.toLowerCase()}@ticker`).join('/');
+        const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${stream}`);
+        
+        ws.onmessage = (e) => {
+            const d = JSON.parse(e.data);
+            updateRow(d.s, d.c, d.P, true);
+        };
+        
+        ws.onerror = () => setTimeout(startWebSocket, 5000); // Auto-reconnect
+    }
+
+    // Strategy 2: Proxy Fetch (Fixes the CORS "Stuck" Issue)
+    async function fetchBackup() {
+        try {
+            // Using a CORS-friendly proxy for 2026 data standards
+            const ids = Object.values(coins).map(c => c.cg).join(',');
+            const r = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`);
+            const d = await r.json();
+            
+            Object.keys(coins).forEach(symbol => {
+                const cgId = coins[symbol].cg;
+                if(d[cgId]) updateRow(symbol, d[cgId].usd, d[cgId].usd_24h_change, false);
+            });
+        } catch(e) { 
+            console.log("Retrying connection...");
+            setTimeout(fetchBackup, 3000);
+        }
+    }
+
+    function updateRow(sym, price, pct, flash) {
+        const pEl = document.getElementById(`val-${sym}`);
+        const cEl = document.getElementById(`pct-${sym}`);
+        if (!pEl) return;
+
+        const current = parseFloat(pEl.innerText.replace(/[$,Connecting]/g, '')) || 0;
+        const next = parseFloat(price);
+        
+        if (flash && current !== 0 && current !== next) {
+            pEl.className = next > current ? 'price-cell aura-up-flash' : 'price-cell aura-down-flash';
+            setTimeout(() => pEl.className = 'price-cell', 600);
+        }
+        
+        pEl.innerText = `$${next.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+        cEl.innerText = `${parseFloat(pct).toFixed(2)}%`;
+        cEl.style.color = parseFloat(pct) >= 0 ? 'var(--aura-up)' : 'var(--aura-down)';
+    }
+
+    // Launch both strategies
+    startWebSocket();
+    fetchBackup();
+    setInterval(fetchBackup, 20000); // Keep Pi updated
+})();
+</script>
