@@ -1,0 +1,408 @@
+<div class="hero-container">     <div class="hero-badge">EST. 2026</div>     <h1 class="hero-title">The Aura<br>Store</h1>     <div class="hero-divider"></div>     <p class="hero-cornerstone">"Built upon the Cornerstone"</p> </div><style>     /* This tells the block to center everything */     .hero-container {         text-align: center;         padding: 60px 20px;         background: transparent; /* Or #05050a if you want it solid obsidian */         animation: auraFadeIn 1.5s ease-out;     }     .hero-badge {         color: #b8860b;          letter-spacing: 6px;          font-size: 0.75rem;         margin-bottom: 15px;         font-weight: 600;     }     .hero-title {         /* This creates the "Liquid Gold" look */         font-family: 'Montserrat', 'Segoe UI', sans-serif;         font-size: clamp(2.5rem, 10vw, 5.5rem);          font-weight: 900;         text-transform: uppercase;         letter-spacing: -0.03em;         line-height: 0.85;         margin: 0;                  /* The Animated Gradient */         background: linear-gradient(             to right,              #bf953f,              #fcf6ba,              #b38728,              #fbf5b7,              #aa771c         );         background-size: 200% auto;         -webkit-background-clip: text;         -webkit-text-fill-color: transparent;                  /* The Glow */         filter: drop-shadow(0 0 20px rgba(184, 134, 11, 0.4));         animation: auraShine 4s linear infinite;     }     .hero-divider {         width: 60px;          height: 2px;          background: #ffcc00;          margin: 25px auto;          box-shadow: 0 0 15px #ffcc00;     }     .hero-cornerstone {         color: rgba(255, 255, 255, 0.4);         font-style: italic;         font-size: 0.9rem;         letter-spacing: 1px;     }     /* Animations */     @keyframes auraShine {         to { background-position: 200% center; }     }     @keyframes auraFadeIn {         from { opacity: 0; transform: translateY(20px); }         to { opacity: 1; transform: translateY(0); }     } </style> <script>     // This adds a subtle tilt effect when you hover over the title     const title = document.querySelector('.hero-title');     document.addEventListener('mousemove', (e) => {         let x = (window.innerWidth / 2 - e.pageX) / 25;         let y = (window.innerHeight / 2 - e.pageY) / 25;         title.sty le.transform = `rotateY(${x}deg) rotateX(${y}deg)`;     }); </script>
+
+<!-- wp:html -->
+<!-- [AURA MERCH: FULL FRAME COLLECTION V5.0] -->
+<div class="aura-full-frame-store">
+    <style>
+        .aura-full-frame-store {
+            --gold: #ff9900;
+            --blue: #0088ff;
+            --red: #ff3e3e;
+            --dark-bg: #05050a;
+            
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: var(--dark-bg);
+            padding: 60px 0;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+        }
+
+        .product-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #0c0c12;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-radius: 4px;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .img-container {
+            width: 100%;
+            /* Maintain aspect ratio to prevent cutting off top/bottom */
+            aspect-ratio: 4 / 3; 
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            /* "contain" ensures the full image is shown without cropping */
+            object-fit: contain; 
+        }
+
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .p-name {
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .p-price {
+            font-family: monospace;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .gold-txt { color: var(--gold); }
+        .blue-txt { color: var(--blue); }
+        .red-txt { color: var(--red); }
+
+        /* Button group spacing container */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-btn {
+            display: block;
+            padding: 10px;
+            border: 1px solid #333;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.6rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+
+        /* Primary Crypto Button Hover state */
+        .action-btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        /* Secondary Wire Button Custom style */
+        .action-btn.wire-btn {
+            border-color: rgba(255, 153, 0, 0.3);
+            color: var(--gold);
+        }
+
+        /* Secondary Wire Button Hover state */
+        .action-btn.wire-btn:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 1024px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .img-container { aspect-ratio: 16 / 9; }
+        }
+    </style>
+
+    <div class="product-grid">
+        <!-- GOLD (BLACK) -->
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://lh3.googleusercontent.com/d/1UuaXuz0xKWZriba3Ai96Jt9S02y8zE7I" class="product-img" alt="Aura Angel Gold">
+            </div>
+            <div class="product-details">
+                <div class="p-name">Gold Edition</div>
+                <div class="p-price gold-txt">19.99 USD</div>
+                <div class="btn-group">
+                    <a href="https://flutterwave.com/pay/ucvztdw6dlhg" class="action-btn" target="_blank">BUY NOW</a>
+                    <a href="http://betheledison.com/payments" class="action-btn wire-btn" target="_blank">WIRE/LOCAL TRANSFER</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHITE -->
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://lh3.googleusercontent.com/d/1O-jXDrE1xBOoMgBQxpWCObK18_Ttg0Nb" class="product-img" alt="Aura Angel White">
+            </div>
+            <div class="product-details">
+                <div class="p-name">White Edition</div>
+                <div class="p-price">19.99 USD</div>
+                <div class="btn-group">
+                    <a href="https://flutterwave.com/pay/ucvztdw6dlhg" class="action-btn" target="_blank">BUY NOW</a>
+                    <a href="http://betheledison.com/payments" class="action-btn wire-btn" target="_blank">WIRE/LOCAL TRANSFER</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLUE -->
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://lh3.googleusercontent.com/d/1bL6w3D59TQh5zdvmjJ6iE8bkyZglGMvg" class="product-img" alt="Aura Angel Blue">
+            </div>
+            <div class="product-details">
+                <div class="p-name">Blue Edition</div>
+                <div class="p-price blue-txt">19.99 USD</div>
+                <div class="btn-group">
+                    <a href="https://flutterwave.com/pay/ucvztdw6dlhg" class="action-btn" target="_blank">BUY NOW</a>
+                    <a href="http://betheledison.com/payments" class="action-btn wire-btn" target="_blank">WIRE/LOCAL TRANSFER</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RED -->
+        <div class="product-card">
+            <div class="img-container">
+                <img src="https://lh3.googleusercontent.com/d/1O06at7VQYsqRqa8NmBWmbyJSnJLOFehU" class="product-img" alt="Aura Angel Green">
+            </div>
+            <div class="product-details">
+                <div class="p-name">Red Edition</div>
+                <div class="p-price red-txt">19.99 USD</div>
+                <div class="btn-group">
+                    <a href="https://flutterwave.com/pay/ucvztdw6dlhg" class="action-btn" target="_blank">BUY NOW</a>
+                    <a href="http://betheledison.com/payments" class="action-btn wire-btn" target="_blank">WIRE/LOCAL TRANSFER</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div id="aura-extended-experience">
+
+    <!-- BLOCK 1: THE METALLIC "VALUES" GRID -->
+    <section class="aura-section" id="values-grid">
+        <div class="value-card">
+            <div class="card-icon">✝</div>
+            <h3>Foundation</h3>
+            <p>Built upon the Cornerstone. Faith as the substance of every creative endeavor.</p>
+        </div>
+        <div class="value-card">
+            <div class="card-icon">◈</div>
+            <h3>Ecosystem</h3>
+            <p>A unified digital space where music, finance, and tech merge into one Aura.</p>
+        </div>
+        <div class="value-card">
+            <div class="card-icon">𓋹</div>
+            <h3>Legacy</h3>
+            <p>Moving in the "Dusk." Privacy by design. Wealth built for generations.</p>
+        </div>
+    </section>
+
+    <!-- BLOCK 2: THE "LIQUID GOLD" SCROLL TRACKER -->
+    <section class="aura-section" id="scroll-reveal">
+        <div class="reveal-container">
+            <h2 class="reveal-text">STAY OBSIDIAN. STAY GOLDEN.</h2>
+            <div class="reveal-bar">
+                <div id="progress-aura"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 3: THE INTERACTIVE "NODE" FOOTER -->
+    <section class="aura-section" id="interactive-node">
+        <div class="node-content">
+            <div class="pulsing-orb"></div>
+            <h2>Join the Network</h2>
+            <p>Sync your frequency with the 6 AM Awakening.</p>
+
+            <!-- ✅ LINKED BUTTON -->
+            <a href="http://betheledison.com/register" target="_blank" class="gold-btn">
+                ENTER THE VAULT
+            </a>
+
+        </div>
+    </section>
+
+</div>
+
+<style>
+    :root {
+        --gold: #ffcc00;
+        --obsidian: #05050a;
+        --soft-gold: #fcf6ba;
+    }
+
+    #aura-extended-experience {
+        background: var(--obsidian);
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .aura-section {
+        min-height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-out;
+    }
+
+    /* BLOCK 1 STYLES */
+    #values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .value-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 204, 0, 0.1);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .value-card:hover {
+        border-color: var(--gold);
+        background: rgba(255, 204, 0, 0.05);
+        transform: translateY(-10px);
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        color: var(--gold);
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    }
+
+    /* BLOCK 2 STYLES */
+    .reveal-container { width: 100%; text-align: center; }
+    .reveal-text {
+        font-size: clamp(1.5rem, 5vw, 3.5rem);
+        letter-spacing: 15px;
+        background: linear-gradient(90deg, #333, var(--gold), #333);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine-move 5s infinite linear;
+    }
+
+    .reveal-bar {
+        width: 300px;
+        height: 2px;
+        background: rgba(255,255,255,0.1);
+        margin: 30px auto;
+        position: relative;
+    }
+
+    #progress-aura {
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: var(--gold);
+        box-shadow: 0 0 15px var(--gold);
+    }
+
+    /* BLOCK 3 STYLES */
+    .node-content { text-align: center; }
+    .pulsing-orb {
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, var(--gold), transparent);
+        border-radius: 50%;
+        margin: 0 auto 30px;
+        animation: orb-pulse 2s infinite ease-in-out;
+    }
+
+    .gold-btn {
+        display: inline-block;
+        background: transparent;
+        border: 2px solid var(--gold);
+        color: var(--gold);
+        padding: 15px 40px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+    .gold-btn:hover {
+        background: var(--gold);
+        color: black;
+        box-shadow: 0 0 30px var(--gold);
+    }
+
+    /* ANIMATIONS */
+    @keyframes shine-move { to { background-position: 200% center; } }
+    @keyframes orb-pulse {
+        0%, 100% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.2); opacity: 1; }
+    }
+
+    /* REVEAL CLASS */
+    .section-visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+</style>
+
+<script>
+    (function() {
+        // Intersection Observer for Scroll Animations
+        const sections = document.querySelectorAll('.aura-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(s => observer.observe(s));
+
+        // Progress Bar Logic for Block 2
+        window.addEventListener('scroll', () => {
+            const bar = document.getElementById('progress-aura');
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if(bar) bar.style.width = scrollPercent + "%";
+        });
+    })();
+</script>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
