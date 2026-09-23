@@ -1,0 +1,364 @@
+<header class="be-about-header">     <div class="identity-scanline"></div>     <div class="about-container">         <div class="auth-row">             <div class="auth-id">     <span class="label">SUBJECT ID:</span>  <span class="value">BETHEL EDISON</span>             </div>             <div class="auth-status">                 <span class="status-dot"></span> IDENTITY VERIFIED             </div>         </div>         <div class="about-title-wrapper">             <h1 class="about-main-title">AB<span>O</span>UT</h1>             <div class="title-bg-text">CREATOR CORE</div>         </div>         <div class="about-bio-intro">             <div class="gold-accent-pillar"></div>             <p>                 Musician. Media Personality. Digital Infrastructure Architect. <br>                 Building the <strong>Aura Angels</strong> community and the future of <span>Bethel Edison</span>.             </p>         </div>         <div class="about-tags">             <div class="tag-item">WEB_DEV</div>             <div class="tag-item">CRYPTO_AMBASSADOR</div>             <div class="tag-item">SONGWRITER</div>             <div class="tag-item">ACTOR &amp; PRODUCER</div>         </div>     </div> </header> <style>     .be-about-header {         --gold: #ff9900;         --dark-bg: #05050a;                  width: 100vw;         position: relative;         left: 50%;         right: 50%;         margin-left: -50vw;         margin-right: -50vw;         background: var(--dark-bg);         padding: 120px 0 80px 0;         overflow: hidden;         border-bottom: 3px solid var(--gold);         /* Sharp, industrial finish */     }     /* Subtle Scanline Animation */     .identity-scanline {         position: absolute;         top: 0;         left: 0;         width: 100%;         height: 100%;         background: linear-gradient(             to bottom,             transparent,             rgba(255, 153, 0, 0.03) 50%,             transparent 50%         );         background-size: 100% 4px;         pointer-events: none;         opacity: 0.4;     }     .about-container {         max-width: 1000px;         margin: 0 auto;         padding: 0 30px;         position: relative;         z-index: 5;     }     .auth-row {         display: flex;         justify-content: space-between;         align-items: center;         margin-bottom: 40px;         border-bottom: 1px solid rgba(255, 153, 0, 0.1);         padding-bottom: 15px;     }     .auth-id {         font-family: 'Inter', monospace;         font-size: 0.7rem;         letter-spacing: 2px;     }     .auth-id .label { color: var(--gold); font-weight: 900; }     .auth-id .value { color: #fff; }     .auth-status {         display: flex;         align-items: center;         gap: 8px;         font-family: 'Inter', sans-serif;         font-size: 0.6rem;         font-weight: 900;         color: #fff;         letter-spacing: 1px;     }     .status-dot {         width: 6px;         height: 6px;         background: var(--gold);         box-shadow: 0 0 10px var(--gold);     }     .about-title-wrapper {         position: relative;         margin-bottom: 50px;     }     .about-main-title {         font-family: 'Inter', sans-serif;         font-size: clamp(4rem, 18vw, 10rem);         font-weight: 900;         color: #ffffff;         margin: 0;         line-height: 0.85;         letter-spacing: -6px;         text-transform: uppercase;         position: relative;         z-index: 2;     }     .about-main-title span {         color: var(--gold);         text-shadow: 0 0 30px rgba(255, 153, 0, 0.4);     }     .title-bg-text {         position: absolute;         top: 50%;         left: 0;         transform: translateY(-50%);         font-family: 'Inter', sans-serif;         font-size: 11rem;         font-weight: 900;         color: rgba(255, 153, 0, 0.02);         white-space: nowrap;         pointer-events: none;         z-index: 1;     }     .about-bio-intro {         display: flex;         gap: 25px;         margin-bottom: 50px;     }     .gold-accent-pillar {         width: 6px;         height: auto;         background: var(--gold);         box-shadow: 0 0 20px rgba(255, 153, 0, 0.2);     }     .about-bio-intro p {         font-family: 'Inter', sans-serif;         font-size: 1.4rem;         line-height: 1.4;         color: #eee;         margin: 0;         font-weight: 400;     }     .about-bio-intro p strong { color: #fff; font-weight: 800; }     .about-bio-intro p span { color: var(--gold); font-weight: 800; border-bottom: 2px solid var(--gold); }     .about-tags {         display: flex;         flex-wrap: wrap;         gap: 15px;     }     .tag-item {         font-family: 'Inter', monospace;         font-size: 0.65rem;         font-weight: 900;         color: var(--gold);         background: rgba(255, 153, 0, 0.1);         border: 1px solid var(--gold);         padding: 5px 12px;         letter-spacing: 1px;     }     @media (max-width: 768px) {         .be-about-header { padding: 80px 0 50px 0; }         .about-main-title { letter-spacing: -2px; }         .about-bio-intro p { font-size: 1.1rem; }         .about-tags { gap: 10px; }         .title-bg-text { display: none; }     } </style>
+
+<!-- wp:html -->
+<div class="be-about-full-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .be-about-full-width {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #090913;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Hero Header - Gold Glow Style */
+        .be-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 5%;
+            background: linear-gradient(180deg, #0d0d1f 0%, #090913 100%);
+            border-bottom: 1px solid #2c2c44;
+            gap: 60px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .profile-frame {
+            position: relative;
+            flex-shrink: 0;
+            width: 320px;
+            height: 320px;
+        }
+
+        /* Direct stream link for Google Drive Image */
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff9900;
+            box-shadow: 0 0 30px rgba(255, 153, 0, 0.3);
+            animation: profileGlow 4s infinite alternate;
+            background: #14142b;
+        }
+
+        @keyframes profileGlow {
+            from { box-shadow: 0 0 20px rgba(255, 153, 0, 0.2); }
+            to { box-shadow: 0 0 40px rgba(255, 153, 0, 0.5); }
+        }
+
+        .hero-content h1 { 
+            font-size: 3.5rem; 
+            font-weight: 900; 
+            margin: 0; 
+            line-height: 1.1; 
+            text-transform: uppercase; 
+            letter-spacing: 4px;
+        }
+
+        .name-gold { color: #ff9900; text-shadow: 0 0 15px rgba(255, 153, 0, 0.4); }
+        .name-white { color: #ffffff; }
+
+        .hero-quote { 
+            font-size: 1.2rem; 
+            color: #aaa; 
+            font-style: italic; 
+            margin-top: 30px; 
+            border-left: 4px solid #ff9900; 
+            padding-left: 25px;
+            max-width: 500px;
+        }
+
+        .be-section {
+            position: relative;
+            padding: 100px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-caption {
+            display: inline-block;
+            background: rgba(255, 153, 0, 0.1);
+            color: #ff9900;
+            padding: 6px 20px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-radius: 50px;
+            border: 1px solid #ff9900;
+            margin-bottom: 25px;
+        }
+
+        .be-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .be-card {
+            padding: 40px;
+            background: #14142b;
+            border-radius: 20px;
+            border: 1px solid #2c2c44;
+            transition: all 0.3s ease;
+        }
+
+        .be-card:hover { 
+            border-color: #ff9900; 
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 153, 0, 0.1);
+        }
+
+        .be-card i { color: #ff9900; font-size: 2rem; margin-bottom: 25px; display: block; }
+        .be-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #ff9900; text-transform: uppercase; }
+        .be-card p { color: #ccc; font-size: 1rem; }
+
+        .philosophy-wrap { 
+            background: linear-gradient(145deg, #0d0d1f 0%, #090913 100%); 
+            padding: 100px 10%; 
+            border-top: 1px solid #2c2c44;
+            border-bottom: 1px solid #2c2c44;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .philosophy-wrap h2 { 
+            color: #ffffff; 
+            text-align: center; 
+            font-size: 2.8rem; 
+            margin-bottom: 60px; 
+            text-transform: uppercase; 
+            letter-spacing: 5px;
+        }
+        
+        .view-stories-btn {
+            display: block;
+            width: fit-content;
+            margin: 60px auto 0;
+            padding: 18px 50px;
+            background: #ff9900;
+            color: #000 !important;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 153, 0, 0.3);
+        }
+
+        .view-stories-btn:hover { 
+            background: transparent; 
+            color: #ff9900 !important; 
+            box-shadow: 0 0 35px rgba(255, 153, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 900px) {
+            .be-hero { flex-direction: column; text-align: center; padding: 60px 20px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-quote { border-left: none; border-top: 4px solid #ff9900; padding: 25px 0 0 0; margin: 30px auto 0; }
+            .profile-frame { width: 250px; height: 250px; }
+            .be-section { padding: 60px 5%; }
+        }
+    </style>
+
+    <header class="be-hero">
+        <div class="profile-frame">
+            <img src="https://lh3.googleusercontent.com/u/0/d/1ExiK25lqehH70tNMvmNQERDj1YNV4doU=w1000-h1000" alt="Bethel Edison" class="profile-img">
+        </div>
+        <div class="hero-content">
+            <h1><span class="name-gold">BETHEL</span> <span class="name-white">EDISON</span></h1>
+            <p class="hero-quote">"I've learned that people will forget what you said, what you did, but they won't forget how you made them feel."</p>
+        </div>
+    </header>
+
+    <section class="be-section">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span class="section-caption">The Mission</span>
+            <h2 style="font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-top: 10px;">The Voice Behind the Vision</h2>
+        </div>
+        
+        <div style="max-width: 850px; margin: 0 auto; text-align: center; color: #ddd;">
+            <p style="font-size: 1.1rem;">Welcome to the official digital home of <span class="name-gold">Bethel Edison</span>. I am a Christian artist, broadcaster, and digital storyteller dedicated to creating "Life-Giving Melodies" that resonate deep within the soul.</p>
+        </div>
+
+        <div class="be-grid">
+            <div class="be-card">
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <h3>A Miracle Journey</h3>
+                <p>My path was altered when one of my songs played a role in the clinical revival of a young teen. That moment confirmed my purpose transcends the digital airwaves.</p>
+            </div>
+            <div class="be-card">
+                <i class="fa-solid fa-microphone-lines"></i>
+                <h3>Artistry & Impact</h3>
+                <p>With works like the <i>Divine Echoes EP</i> and singles like "Carry Me," my sound intersections contemporary gospel and scriptural depth to build faith and resilience.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="philosophy-wrap">
+        <div style="text-align: center;">
+            <span class="section-caption">Core Values</span>
+        </div>
+        <h2>Creative Philosophy</h2>
+        <div class="be-grid" style="max-width: 1200px; margin: 0 auto;">
+            <div class="be-card" style="background: rgba(255,255,255,0.03);">
+                <h3>Integrity First</h3>
+                <p>I do not create for viral metrics or temporary applause; I create for the one person searching for a reason to keep going and a melody to hold onto.</p>
+            </div>
+            <div class="be-card" style="background: rgba(255,255,255,0.03);">
+                <h3>Science of Soul</h3>
+                <p>Music is a spiritual science. It must be constructive, intentionally shaping our mental clarity and spiritual well-being through sound and truth.</p>
+            </div>
+        </div>
+        <a href="http://betheledison.com/blog" class="view-stories-btn">Explore My Journey</a>
+    </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="aura-origin-story" id="dawn-in-anara">
+    <div class="aura-gold-glow-bg"></div>
+
+    <div class="story-inner">
+        <div class="story-header">
+            <span class="meta-tag">CHRONICLE // ORIGIN_SYNC_0512</span>
+            <div class="lineage-badge">LEGACY_ACTIVE</div>
+        </div>
+
+        <section class="story-segment">
+            <div class="segment-accent-line"></div>
+            <h2 class="segment-title">The Dawn <span class="highlight-gold">in Anara</span></h2>
+            <div class="segment-content">
+                <div class="content-lane">
+                    <p>I didn’t just fall from the sky. My story began in the quiet, sacred hours of a Sunday morning at <span class="gold-text">3:00 AM</span>.</p>
+                </div>
+                <div class="content-lane">
+                    <p>In a small hospital in Anara, Isiala Mbano, the world stood still as my mother, <span class="gold-text">Reverend Mrs. Joy Nma Mbachu</span>, brought me into this world on May 12th.</p>
+                </div>
+                <div class="content-lane">
+                    <p>The joy she felt wasn't just a name; it was a prophecy. I was born into the legacy of <span class="gold-text">Reverend Innocent Nwanedo Mbachu</span>—a gallant General in God’s Army.</p>
+                </div>
+                <div class="content-lane">
+                    <p>My spiritual architect, who baptized me into my new life in 2009 at the Assemblies of God.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-segment">
+            <div class="segment-accent-line"></div>
+            <div class="trajectory-header">
+                <span class="coord-tag">LOCATION: PORT_HARCOURT // 2011</span>
+                <h3 class="segment-subtitle">The Vision of Pursuit</h3>
+            </div>
+            <div class="segment-content">
+                <div class="content-lane">
+                    <p>I moved to Port Harcourt not in panic, but in pursuit. Destiny met me through the giants who shifted my trajectory:</p>
+                </div>
+                <ul class="destiny-list">
+                    <li class="destiny-lane">
+                        <span class="bullet">✦</span>
+                        <p><strong>The Late Pastor Great:</strong> My lead pastor who opened the doors of Music Instruction.</p>
+                    </li>
+                    <li class="destiny-lane">
+                        <span class="bullet">✦</span>
+                        <p><strong>Michael George:</strong> My brother in harmony as we led the people in worship.</p>
+                    </li>
+                    <li class="destiny-lane">
+                        <span class="bullet">✦</span>
+                        <p><strong>Deacon Andrew Obadan:</strong> A close ally and a sanctuary in my early days.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="story-segment tech-block">
+            <div class="segment-accent-line"></div>
+            <h3 class="segment-subtitle">Evolution: <span class="highlight-gold">Music, Code, & Web3</span></h3>
+            <div class="matrix-grid">
+                <div class="matrix-item">
+                    <div class="matrix-glow"></div>
+                    <span class="matrix-label">SONIC_ENGINEERING</span>
+                    <p>Degree in Sound Engineering from UNN</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-glow"></div>
+                    <span class="matrix-label">DATA_SCIENCE</span>
+                    <p>Bridging the gap between Art and Information</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-glow"></div>
+                    <span class="matrix-label">WEB3_DEV</span>
+                    <p>Mastering HTML, CSS, JS & Blockchain Logic</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-segment community-block">
+            <div class="aura-shield-glow"></div>
+            <div class="community-callout">
+                <h3 class="community-title">To My <span class="aura-gold-glow-text">AURA ANGELS</span></h3>
+                <div class="content-lane">
+                    <p>This journey has never been a solo flight. You are the reason the music continues to play and the code continues to run.</p>
+                </div>
+                <div class="content-lane">
+                    <p>You are the community that turns a <strong>"story"</strong> into a <strong>"movement."</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <div class="story-footer">
+            <div class="footer-divider">
+                <span class="line"></span>
+                <span class="gold-diamond">◆</span>
+                <span class="line"></span>
+            </div>
+            <p class="final-statement">The story doesn’t end here. We are just getting to the <span class="best-part">best part.</span></p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 1. THE CORE: GOLD-GLOW FOUNDATION */
+.aura-origin-story {
+    background: #020204;
+    border: 1px solid rgba(255, 204, 0, 0.15);
+    border-radius: 20px;
+    padding: 80px 40px;
+    margin: 40px auto;
+    max-width: 850px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.aura-gold-glow-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 204, 0, 0.08) 0%, transparent 70%);
+    background-image: linear-gradient(rgba(255, 204, 0, 0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 204, 0, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+/* 2. HEADER */
+.story-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
+.meta-tag { font-family: monospace; font-size: 0.6rem; color: #555; letter-spacing: 3px; }
+.lineage-badge { background: rgba(255, 204, 0, 0.1); color: #ffcc00; font-size: 0.6rem; padding: 5px 12px; border-radius: 4px; border: 1px solid rgba(255, 204, 0, 0.3); font-weight: 800; letter-spacing: 1px; }
+
+/* 3. SEGMENT ARCHITECTURE */
+.story-segment { margin-bottom: 80px; positi
