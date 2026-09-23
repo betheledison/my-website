@@ -1,0 +1,169 @@
+<header class="be-scores-cornerstone">     <div class="sonic-grid-overlay"></div>     <div class="cornerstone-container">         <div class="status-row">             <div class="live-signal">                 <span class="signal-bar"></span>                 <span class="signal-bar"></span>                 <span class="signal-bar"></span>                 <span class="signal-text">FEED_STABLE_2026</span>             </div>             <div class="identity-tag">BETHEL EDISON</div>         </div>         <h1 class="main-music-title">             LI<span>V</span>E         </h1>         <div class="music-infrastructure">             <div class="gold-block"></div>             <p>The sports-data infrastructure for <strong>The Aura Angels</strong>. <br>Global soccer tracking, real-time analytics, and live schedules.</p>         </div>         <div class="music-specs">             <div class="spec-item"><span>DATA_STREAM:</span> JSON_ACTIVE</div>             <div class="spec-divider"></div>             <div class="spec-item"><span>REGION:</span> GLOBAL_LIGAS</div>             <div class="spec-divider"></div>             <div class="spec-item"><span>STATUS:</span> SYSTEM_SYNCED</div>         </div>     </div> </header> <style>     .be-scores-cornerstone {         --gold: #ff9900;         --deep-dark: #05050a;                  width: 100vw;         position: relative;         left: 50%;         right: 50%;         margin-left: -50vw;         margin-right: -50vw;         background: var(--deep-dark);         padding: 140px 0 100px 0;         overflow: hidden;         border-bottom: 5px solid var(--gold);      }     .sonic-grid-overlay {         position: absolute;         top: 0;         left: 0;         width: 100%;         height: 100%;         background-image:              linear-gradient(rgba(255, 153, 0, 0.05) 1px, transparent 1px),             linear-gradient(90deg, rgba(255, 153, 0, 0.05) 1px, transparent 1px);         background-size: 50px 50px;         mask-image: linear-gradient(to bottom, black 60%, transparent);     }     .cornerstone-container {         max-width: 1100px;         margin: 0 auto;         padding: 0 40px;         position: relative;         z-index: 5;     }     .status-row {         display: flex;         justify-content: space-between;         align-items: center;         margin-bottom: 40px;     }     .live-signal {         display: flex;         align-items: flex-end;         gap: 3px;     }     .signal-bar {         width: 4px;         background: var(--gold);         height: 10px;         animation: eq-pulse 1.2s infinite ease-in-out;     }     .signal-bar:nth-child(2) { height: 18px; animation-delay: 0.2s; }     .signal-bar:nth-child(3) { height: 12px; animation-delay: 0.4s; }     .signal-text {         font-family: 'Inter', monospace;         font-size: 0.7rem;         color: var(--gold);         letter-spacing: 3px;         margin-left: 10px;         font-weight: 900;     }     .identity-tag {         font-family: 'Inter', sans-serif;         font-size: 0.65rem;         color: #fff;         border: 1px solid rgba(255,255,255,0.2);         padding: 4px 12px;         letter-spacing: 2px;         font-weight: 800;     }     .main-music-title {         font-family: 'Inter', -apple-system, sans-serif;         font-size: clamp(5rem, 20vw, 12rem);         font-weight: 900;         color: #ffffff;         margin: 0;         line-height: 0.75;         letter-spacing: -8px;         text-transform: uppercase;         position: relative;     }     .main-music-title span {         color: var(--gold);         text-shadow: 0 0 50px rgba(255, 153, 0, 0.6);     }     .music-infrastructure {         margin-top: 50px;         display: flex;         gap: 25px;         align-items: flex-start;     }     .gold-block {         width: 10px;         height: 60px;         background: var(--gold);         box-shadow: 10px 10px 0px rgba(255, 153, 0, 0.1);     }     .music-infrastructure p {         font-family: 'Inter', sans-serif;         font-size: 1.5rem;         line-height: 1.3;         color: #fff;         margin: 0;         font-weight: 500;     }     .music-infrastructure p strong { color: var(--gold); font-weight: 900; }     .music-specs {         margin-top: 60px;         display: flex;         gap: 30px;         border-top: 1px solid rgba(255,153,0,0.2);         padding-top: 30px;     }     .spec-item {         font-family: 'Inter', sans-serif;         font-size: 0.75rem;         color: #888;         font-weight: 700;         letter-spacing: 1px;     }     .spec-item span { color: var(--gold); margin-right: 5px; }     .spec-divider {         width: 1px;         height: 15px;         background: rgba(255,153,0,0.3);     }     @keyframes eq-pulse {         0%, 100% { height: 10px; }         50% { height: 20px; }     }     @media (max-width: 768px) {         .be-scores-cornerstone { padding: 80px 0 60px 0; }         .main-music-title { letter-spacing: -3px; }         .music-infrastructure p { font-size: 1.1rem; }         .music-specs { flex-direction: column; gap: 10px; }         .spec-divider { display: none; }     } </style>
+
+<div style="background:#05050a; padding:10px; font-family:monospace !important; width:100%; box-sizing:border-box; overflow-x:hidden;">
+        <style>
+            @keyframes aura-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+            @keyframes blinker { 50% { opacity: 0; } }
+            .scrolling-content { display: flex !important; animation: aura-scroll 35s linear infinite !important; }
+            th, td { font-size: 10px !important; line-height: 1.2 !important; }
+        </style>
+        <div style="background:#090913; border:1px solid #222; padding:8px 0; overflow:hidden; margin-bottom:15px;">
+            <div class="scrolling-content"><div style="color:#888; font-size:10px; padding-left:20px;">SYSTEM_IDLE: WAITING FOR NEXT MATCHDAY</div><div style="color:#888; font-size:10px; padding-left:20px;">SYSTEM_IDLE: WAITING FOR NEXT MATCHDAY</div></div>
+        </div>
+        <div style="width:100%;">
+            <div style="margin-bottom:25px; width:100%;">
+                <div style="color:#ff9900; font-size:9px; margin-bottom:4px; letter-spacing:1px; font-weight:bold;">>> PREMIER LEAGUE</div>
+                <table style="width:100%; border-collapse:collapse; background:#0d0d16; table-layout:fixed; border:1px solid #1a1a2e;">
+                    <thead style="background:#090913; border-bottom:1px solid #333;">
+                        <tr style="color:#666; font-weight:bold; font-size:10px !important;">
+                            <th style="width:8%; padding:6px 2px; white-space:nowrap; text-align:center;">#</th>
+                            <th style="width:38%; text-align:left; padding-left:4px; white-space:nowrap;">CLUBS</th>
+                            <th style="width:9%; text-align:center; white-space:nowrap;">P</th>
+                            <th style="width:9%; text-align:center; white-space:nowrap;">W</th>
+                            <th style="width:9%; text-align:center; white-space:nowrap;">L</th>
+                            <th style="width:9%; text-align:center; white-space:nowrap;">GA</th>
+                            <th style="width:9%; text-align:center; white-space:nowrap;">GD</th>
+                            <th style="width:9%; text-align:center; white-space:nowrap;">PTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">1</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/65.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">MAN CITY</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">0</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">8</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">15</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">2</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/57.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">ARSENAL</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">1</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">12</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">3</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/397.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">BRIGHTON HOVE</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">3</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">1</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">11</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">10</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">4</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/402.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">BRENTFORD</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">0</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">6</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">9</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">5</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/341.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">LEEDS UNITED</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">0</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">3</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">9</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">6</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/64.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">LIVERPOOL</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">0</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">3</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">9</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">7</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/62.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">EVERTON</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">0</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">3</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">3</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">9</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">8</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/322.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">HULL CITY</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">1</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">4</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">8</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">9</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/67.png" style="width:12px; height:12px; flex-shrink:0;">
+                            <span style="color:#fff; font-weight:bold; font-size:10px; overflow:hidden; text-overflow:ellipsis;">NEWCASTLE</span>
+                        </div>
+                    </td>
+                    <td style="padding:6px 2px; text-align:center; color:#37bcf9; font-size:10px;">5</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-size:10px;">2</td>
+                    <td style="padding:6px 2px; text-align:center; color:#ff5f56; font-size:10px;">1</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">9</td>
+                    <td style="padding:6px 2px; text-align:center; color:#888; font-size:10px;">0</td>
+                    <td style="padding:6px 2px; text-align:center; color:#00ff88; font-weight:bold; font-size:10px;">8</td>
+                </tr>
+                <tr style="border-bottom:1px solid #1a1a2e;">
+                    <td style="padding:6px 2px; color:#ff9900; text-align:center; font-size:10px;">10</td>
+                    <td style="padding:6px 4px; overflow:hidden;">
+                        <div style="display:flex; align-items:center; gap:5px; white-space:nowrap;">
+                            <img src="https://crests.football-data.org/61.png" style="width:12px; height:12px; flex-shrink:0;"
