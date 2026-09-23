@@ -1,0 +1,394 @@
+<div class="be-contact-page-wrapper">     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">          <style>         :root {             --gold: #ff9900;             --deep-dark: #05050a;             --card-bg: #11111a;             --border-muted: rgba(255, 153, 0, 0.2);         }         .be-contact-page-wrapper {             background-color: var(--deep-dark);             color: #ffffff;             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;             overflow-x: hidden;         }         /* --- HEADER SECTION --- */         .be-music-cornerstone {             width: 100vw;             position: relative;             left: 50%;             right: 50%;             margin-left: -50vw;             margin-right: -50vw;             background: var(--deep-dark);             padding: 140px 0 100px 0;             overflow: hidden;             border-bottom: 5px solid var(--gold);         }         .sonic-grid-overlay {             position: absolute;             top: 0;             left: 0;             width: 100%;             height: 100%;             background-image:                  linear-gradient(rgba(255, 153, 0, 0.05) 1px, transparent 1px),                 linear-gradient(90deg, rgba(255, 153, 0, 0.05) 1px, transparent 1px);             background-size: 50px 50px;             mask-image: linear-gradient(to bottom, black 60%, transparent);         }         .cornerstone-container {             max-width: 1200px;             margin: 0 auto;             padding: 0 40px;             position: relative;             z-index: 5;         }         .status-row {             display: flex;             justify-content: space-between;             align-items: center;             margin-bottom: 40px;         }         .live-signal {             display: flex;             align-items: flex-end;             gap: 3px;         }         .signal-bar {             width: 4px;             background: var(--gold);             height: 10px;             animation: eq-pulse 1.2s infinite ease-in-out;         }         .signal-bar:nth-child(2) { height: 18px; animation-delay: 0.2s; }         .signal-bar:nth-child(3) { height: 12px; animation-delay: 0.4s; }         .signal-text {             font-size: 0.7rem;             color: var(--gold);             letter-spacing: 3px;             margin-left: 10px;             font-weight: 900;         }         .identity-tag {             font-size: 0.65rem;             color: #fff;             border: 1px solid rgba(255,255,255,0.2);             padding: 4px 12px;             letter-spacing: 2px;             font-weight: 800;         }         .main-music-title {             font-size: clamp(4rem, 18vw, 10rem);             font-weight: 900;             line-height: 0.75;             letter-spacing: -6px;             text-transform: uppercase;             margin: 0;         }         .main-music-title span {             color: var(--gold);             text-shadow: 0 0 50px rgba(255, 153, 0, 0.4);         }         .music-infrastructure {             margin-top: 50px;             display: flex;             gap: 25px;             align-items: flex-start;         }         .gold-block {             width: 10px;             height: 60px;             background: var(--gold);         }         .music-infrastructure p {             font-size: 1.4rem;             line-height: 1.3;             margin: 0;             font-weight: 500;         }         .music-infrastructure p strong { color: var(--gold); font-weight: 900; }         /* --- CONTENT SECTION --- */         .be-content-body {             max-width: 1200px;             margin: 60px auto;             padding: 0 40px;         }         .be-media-grid {             display: grid;             grid-template-columns: 1fr 1fr;             gap: 20px;             margin-bottom: 50px;         }         .be-links-grid {             display: grid;             grid-template-columns: repeat(8, 1fr);             gap: 12px;         }         .be-link-card {             display: flex;             flex-direction: column;             align-items: center;             justify-content: center;             background: var(--card-bg);             color: #ffffff;             text-decoration: none;             padding: 22px 10px;             border-radius: 8px;             border: 1px solid #222;             transition: all 0.3s ease;         }         .be-link-card:hover {             border-color: var(--gold);             transform: translateY(-4px);             background: #181825;             box-shadow: 0 8px 20px rgba(255, 153, 0, 0.1);         }         .be-link-card i {             font-size: 1.4rem;             margin-bottom: 10px;             color: var(--gold);         }         .be-link-card span {             font-size: 9px;             font-weight: 800;             text-transform: uppercase;             letter-spacing: 1px;             opacity: 0.6;         }         @keyframes eq-pulse {             0%, 100% { height: 10px; }             50% { height: 20px; }         }         /* --- RESPONSIVE --- */         @media (max-width: 1024px) {             .be-links-grid { grid-template-columns: repeat(4, 1fr); }             .be-media-grid { grid-template-columns: 1fr; }         }         @media (max-width: 768px) {             .be-music-cornerstone { padding: 80px 0 60px 0; }             .be-content-body { padding: 0 20px; margin: 40px auto; }             .be-links-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }             .music-infrastructure p { font-size: 1.1rem; }             .main-music-title { letter-spacing: -2px; }         }     </style>     <header class="be-music-cornerstone">         <div class="sonic-grid-overlay"></div>         <div class="cornerstone-container">             <div class="status-row">                 <div class="live-signal">                     <span class="signal-bar"></span>                     <span class="signal-bar"></span>                     <span class="signal-bar"></span>                     <span class="signal-text">CONTACT_GATEWAY_2026</span>                 </div>                 <div class="identity-tag">BETHEL EDISON</div>             </div>             <h1 class="main-music-title">                 CONT<span>A</span>CT             </h1>             <div class="music-infrastructure">                 <div class="gold-block"></div>                 <p>The access point for <strong>The Aura Strategy</strong>. <br>Direct lines for creative direction and technical partnerships.</p>             </div>         </div>     </header>
+
+  <!-- wp:html -->
+<div class="be-gateway-bar">
+    <style>
+        .be-gateway-bar {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            padding: 20px;
+            background: rgba(255, 153, 0, 0.03);
+            border: 1px dashed rgba(255, 153, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', monospace;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88; /* Green for online */
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: aura-pulse 2s infinite;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-btn {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 0.65rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .action-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        @keyframes aura-pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .be-gateway-bar { flex-direction: column; gap: 20px; text-align: center; }
+        }
+    </style>
+
+    <div class="status-indicator">
+        <div class="pulse-dot"></div>
+        SYSTEM_STATUS: <span id="local-time">LOADING...</span>
+    </div>
+
+    <div class="quick-actions">
+        <a href="mailto:contact@betheledison.com?subject=[COLLAB]" class="action-btn">Pitch Collab</a>
+        <a href="mailto:affiliates@betheledison.com?subject=[STRATEGY]" class="action-btn">Digital Strategy</a>
+    </div>
+
+    <script>
+        function updateTime() {
+            const options = { timeZone: 'Africa/Lagos', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const timeString = new Intl.DateTimeFormat('en-GB', options).format(new Date());
+            document.getElementById('local-time').innerText = `AURA_HQ  | ${timeString} | GMT +1`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="be-email-infrastructure">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        .be-email-infrastructure {
+            --gold: #ff9900;
+            --dark-card: #0c0c14;
+            --dark-bg: #05050a;
+            --border: #22222a;
+            
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: var(--dark-bg);
+            padding: 80px 0;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .email-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        /* --- Appointment Button Styling --- */
+        .aura-booking-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .aura-booking-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 50px;
+            background: var(--gold);
+            filter: blur(50px);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .booking-btn {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 20px 40px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 153, 0, 0.1);
+        }
+
+        .booking-btn:hover {
+            background: var(--gold);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px rgba(255, 153, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Specialized Pulse animation for the booking button */
+        @keyframes aura-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 153, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0); }
+        }
+
+        .booking-btn {
+            animation: aura-pulse 2s infinite;
+        }
+        .booking-btn:hover {
+            animation: none;
+        }
+
+        /* --- Email Grid Styling --- */
+        .email-grid {
+            display: grid;
+            /* Updated to 3 columns for even distribution of 6 items */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .email-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+            padding: 35px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .email-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--gold);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .email-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            background: #11111d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .email-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .card-content-top {
+            margin-bottom: 20px;
+        }
+
+        .email-type {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .email-address {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            word-break: break-all;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .email-usage {
+            font-size: 0.85rem;
+            color: #888;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .copy-indicator {
+            font-size: 0.6rem;
+            color: var(--gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-align: right;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .email-card:hover .copy-indicator {
+            opacity: 0.6;
+        }
+
+        /* --- Responsive Settings --- */
+        @media (max-width: 1200px) {
+            .email-grid { grid-template-columns: repeat(2, 1fr); }
+            .email-container { padding: 0 30px; }
+        }
+
+        @media (max-width: 768px) {
+            .be-email-infrastructure { padding: 60px 0; }
+            .aura-booking-wrapper { margin-bottom: 40px; padding: 0 20px; }
+            .booking-btn { width: 100%; padding: 15px 20px; font-size: 0.8rem; letter-spacing: 2px; }
+            .email-grid { grid-template-columns: 1fr; gap: 20px; }
+            .email-container { padding: 0 20px; }
+            .email-card { padding: 25px; }
+            .email-address { font-size: 1rem; }
+        }
+    </style>
+
+    <div class="email-container">
+        
+        <!-- Appointment Booking Button -->
+        <div class="aura-booking-wrapper">
+            <a href="https://team-betheledison.zohobookings.com/#/4946679000000042009" target="_blank" class="booking-btn">
+                Secure your spot on my calendar
+            </a>
+        </div>
+
+        <div class="email-grid">
+            
+            <!-- 01: Primary Gateway -->
+            <div class="email-card" onclick="copyEmail(this, 'contact@betheledison.com')">
+                <div class="card-content-top">
+                    <span class="email-type">Primary Gateway</span>
+                    <span class="email-address">contact@betheledison.com</span>
+                    <p class="email-usage">General inquiries, project proposals, and creative directorship bookings.</p>
+                </div>
+                <span class="copy-indicator">CLICK TO COPY</span>
+            </div>
+
+            <!-- 02: The Aura Team -->
+            <div class="email-card" onclick="copyEmail(this, 'team@betheledison.com')">
+                <div class="card-content-top">
+                    <span class="email-type">The Aura Team</span>
+                    <span class="email-address">team@betheledison.com</span>
+                    <p class="email-usage">Direct access for creative collaborators, actors, and music producers.</p>
+                </div>
+                <span class="copy-indicator">CLICK TO COPY</span>
+            </div>
+
+            <!-- 03: Support Protocol (NEW) -->
+            <div class="email-card" onclick="copyEmail(this, 'support@betheledison.com')">
+                <div class="card-content-top">
+                    <span class="email-type">Support Protocol</span>
+                    <span class="email-address">support@betheledison.com</span>
+                    <p class="email-usage">Technical assistance regarding digital products, assets, or platform access.</p>
+                </div>
+                <span class="copy-indicator">CLICK TO COPY</span>
+            </div>
+
+            <!-- 04: Digital Sovereignty -->
+            <div class="email-card" onclick="copyEmail(this, 'affiliates@betheledison.com')">
+                <div class="card-content-top">
+                    <span class="email-type">Digital Sovereignty</span>
+                    <span class="email-address">affiliates@betheledison.com</span>
+                    <p class="email-usage">Partnership inquiries regarding The Aura Strategy and digital product scaling.</p>
+                </div>
+                <span class="copy-indicator">CLICK TO COPY</span>
+            </div>
+
+            <!-- 05: Public Data -->
+            <div class="email-card" onclick="copyEmail(this, 'info@betheledison.com')">
+                <div class="card-content-top">
+                    <span class="email-type">Public Data</span>
+                    <span class="email-address">info@betheledison.com</span>
+                    <p class="email-usage">Media kits, press releases, and general information about the brand architecture.</p>
+                </div>
+                <span class="copy-indicator">CLICK TO COPY</span>
+            </div>
+
+            <!-- 06: Events & Immersive (NEW) -->
+            <div class="email-card" onclick="copyEmail(this, 'events@betheledison.com')">
+                <div class="card-content-top">
+                    <span class="email-type">Events & Immersive</span>
+                    <span class="email-address">events@betheledison.com</span>
+                    <p class="email-usage">Inquiries regarding live showcases, exhibitions, and immersive sonic experiences.</p>
+                </div>
+                <span class="copy-indicator">CLICK TO COPY</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function copyEmail(element, email) {
+            navigator.clipboard.writeText(email).then(() => {
+                const indicator = element.querySelector('.copy-indicator');
+                const originalText = indicator.innerText;
+                
+                // Visual Feedback
+                indicator.innerText = "COPIED TO CLIPBOARD";
+                indicator.style.opacity = "1";
+                element.style.borderColor = "#ffffff";
+                
+                setTimeout(() => {
+                    indicator.innerText = originalText;
+                    indicator.style.opacity = "";
+                    element.style.borderColor = "";
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                const indicator = element.querySelector('.copy-indicator');
+                indicator.innerText = "ERROR - COPY MANUALLY";
+                indicator.style.opacity = "1";
+                indicator.style.color = "#ff3e3e";
+            });
+        }
+
