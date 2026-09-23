@@ -1,0 +1,160 @@
+<header class="be-vault-header">     <div class="vault-container">         <div class="frame-top">             <div class="frame-label">PRIVACY_PROTOCOL_v2.6</div>             <div class="frame-line"></div>         </div>                  <div class="vault-core">             <h1 class="vault-title">WELCOME</h1>             <div class="vault-scanner"></div>         </div>         <div class="frame-bottom">             <div class="frame-line"></div>             <div class="frame-status">ACCESS: PUBLIC_READ_ONLY</div>         </div>     </div> </header> <style>     .be-vault-header {         --gold: #ff9900; background: #05050a; padding: 100px 0;         width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;     }     .vault-container { max-width: 900px; margin: 0 auto; padding: 0 30px; }     .frame-top, .frame-bottom { display: flex; align-items: center; gap: 20px; }     .frame-label, .frame-status { font-family: monospace; font-size: 0.7rem; color: var(--gold); font-weight: 900; white-space: nowrap; letter-spacing: 2px; }     .frame-line { flex-grow: 1; height: 2px; background: rgba(255,153,0,0.3); }     .vault-core { position: relative; padding: 40px 0; text-align: center; }     .vault-title {         font-family: 'Inter', sans-serif; font-size: clamp(4rem, 12vw, 10rem); font-weight: 900;         color: #fff; margin: 0; letter-spacing: 20px; text-transform: uppercase;     }     .vault-scanner {         position: absolute; top: 0; left: 0; width: 100%; height: 4px;         background: var(--gold); box-shadow: 0 0 20px var(--gold);         animation: scan-move 4s ease-in-out infinite;     }     @keyframes scan-move {         0%, 100% { top: 10%; }         50% { top: 90%; }     }     @media (max-width: 768px) {         .vault-title { letter-spacing: 5px; }         .frame-line { display: none; }     } </style>
+
+<!-- wp:html -->
+<div class="aura-vip-full-wrapper">
+    <div class="aura-vip-success">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+        <div class="vip-card">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h1 class="vip-title">Success.</h1>
+            <div class="gold-line"></div>
+            
+            <p class="vip-status">Your <strong>AURA VIP</strong> status is now unlocked.</p>
+            
+            <p class="vip-details">
+                You’ve secured exclusive access to premium content, priority updates, and private community channels. 
+            </p>
+
+            <a href="https://discord.gg/QXQuhP7tf8" class="lounge-btn">
+                Enter The VIP Lounge <i class="fa-solid fa-door-open"></i>
+            </a>
+
+            <p class="instruction-text">Activate your role automatically upon entry</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Full Width Breakout Container */
+    .aura-vip-full-wrapper {
+        background-color: #090913;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding: 80px 0; /* Adds vertical breathing room */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aura-vip-success {
+        width: 90%;
+        max-width: 800px;
+        color: #ffffff;
+        font-family: 'Palanquin Dark', sans-serif;
+        text-align: center;
+    }
+
+    /* Premium Success Card */
+    .vip-card {
+        background: linear-gradient(145deg, #14142b 0%, #0d0d1f 100%);
+        border: 2px solid #ff9900;
+        border-radius: 24px;
+        padding: 60px 30px;
+        box-shadow: 0 0 50px rgba(255, 153, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Success Icon Glow */
+    .success-icon {
+        font-size: 4rem;
+        color: #ff9900;
+        margin-bottom: 25px;
+        text-shadow: 0 0 20px rgba(255, 153, 0, 0.6);
+        animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes pulseGlow {
+        0% { transform: scale(1); text-shadow: 0 0 20px rgba(255, 153, 0, 0.6); }
+        50% { transform: scale(1.05); text-shadow: 0 0 40px rgba(255, 153, 0, 0.9); }
+        100% { transform: scale(1); text-shadow: 0 0 20px rgba(255, 153, 0, 0.6); }
+    }
+
+    h1.vip-title {
+        color: #ff9900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin: 0 0 15px 0;
+        font-weight: 900;
+    }
+
+    .vip-status {
+        font-size: 1.4rem;
+        color: #fff;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
+
+    .vip-details {
+        font-size: 1.05rem;
+        color: #ccc;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto 40px auto;
+        font-style: italic;
+    }
+
+    /* The VIP Lounge Button */
+    .lounge-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #ff9900;
+        color: #000 !important;
+        padding: 20px 45px;
+        border-radius: 12px;
+        font-weight: 900;
+        text-decoration: none !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(255, 153, 0, 0.3);
+        border: 2px solid #ff9900;
+    }
+
+    .lounge-btn:hover {
+        background: transparent;
+        color: #ff9900 !important;
+        box-shadow: 0 0 30px rgba(255, 153, 0, 0.6);
+        transform: translateY(-5px);
+    }
+
+    .instruction-text {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .gold-line {
+        width: 80px;
+        height: 3px;
+        background: #ff9900;
+        margin: 20px auto;
+        border-radius: 2px;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+        .aura-vip-full-wrapper { padding: 40px 0; }
+        .vip-card { padding: 40px 20px; border-radius: 0; border-left: none; border-right: none; }
+    }
+</style>
+<!-- /wp:html -->
