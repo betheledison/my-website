@@ -1,0 +1,438 @@
+<header class="be-affiliate-portal">     <div class="portal-glitch-overlay"></div>     <div class="portal-container">         <div class="handshake-row">             <div class="handshake-id">                 <span class="id-label">PROTOCOL:</span>                 <span class="id-value">PARTNER_VETTED</span>             </div>             <div class="verification-seal">                 <span class="seal-icon"></span>                 AUTHENTICATED             </div>         </div>         <div class="title-bracket-wrapper">             <div class="bracket-left"></div>             <h1 class="affiliate-main-title">AFFILIATES</h1>             <div class="bracket-right"></div>         </div>         <div class="affiliate-context">             <div class="context-gold-bar"></div>             <p>Access the <strong>vetted infrastructure</strong> powering the 2026 digital economy. Every link here is a tool I use to manage my music business and crypto portfolio. <span>Transparency Guaranteed.</span></p>         </div>         <div class="affiliate-stats">             <div class="stat-node">                 <span class="node-num">01</span>                 <span class="node-text">CRYPTO WALLETS</span>             </div>             <div class="stat-node">                 <span class="node-num">02</span>                 <span class="node-text">TRADING TOOLS</span>             </div>             <div class="stat-node">                 <span class="node-num">03</span>                 <span class="node-text">USD BANKING AND MORE...</span>             </div>         </div>     </div> </header> <style>     .be-affiliate-portal {         --gold: #ff9900;         --dark: #05050a;         --accent-bg: rgba(255, 153, 0, 0.03);                  width: 100vw;         position: relative;         left: 50%;         right: 50%;         margin-left: -50vw;         margin-right: -50vw;         background: var(--dark);         padding: 120px 0 80px 0;         overflow: hidden;         border-bottom: 2px solid var(--gold);     }     .portal-container {         max-width: 1100px;         margin: 0 auto;         padding: 0 40px;         position: relative;         z-index: 5;     }     .handshake-row {         display: flex;         justify-content: space-between;         align-items: center;         margin-bottom: 30px;     }     .handshake-id {         font-family: 'Inter', monospace;         font-size: 0.7rem;         letter-spacing: 2px;     }     .id-label { color: var(--gold); font-weight: 900; }     .id-value { color: #fff; opacity: 0.8; }     .verification-seal {         display: flex;         align-items: center;         gap: 8px;         font-family: 'Inter', sans-serif;         font-size: 0.65rem;         font-weight: 900;         color: #00ff88; /* Success Green */         letter-spacing: 1px;     }     .seal-icon {         width: 8px;         height: 8px;         background: #00ff88;         box-shadow: 0 0 10px #00ff88;     }     .title-bracket-wrapper {         display: flex;         align-items: center;         gap: 30px;         margin-bottom: 50px;     }     .bracket-left, .bracket-right {         height: 80px;         width: 15px;         border: 2px solid var(--gold);     }     .bracket-left { border-right: none; }     .bracket-right { border-left: none; }     .affiliate-main-title {         font-family: 'Inter', sans-serif;         font-size: clamp(3rem, 12vw, 8rem);         font-weight: 900;         color: #ffffff;         margin: 0;         line-height: 1;         letter-spacing: 10px;         text-transform: uppercase;     }     .affiliate-context {         display: flex;         gap: 25px;         max-width: 750px;         margin-bottom: 60px;     }     .context-gold-bar {         width: 6px;         height: auto;         background: var(--gold);         box-shadow: 5px 0 15px rgba(255, 153, 0, 0.3);     }     .affiliate-context p {         font-family: 'Inter', sans-serif;         font-size: 1.3rem;         line-height: 1.5;         color: #ccc;         margin: 0;     }     .affiliate-context p strong { color: #fff; border-bottom: 1px solid var(--gold); }     .affiliate-context p span { color: var(--gold); font-weight: 900; }     .affiliate-stats {         display: flex;         flex-wrap: wrap;         gap: 40px;         padding: 30px;         background: var(--accent-bg);         border: 1px solid rgba(255, 153, 0, 0.1);     }     .stat-node {         display: flex;         flex-direction: column;         gap: 5px;     }     .node-num {         font-family: 'Inter', monospace;         font-size: 0.6rem;         color: var(--gold);         font-weight: 900;     }     .node-text {         font-family: 'Inter', sans-serif;         font-size: 0.75rem;         color: #fff;         font-weight: 800;         letter-spacing: 2px;     }     @media (max-width: 768px) {         .be-affiliate-portal { padding: 80px 0 60px 0; }         .affiliate-main-title { letter-spacing: 2px; }         .bracket-left, .bracket-right { display: none; }         .affiliate-context p { font-size: 1.1rem; }         .affiliate-stats { gap: 20px; }     } </style>
+
+<!-- wp:html -->
+<div id="dynamic-uplink-portal" class="uplink-container">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        .uplink-container {
+            /* FIXED: Lowered z-index to stay under site navigation/tickers */
+            position: relative;
+            z-index: 1 !important; 
+            
+            background-color: #090913; 
+            min-height: 600px;
+            padding: 100px 40px;
+            border-radius: 40px;
+            margin: 20px 0 60px 0;
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* 1. The Animated SVG Edge Border */
+        .edge-animation-svg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1; /* Inside container layer */
+        }
+
+        .edge-path {
+            fill: none;
+            stroke: #ff9900; 
+            stroke-width: 4px; 
+            stroke-dasharray: 400; 
+            stroke-dashoffset: 400; 
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 10px rgba(255, 153, 0, 0.6));
+            animation: drawEdge 5s linear infinite;
+        }
+
+        @keyframes drawEdge {
+            0% { stroke-dashoffset: 400; }
+            100% { stroke-dashoffset: -400; }
+        }
+
+        /* 2. The JavaScript "Dancing Emails" Canvas */
+        #email-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 2; 
+            pointer-events: none;
+        }
+
+        /* 3. Text & Interactive Elements */
+        .uplink-content-safe {
+            position: relative;
+            z-index: 10; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .uplink-header-tag {
+            color: #ff9900; 
+            font-size: 0.85rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .uplink-main-title {
+            font-size: clamp(2.2rem, 9vw, 4.5rem);
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 40px;
+        }
+
+        .email-display-uplink {
+            background: #14142b; 
+            border: 1px solid #2c2c44;
+            padding: 25px 50px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            transition: 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .email-display-uplink:hover {
+            border-color: #ff9900;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 153, 0, 0.2);
+        }
+
+        .email-uplink-text {
+            color: #ff9900; 
+            font-family: 'Courier New', monospace;
+            font-size: clamp(1.1rem, 4vw, 1.8rem);
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .aura-send-btn {
+            background: #ff9900; 
+            color: #000 !important;
+            text-decoration: none !important;
+            padding: 20px 60px;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid #ff9900;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .aura-send-btn:hover {
+            background: transparent;
+            color: #ff9900 !important;
+            box-shadow: 0 0 30px rgba(255, 153, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        .uplink-status {
+            margin-top: 40px;
+            font-family: 'Courier New', monospace;
+            color: #555; 
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+
+    <svg class="edge-animation-svg" width="100%" height="100%">
+        <defs>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="40" class="edge-path" />
+    </svg>
+
+    <canvas id="email-canvas"></canvas>
+
+    <div class="uplink-content-safe">
+        <span class="uplink-header-tag">Strategic Proposal Gateway</span>
+        <h1 class="uplink-main-title">Join the <span style="color:#ff9900">Aura</span><br> Ecosystem</h1>
+        <div class="email-display-uplink">
+            <span class="email-uplink-text">affiliates@betheledison.com</span>
+        </div>
+        <a href="mailto:affiliates@betheledison.com?subject=Affiliate Proposal" class="aura-send-btn">
+            Send Email To The Mailbox
+        </a>
+        <div class="uplink-status" id="uplink-text">SYSTEM_READY: WAITING FOR INCOMING DATA...</div>
+    </div>
+
+    <script>
+        (function() {
+            const canvas = document.getElementById('email-canvas');
+            const ctx = canvas.getContext('2d');
+            const portal = document.getElementById('dynamic-uplink-portal');
+
+            function resizeCanvas() {
+                canvas.width = portal.offsetWidth;
+                canvas.height = portal.offsetHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            class EmailPaper {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 20 + 10;
+                    this.speedX = Math.random() * 0.8 - 0.4;
+                    this.speedY = Math.random() * 0.8 - 0.4;
+                    this.rotation = Math.random() * Math.PI * 2;
+                    this.rotationSpeed = Math.random() * 0.02 - 0.01;
+                    this.opacity = Math.random() * 0.3 + 0.1;
+                }
+
+                update(mouseX, mouseY) {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    this.rotation += this.rotationSpeed;
+                    if (this.x > canvas.width + this.size) this.x = -this.size;
+                    if (this.x < -this.size) this.x = canvas.width + this.size;
+                    if (this.y > canvas.height + this.size) this.y = -this.size;
+                    if (this.y < -this.size) this.y = canvas.height + this.size;
+
+                    const dx = mouseX - this.x;
+                    const dy = mouseY - this.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < 200) {
+                        const angle = Math.atan2(dy, dx);
+                        const force = (200 - distance) / 200;
+                        this.x -= Math.cos(angle) * force * 0.5;
+                        this.y -= Math.sin(angle) * force * 0.5;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation);
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = "#ff9900";
+                    ctx.font = `${this.size}px FontAwesome`;
+                    ctx.fillText("\uf1d8", 0, 0); 
+                    ctx.restore();
+                }
+            }
+
+            const papers = Array.from({ length: 40 }, () => new EmailPaper());
+            let mouseX = canvas.width / 2;
+            let mouseY = canvas.height / 2;
+
+            portal.addEventListener('mousemove', (e) => {
+                const rect = portal.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                papers.forEach(paper => {
+                    paper.update(mouseX, mouseY);
+                    paper.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            const term = document.getElementById('uplink-text');
+            const logs = ["SYSTEM_READY: STANDBY...", "PROCESSING_INCOMING_DATAFEED...", "AURA_UPLINK: ACTIVE"];
+            let i = 0;
+            setInterval(() => {
+                term.innerHTML = logs[i];
+                i = (i + 1) % logs.length;
+            }, 4000);
+        })();
+    </script>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<!-- START DISCLAIMER BOX -->
+<div style="
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border: 2px dotted #ffb11a;
+  border-radius: 8px;
+  background-color: rgba(255, 177, 26, 0.05);
+  color: #cccccc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+">
+  <p style="margin: 0; padding: 0;">
+    <strong style="color: #ffffff;">Disclaimer:</strong> Independent affiliate &amp; community member. VIP status reflects community tier, not an official staff or moderation role.
+  </p>
+</div>
+<!-- END DISCLAIMER BOX -->
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="be-affiliate-wrapper">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* The Full-Width "Breakout" Logic */
+        .be-affiliate-wrapper {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #090913;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        /* Hero Header */
+        .be-header { 
+            text-align: center; 
+            padding: 100px 20px 60px; 
+            background: linear-gradient(180deg, #0d0d1f 0%, #090913 100%);
+            border-bottom: 1px solid #2c2c44;
+        }
+        .be-header h1 { 
+            color: #ff9900; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            font-size: clamp(2rem, 10vw, 3.5rem); 
+            margin: 0;
+            font-weight: 900;
+            text-shadow: 0 0 30px rgba(255, 153, 0, 0.3);
+        }
+        .be-header p { color: #ccc; font-size: 1.2rem; margin-top: 15px; letter-spacing: 1px; }
+
+        /* Content Container */
+        .affiliate-container {
+            max-width: 1300px;
+            margin: 60px auto;
+            padding: 0 5%;
+        }
+
+        .affiliate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        /* Card Aesthetics */
+        .ref-card {
+            background: #14142b;
+            border: 1px solid #2c2c44;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+
+        .ref-card:hover { 
+            transform: translateY(-12px); 
+            border-color: #ff9900;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
+        }
+
+        /* Image Handling */
+        .flier-container {
+            width: 100%;
+            height: 240px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #2c2c44;
+        }
+
+        .flier-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .ref-card:hover .flier-img { transform: scale(1.1); }
+
+        /* Card Content */
+        .card-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .ref-title { font-size: 1.4rem; font-weight: 900; margin-bottom: 15px; color: #ff9900; text-transform: uppercase; letter-spacing: 2px; }
+        .ref-desc { font-size: 1rem; color: #ccc; line-height: 1.7; margin-bottom: 30px; }
+
+        /* Premium Gold Button */
+        .ref-btn {
+            margin-top: auto;
+            display: block;
+            text-align: center;
+            background: #ff9900;
+            color: #000 !important;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 900;
+            text-decoration: none !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            border: 2px solid #ff9900;
+            transition: 0.3s ease;
+        }
+
+        .ref-btn:hover { 
+            background: transparent; 
+            color: #ff9900 !important; 
+            box-shadow: 0 0 20px rgba(255, 153, 0, 0.4);
+        }
+
+        .disclaimer { 
+            font-size: 0.85rem; 
+            color: #555; 
+            text-align: center; 
+            margin-top: 100px; 
+            padding: 40px 10%; 
+            border-top: 1px solid #1a1a2e; 
+            max-width: 900px;
+            margin: 100px auto 0;
+        }
+
+        /* Mobile Breakpoints */
+        @media (max-width: 900px) {
+            .be-affiliate-wrapper { width: 100%; margin: 0; left: 0; right: 0; }
+            .affiliate-grid { grid-template-columns: 1fr; }
+            .be-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+
+    <div class="be-header">
+        <h1>Affiliates & Perks</h1>
+        <p>Verified tools for finance, investment, and global scale.</p>
+    </div>
+
+    <div class="affiliate-container">
+        <div class="affiliate-grid">
+            
+            <div class="ref-card">
+                <div class="flier-container">
+                    <img src="https://drive.google.com/thumbnail?id=1-hGqi2Tnp1vU6h1KMKMCPIJZMJNA33oF&sz=w1000" class="flier-img" alt="Cleva">
+                </div>
+                <div class="card-body">
+                    <div class="ref-title">Cleva USD Banking</div>
+                    <p class="ref-desc">The ultimate USD banking solution for African professionals. Receive Upwork earn
