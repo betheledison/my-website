@@ -1,0 +1,144 @@
+<div class="be-news-bridge-wrapper">
+    <style>
+        .be-news-bridge-wrapper {
+            --gold: #ff9900;
+            --deep-dark: #05050a;
+            --border-glow: rgba(255, 153, 0, 0.15);
+            
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: var(--deep-dark);
+            padding: 80px 0;
+            /* The Golden Edge Line - Horizontal Bottom Only */
+            border-bottom: 5px solid var(--gold);
+            overflow: hidden;
+        }
+
+        .bridge-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 5;
+        }
+
+        .bridge-text-area {
+            max-width: 600px;
+        }
+
+        .bridge-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Inter', monospace;
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .bridge-pulse {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--gold);
+            animation: bridge-blink 1.5s infinite;
+        }
+
+        .bridge-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 15px 0;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .bridge-title span {
+            color: var(--gold);
+        }
+
+        .bridge-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: #888;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Action Button with Glitch Effect */
+        .bridge-cta {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 18px 40px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+            overflow: hidden;
+        }
+
+        .bridge-cta:hover {
+            background: var(--gold);
+            color: #000;
+            box-shadow: 0 0 30px var(--border-glow);
+            transform: scale(1.05);
+        }
+
+        /* Background Grid */
+        .bridge-grid-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,153,0,0.05) 1px, transparent 0);
+            background-size: 30px 30px;
+            z-index: 1;
+        }
+
+        @keyframes bridge-blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        @media (max-width: 768px) {
+            .bridge-container { flex-direction: column; text-align: center; gap: 40px; }
+            .bridge-title { font-size: 1.8rem; }
+            .bridge-cta { width: 100%; padding: 18px 0; }
+        }
+    </style>
+
+    <div class="bridge-grid-overlay"></div>
+
+    <div class="bridge-container">
+        <div class="bridge-text-area">
+            <div class="bridge-status">
+                <div class="bridge-pulse"></div>
+                UPLINK_ESTABLISHED // STREAMING_LATEST
+            </div>
+            <h2 class="bridge-title">ENT<span>E</span>R THE NEWS STREAM</h2>
+            <p class="bridge-description">
+                Access the global narrative engine. Real-time updates on music architecture, 
+                cultural shifts, and the 2026 sonic landscape.
+            </p>
+        </div>
+
+        <a href="http://betheledison.com/music-news" class="bridge-cta">
+            OPEN_CHANNEL
+        </a>
+    </div>
+</div>
