@@ -1,0 +1,933 @@
+/*
+Theme Name: ScapeRock
+Theme URI: https://catchthemes.com/themes/scaperock/
+Author: Catch Themes
+Author URI: https://catchthemes.com/
+Description: ScapeRock is an innovative and unique Music WordPress theme that comes with a dark color scheme. It is a child theme of a popular multipurpose WordPress theme, ScapeShot.
+Version: 1.2.1
+Requires at least: 5.6
+Tested up to: 6.9
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: scaperock
+Template: scapeshot
+Tags: one-column, two-columns, right-sidebar, grid-layout, custom-background, custom-header, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, theme-options, translation-ready, blog, entertainment, portfolio
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ==========================================================
+   1. TYPOGRAPHY & LINK ACCENTS
+   ========================================================== */
+.section-title, .color-scheme-rockmusic .post-wrapper .entry-title {
+	font-family: "Courgette", cursive;
+}
+
+/* Link Hover Colors */
+a:hover,
+a:focus,
+.entry-title a:hover,
+.entry-title a:focus,
+.post-wrapper .entry-meta .cat-links a:hover,
+.post-wrapper .entry-meta .cat-links a:focus,
+.site-title a:hover,
+.site-title a:focus,
+.absolute-header .site-title a:hover,
+.absolute-header .site-title a:focus,
+div#footer-menu-section ul li a:hover,
+div#footer-menu-section ul li a:focus,
+.portfolio-content-wrapper .hentry .entry-container a:hover,
+.portfolio-content-wrapper .hentry .entry-container a:focus,
+.portfolio-section .hentry .hentry-inner .entry-container a:hover,
+.portfolio-section .hentry .hentry-inner .entry-container a:focus,
+.widget .ui-state-default a:hover,
+.widget .ui-state-default a:focus,
+.widget .ui-widget-content .ui-state-default a:hover,
+.widget .ui-widget-content .ui-state-default a:focus,
+.widget .ui-widget-header .ui-state-default a:hover,
+.widget .ui-widget-header .ui-state-default a:focus,
+.archive-content-wrap .section-content-wrapper.layout-one .entry-container>.entry-meta .posted-on a:hover,
+.archive-content-wrap .section-content-wrapper.layout-one .entry-container>.entry-meta .posted-on a:focus,
+.more-link .readmore:hover,
+.more-link .readmore:focus,
+#testimonial-content-section button:hover,
+#testimonial-content-section button:focus,
+.site-header-menu button:hover,
+.site-header-menu button:focus,
+.events-section .entry-meta a:hover,
+.events-section .entry-meta a:focus,
+.category-content-section .entry-title a:hover,
+.category-content-section .entry-title a:focus,
+#feature-slider-section .entry-meta a:hover,
+#feature-slider-section .entry-meta a:focus,
+body:not(.home) .custom-header .entry-meta a:hover,
+body:not(.home) .custom-header .entry-meta a:focus,
+#fullscreen-menu-right-wrap .social-navigation li a:hover,
+#fullscreen-menu-right-wrap .social-navigation li a:focus,
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-next:focus,
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-prev:focus,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.filter-button-group .button:hover,
+.filter-button-group .button:focus,
+.home .archive-post-wrap .hentry .entry-title a:hover,
+.home .archive-post-wrap .hentry .entry-title a:focus,
+.recent-blog-content .archive-post-wrap .hentry .entry-title a:hover,
+.recent-blog-content .archive-post-wrap .hentry .entry-title a:focus,
+.home .post-wrapper .entry-meta .cat-links a:hover,
+.home .post-wrapper .entry-meta .cat-links a:focus,
+.recent-blog-content .archive-post-wrap .hentry .entry-meta .cat-links a:hover,
+.recent-blog-content .archive-post-wrap .hentry .entry-meta .cat-links a:focus,
+.home .post-wrapper .more-link .readmore:hover,
+.home .post-wrapper .more-link .readmore:focus,
+.recent-blog-content .archive-post-wrap .hentry .more-link .readmore:hover,
+.recent-blog-content .archive-post-wrap .hentry .more-link .readmore:focus,
+.section-with-background-image .section-title a:hover,
+.section-with-background-image .section-title a:focus,
+.section-with-background-image .entry-title a:hover,
+.section-with-background-image .entry-title a:focus,
+body.search-active #primary-search-wrapper .search-toggle:hover,
+body.search-active #primary-search-wrapper .search-toggle:focus,
+.absolute-header.menu-open #fullscreen-menu-toggle:hover,
+.absolute-header.menu-open #fullscreen-menu-toggle:focus,
+.navigation-full-screen .fullscreen-menu-inside-wrapper .site-title a:hover,
+.navigation-full-screen .fullscreen-menu-inside-wrapper .site-title a:focus,
+#primary-search-wrapper .search-toggle:hover,
+#primary-search-wrapper .search-toggle:focus {
+	color: #5252f2;
+}
+
+/* Header Navigation Hover Color */
+.menu-toggle:hover,
+.menu-toggle:focus,
+.main-navigation a:hover,
+.main-navigation a:focus,
+.absolute-header.navigation-classic .main-navigation ul ul a:hover,
+.absolute-header.navigation-classic .main-navigation ul ul a:focus,
+.scroll-down:hover,
+.scroll-down:focus,
+#testimonial-content-section.style-two .owl-prev:hover::after,
+#testimonial-content-section.style-two .owl-next:hover::before {
+	color: #5252f2;
+}
+
+/* Secondary Link Hover Color */
+.comment-permalink:hover,
+.comment-permalink:focus,
+.comment-edit-link:hover,
+.comment-edit-link:focus,
+.sidebar li a:hover,
+.sidebar li a:focus,
+.tagcloud a:hover,
+.tagcloud a:focus,
+.entry-meta a:hover,
+.entry-meta a:focus,
+.entry-breadcrumbs .sep,
+.woocommerce .woocommerce-breadcrumb .sep,
+.breadcrumb-area .entry-breadcrumbs a:hover,
+.breadcrumb-area .entry-breadcrumbs a:focus,
+.woocommerce .woocommerce-breadcrumb a:hover,
+.woocommerce .woocommerce-breadcrumb a:focus,
+#fullscreen-menu-right-wrap li a:hover,
+#fullscreen-menu-right-wrap li a:focus {
+	color: #5252f2;
+}
+
+.tagcloud a:hover,
+.tagcloud a:focus,
+#footer-newsletter .ewnewsletter .hentry form input:focus {
+	border-color: #5252f2;
+}
+
+/* Custom Header and Slider Text Hover Color */
+.header-media .entry-title a:hover,
+.header-media .entry-title a:focus,
+#feature-slider-section .entry-title a:hover,
+#feature-slider-section .entry-title a:focus {
+	color: #5252f2;
+}
+
+/* Other Link Hover Color */
+.section .owl-carousel .owl-dots button.active,
+.woocommerce-tabs ul.tabs li.active a,
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce-error,
+.wp-block-pullquote,
+.wp-block-pullquote.alignleft,
+.wp-block-pullquote.alignright,
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large,
+.wp-block-quote {
+	border-color: #5252f2;
+}
+
+.navigation-modern .menu-inside-wrapper .main-navigation .nav-menu .current_page_item a,
+#testimonial-content-section .section-content-wrapper .entry-content:before,
+.archive-posts-wrapper .more-link .readmore:hover .icon.icon-arrow-right,
+.archive-posts-wrapper .more-link .readmore:focus .icon.icon-arrow-right,
+#portfolio-content-section .button.is-checked,
+.menu-inside-wrapper .main-navigation ul.nav-menu ul .current-menu-item a,
+.package-amount,
+.package-price sup,
+.menu-toggle:hover .menu-label,
+.woocommerce-LoopProduct-link:hover .woocommerce-loop-product__title,
+.woocommerce-LoopProduct-link:focus .woocommerce-loop-product__title,
+ul>li::marker,
+.entry-meta .job-label,
+.entry-meta .position,
+.wp-block-quote:before {
+	color: #5252f2;
+}
+
+body button.dropdown-toggle:focus,
+body #menu-toggle:focus {
+	outline-color: #5252f2;
+}
+
+.menu-inside-wrapper .main-navigation .nav-menu .current_page_item>a:after,
+.wpcf7-form-control~.focus-border,
+.comment-form>p>input~.focus-border,
+.comment-form>p>textarea~.focus-border,
+.post-wrapper .more-link .readmore:hover::after,
+.scroll-down:before,
+.scroll-down:after,
+.scroll-down>span:before,
+.scroll-down>span:after,
+.fullscreen-menu-toggle:before,
+.fullscreen-menu-toggle:after,
+.fullscreen-menu-toggle>span:before,
+.fullscreen-menu-toggle>span:after,
+.home .post-wrapper .more-link .readmore:hover::after,
+.home .post-wrapper .more-link .readmore:focus::after,
+.recent-blog-content .archive-post-wrap .hentry .more-link .readmore:hover::after,
+.recent-blog-content .archive-post-wrap .hentry .more-link .readmore:focus::after,
+#team-content-section .team-tab .hentry .more-link .readmore:hover::after,
+#team-content-section .team-tab .hentry .more-link .readmore:focus::after {
+	background-color: #5252f2;
+}
+
+.site-footer input[type="text"]:focus,
+.site-footer input[type="email"]:focus,
+.site-footer input[type="url"]:focus,
+.site-footer input[type="password"]:focus,
+.site-footer input[type="search"]:focus,
+.site-footer input[type="number"]:focus,
+.site-footer input[type="tel"]:focus,
+.site-footer input[type="range"]:focus,
+.site-footer input[type="date"]:focus,
+.site-footer input[type="month"]:focus,
+.site-footer input[type="week"]:focus,
+.site-footer input[type="time"]:focus,
+.site-footer input[type="datetime"]:focus,
+.site-footer input[type="datetime-local"]:focus,
+.site-footer input[type="color"]:focus,
+.site-footer textarea:focus,
+.site-footer select:focus {
+	box-shadow: 0 1px 0 0 #5252f2;
+}
+
+/* Absolute Header Navigation Hover Color */
+.absolute-header .menu-toggle:hover,
+.absolute-header .menu-toggle:focus,
+.absolute-header .scroll-down:hover,
+.absolute-header .scroll-down:focus {
+	color: #5252f2;
+}
+
+@media screen and (min-width: 48em) {
+	#fullscreen-menu-toggle:hover,
+	#fullscreen-menu-toggle:focus,
+	.absolute-header #fullscreen-menu-toggle:hover,
+	.absolute-header #fullscreen-menu-toggle:focus {
+		color: #5252f2;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.absolute-header.navigation-classic .main-navigation a:hover,
+	.absolute-header.navigation-classic .main-navigation a:focus {
+		color: #5252f2;
+	}
+}
+
+/* Border Colors */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select,
+.site-main nav.post-navigation,
+.calendar_wrap tbody tr:first-child,
+.calendar_wrap tbody tr:last-child,
+tfoot,
+tfoot tr td,
+.woocommerce-tabs ul.tabs.wc-tabs li,
+.menu-wrapper .widget_shopping_cart ul.woocommerce-mini-cart li,
+.entry-summary form.cart,
+.widget_recent_entries li,
+.site-header-menu #site-header-cart-wrapper a.cart-contents,
+.team-section .team-content-wrapper .hentry .team-social-profile .social-links-menu,
+table,
+table thead tr,
+table thead th,
+thead th,
+tbody th,
+tbody td,
+tbody tr,
+table.shop_table_responsive tr td,
+table tbody tr,
+table.shop_table_responsive tbody tr:last-child,
+.shop_table tfoot tr td,
+.shop_table tfoot tr th,
+table.shop_table.woocommerce-checkout-review-order-table .cart_item td,
+table.shop_table.woocommerce-checkout-review-order-table tr td,
+table.shop_table.woocommerce-checkout-review-order-table tr th,
+.rtl tbody td:last-child,
+.rtl table thead th:last-child,
+.select2-container--default .select2-selection--single,
+table.woocommerce-grouped-product-list.group_table,
+table.woocommerce-grouped-product-list.group_table td,
+table.variations,
+table.variations td,
+.woocommerce-pagination ul.page-numbers li .page-numbers,
+.archive-content-wrap .navigation.pagination .page-numbers,
+.woocommerce-posts-wrapper .summary.entry-summary .woocommerce-product-rating,
+.woocommerce-posts-wrapper .summary.entry-content .woocommerce-product-rating,
+.cart-collaterals .order-total,
+#payment .wc_payment_methods .payment_box,
+select,
+header .site-header-main,
+abbr,
+acronym,
+.product-quantity input[type="number"],
+.coupon input[type="text"],
+.site-header-main .menu-inside-wrapper,
+.catch-instagram-feed-gallery-widget-wrapper .button,
+.site-header-main .site-header-menu .menu-inside-wrapper .main-navigation .sub-menu,
+.site-header-main .site-header-menu .menu-inside-wrapper .main-navigation .children,
+.site-header-cart .widget_shopping_cart,
+.navigation-classic .site-header-menu #primary-menu-wrapper .menu-inside-wrapper,
+.woocommerce-grouped-product-list tr,
+.mobile-social-search,
+.widget .ui-tabs .ui-tabs-panel,
+.site-header-menu .menu-inside-wrapper .nav-menu button:focus,
+header .site-header-menu .menu-inside-wrapper .main-navigation .sub-menu li:last-child,
+header .site-header-menu .menu-inside-wrapper .main-navigation .children li:last-child,
+.stats-section .view-all-button .more-button .more-link:hover,
+.stats-section .view-all-button .more-button .more-link:focus,
+.comment-body,
+.services-section.section .hentry .hentry-inner,
+.single-product .product_meta,
+.quantity .qty,
+.events-section.single-layout .hentry,
+.woocommerce ul.cart_list li,
+.woocommerce ul.product_list_widget li,
+.tagcloud a,
+.archive .archive-post-wrap .post-wrapper,
+.search .archive-post-wrap .post-wrapper,
+.blog:not(.home) .archive-post-wrap .post-wrapper,
+.site-footer,
+.footer-widget-area,
+#fullscreen-menu-left-wrap+#fullscreen-menu-right-wrap,
+.wp-block-table,
+.wp-block-table caption,
+.wp-block-table th,
+.wp-block-table td,
+body .wp-playlist-item,
+.mejs-container.mejs-container .mejs-controls,
+.team-tab .ui-tabs-nav li:not(:first-child) {
+	border-color: #444444;
+}
+
+#timeline-section .section-content-wrapper:before,
+#floating-social .social-navigation a {
+	background-color: #444444;
+}
+
+/* Gradient Button Background Color */
+.button,
+button,
+input[type="submit"],
+.view-more .button,
+.header-media .more-link .readmore,
+#feature-slider-section .more-link .readmore,
+.hero-section .more-link .readmore,
+#promotion-section .more-link .readmore,
+.pricing-section .more-link .readmore,
+.app-section .more-link .readmore,
+#content #infinite-handle span button,
+nav.navigation.posts-navigation .nav-links a,
+.catch-instagram-feed-gallery-widget-wrapper .button,
+#footer-newsletter .ewnewsletter .hentry form input[type="submit"],
+.scrollup a,
+.section .owl-carousel .owl-dots button.active,
+.menu-inside-wrapper #site-header-cart-wrappe li>a,
+.woocommerce-pagination ul.page-numbers li .page-numbers.current,
+.archive-content-wrap .pagination .page-numbers.current,
+.cart-collaterals .shop_table.shop_table_responsive .cart-subtotal,
+.onsale,
+.sticky-label,
+#feature-slider-section .owl-prev,
+#feature-slider-section .owl-next,
+.pagination .page-numbers.prev,
+.pagination .page-numbers.next,
+.playlist-section .mejs-playpause-button,
+#portfolio-content-section.full-layout .post-thumbnail a:before {
+	background-image: linear-gradient(to right, #5252f2, #279fff);
+}
+
+button[type="submit"].search-submit.search-focused,
+.demo_store,
+.wp-playlist .mejs-controls .mejs-time-rail .mejs-time-current,
+.wp-playlist .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	background-color: #5252f2;
+}
+
+/* Button Background Hover Color */
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+.view-more .button:hover,
+.view-more .button:focus,
+.header-media .more-link .readmore:hover,
+.header-media .more-link .readmore:focus,
+#feature-slider-section .more-link .readmore:hover,
+#feature-slider-section .more-link .readmore:focus,
+.hero-section .more-link .readmore:hover,
+.hero-section .more-link .readmore:focus,
+#promotion-section .more-link .readmore:hover,
+#promotion-section .more-link .readmore:focus,
+.pricing-section .more-link .readmore:hover,
+.pricing-section .more-link .readmore:focus,
+.app-section .more-link .readmore:hover,
+.app-section .more-link .readmore:focus,
+#content #infinite-handle span button:hover,
+#content #infinite-handle span button:focus,
+nav.navigation.posts-navigation .nav-links a:hover,
+nav.navigation.posts-navigation .nav-links a:focus,
+.catch-instagram-feed-gallery-widget-wrapper .button:hover,
+.catch-instagram-feed-gallery-widget-wrapper .button:focus,
+#footer-newsletter .ewnewsletter .hentry form input[type="submit"]:hover,
+#footer-newsletter .ewnewsletter .hentry form input[type="submit"]:focus,
+.slider-content-wrapper .cycle-next:hover,
+.slider-content-wrapper .cycle-next:focus,
+.slider-content-wrapper .cycle-prev:hover,
+.slider-content-wrapper .cycle-prev:focus,
+.woocommerce-pagination ul.page-numbers li .page-numbers:hover,
+.woocommerce-pagination ul.page-numbers li .page-numbers:focus,
+.archive-content-wrap .pagination .page-numbers:hover,
+.archive-content-wrap .pagination .page-numbers:focus,
+.woocommerce a.button:hover,
+.woocommerce a.button:focus,
+.woocommerce button.button:hover,
+.woocommerce button.button:focus,
+#feature-slider-section .owl-prev:hover,
+#feature-slider-section .owl-prev:focus,
+#feature-slider-section .owl-next:hover,
+#feature-slider-section .owl-next:focus,
+.pagination .page-numbers.prev:hover,
+.pagination .page-numbers.prev:focus,
+.pagination .page-numbers.next:hover,
+.pagination .page-numbers.next:focus,
+.playlist-section .mejs-playpause-button:hover,
+.playlist-section .mejs-playpause-button:focus {
+	background-image: linear-gradient(to right, #279fff, #5252f2);
+}
+
+.sticky-post,
+span.sticky-post:after,
+span.sticky-post:before,
+.pricing-section .highlight .hentry-inner,
+.hover-add-to-cart .woocommerce .product-container .button,
+.hover-add-to-cart .woocommerce .product-container .wc-forward,
+.onsale,
+#timeline-section .hentry:before {
+	background-image: linear-gradient(to right, #279fff, #5252f2);
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+.search-form .search-field~.focus-border:before,
+.search-form .search-field~.focus-border:after,
+.search-form .search-field~.focus-border i:before,
+.search-form .search-field~.focus-border i:after,
+.team-tab .ui-tabs-panel .social-navigation a:hover,
+.team-tab .ui-tabs-panel .social-navigation a:focus,
+.team-tab .ui-tabs-panel .social-links-menu a:hover,
+.team-tab .ui-tabs-panel .social-links-menu a:focus {
+	background-color: #5252f2;
+}
+
+/* ==========================================================
+   2. SPARKLE EFFECT UTILITIES
+   ========================================================== */
+@keyframes beShine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.sparkle-text {
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ff9900 20%, #ffffff 40%, #ffffff 60%, #ff9900 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: beShine 3s linear infinite;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.9));
+    display: inline-block;
+}
+
+.sparkle-excerpt {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1), 0px 0px 10px rgba(255, 153, 0, 0.5);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.sparkle-card {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid #ff9900;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* ==========================================================
+   3. FLOATING NAVIGATION & FULLSCREEN MENU
+   ========================================================== */
+.floating-nav-container {    
+    bottom: 90px !important; 
+    transition: bottom 0.3s ease-in-out !important;
+}
+
+.nav-hidden {    
+    transform: translate(-50%, 250%) !important; 
+    opacity: 0 !important;
+}
+
+@media (max-width: 480px) {    
+    .floating-nav-container {        
+        bottom: 100px !important;    
+    }
+}
+
+#fullscreen-menu-toggle {    
+    position: fixed !important;
+    top: 75px !important;     
+    right: 20px !important;    
+    z-index: 999999999 !important;    
+    background-color: #ff9900 !important; 
+    border-radius: 50% !important;    
+    width: 56px !important;     
+    height: 56px !important;    
+    display: flex !important;    
+    align-items: center !important;    
+    justify-content: center !important;    
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4) !important;    
+    cursor: pointer !important;    
+    border: none !important;    
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+#fullscreen-menu-toggle:active {    
+    transform: scale(0.9) !important;
+}
+
+#fullscreen-menu-toggle::before {    
+    content: "" !important;    
+    display: block !important;    
+    width: 24px !important;    
+    height: 2px !important;    
+    background: #ffffff !important;    
+    box-shadow: 0 -8px 0 #ffffff, 0 8px 0 #ffffff !important;    
+    transition: 0.3s !important;
+}
+
+#fullscreen-menu-toggle i, 
+#fullscreen-menu-toggle svg,
+#fullscreen-menu-toggle span,
+#fullscreen-menu-toggle .menu-label {    
+    display: none !important;
+}
+
+#fullscreen-menu, 
+.fullscreen-menu-container,
+.mobile-menu-overlay {    
+    z-index: 999999998 !important;    
+    display: block !important;    
+    visibility: visible !important;    
+    pointer-events: auto !important;    
+    padding-top: 65px !important; 
+}
+
+.fullscreen-menu-inner, 
+.mobile-nav-wrap {    
+    display: flex !important;    
+    flex-direction: column !important;    
+    opacity: 1 !important;
+}
+
+@media (max-width: 480px) {    
+    #fullscreen-menu-toggle {        
+        top: 65px !important;         
+        right: 15px !important;        
+        width: 52px !important;        
+        height: 52px !important;    
+    }
+}
+
+/* ==========================================================
+   4. LIVE TICKER BAR
+   ========================================================== */
+.aura-ticker-shadow {    
+    position: fixed !important;    
+    bottom: 0 !important;    
+    left: 0 !important;    
+    width: 100% !important;    
+    height: 35px !important;    
+    background: #000000 !important;    
+    border-top: 2px solid #ff9900 !important;    
+    z-index: 999999 !important;    
+    overflow: hidden !important;    
+    display: flex !important;    
+    align-items: center !important;
+}
+
+.aura-scroll-text {    
+    white-space: nowrap !important;    
+    display: inline-block !important;    
+    animation: aura-fly 25s linear infinite !important;    
+    font-family: 'Orbitron', sans-serif;    
+    font-size: 11px;    
+    font-weight: 900;    
+    color: #ff9900;
+}
+
+.aura-price, .aura-pnl {    
+    color: #00ff88 !important; 
+}
+
+.ticker-gap {    
+    margin-right: 80px;    
+    display: inline-block;
+}
+
+.live-dot {    
+    height: 8px;    
+    width: 8px;    
+    background-color: #00ff88;    
+    border-radius: 50%;    
+    display: inline-block;    
+    margin-right: 5px;    
+    box-shadow: 0 0 8px #00ff88;    
+    animation: aura-pulse 1.5s infinite;
+}
+
+@keyframes aura-pulse {    
+    0% { opacity: 1; }    
+    50% { opacity: 0.3; }    
+    100% { opacity: 1; }
+}
+
+@keyframes aura-fly {    
+    0% { transform: translateX(0); }    
+    100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================
+   5. SYSTEM HEADER GLOW
+   ========================================================== */
+.wp-block-html, .yellow-code-icon, .edit-post-visual-editor__post-title-wrapper::before {    
+    display: none !important;
+}
+
+.entry-title, .editor-post-title__input, .mastering-header {    
+    background: #05050a;    
+    padding: 60px 40px !important;    
+    border-radius: 12px;    
+    border: 1px solid rgba(255, 153, 0, 0.1);    
+    position: relative;    
+    overflow: hidden;    
+    color: #fff !important;    
+    font-family: 'Inter', sans-serif !important;    
+    font-weight: 900 !important;    
+    text-transform: uppercase !important;    
+    line-height: 1 !important;    
+    text-align: left !important;    
+    font-size: clamp(2.5rem, 8vw, 5rem) !important;
+}
+
+.entry-title::before {    
+    content: "● ● ●  SYSTEM: INTEGRATED_VOICE_2026 // AURA_STRATEGY";    
+    display: block;    
+    font-family: monospace;    
+    font-size: 0.7rem;    
+    color: #444;    
+    letter-spacing: 2px;    
+    margin-bottom: 30px;
+}
+
+.entry-title {    
+    background: linear-gradient(90deg, #00d4ff, #00ff88, #ffcc00, #ff4d4d, #00d4ff);    
+    background-size: 400% auto;    
+    -webkit-background-clip: text;    
+    -webkit-text-fill-color: transparent;    
+    animation: rgb-flow 8s linear infinite;    
+    filter: drop-shadow(0 0 15px rgba(255, 153, 0, 0.2));
+}
+
+@keyframes rgb-flow {    
+    0% { background-position: 0% 50%; }    
+    100% { background-position: 400% 50%; }
+}
+
+.entry-title::after {    
+    content: "";    
+    position: absolute;    
+    top: 50%; left: 50%;    
+    width: 150%; height: 150%;    
+    background: radial-gradient(circle, rgba(255, 153, 0, 0.05) 0%, transparent 70%);    
+    transform: translate(-50%, -50%);    
+    z-index: -1;    
+    animation: aura-breath 5s infinite alternate;
+}
+
+@keyframes aura-breath {    
+    from { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }    
+    to { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* ==========================================================
+   6. SITE RESET & PC DESKTOP CENTERING FIX
+   ========================================================== */
+*, *:before, *:after {    
+    box-sizing: border-box !important;    
+    max-width: 100vw !important; 
+}
+	
+html, body {    
+    width: 100% !important;     
+    min-width: 100% !important;        
+    overflow-x: hidden !important;     
+    position: relative !important;    
+    margin: 0 !important;    
+    padding: 0 !important;
+}
+	
+/* Force main content wrappers and containers to center on PC */
+#page, .site, .main-content, .header-wrapper, .footer-wrapper, .site-content, .site-main, .content-area {    
+    overflow-x: hidden !important;    
+    width: 100% !important;    
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    float: none !important;
+}
+
+/* Force all PC widgets and blocks to center */
+.widget, .panel-grid, .section-content-wrapper, .archive-post-wrap, .hentry {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    text-align: center !important;
+}
+
+.widget p, .widget li, .entry-content {
+    text-align: left;
+}
+
+/* Footer Container Centering */
+#footer-widgets, .footer-nav-widgets-wrapper, .site-footer .container, .footer-widgets-container {    
+    max-width: 100% !important;    
+    width: 100% !important;    
+    margin: 0 auto !important;    
+    display: block !important;
+    text-align: center !important;
+}
+
+.be-registration-wrapper, .aura-footer-master {    
+    margin-top: 20px !important;    
+    margin-bottom: 20px !important;
+}
+
+.nx-notification, .tp-notification {     
+    z-index: 99999 !important; 
+    background: #0B0F14 !important; 
+    border: 2px solid #FFD700 !important; 
+    border-radius: 12px !important;
+}
+
+.nx-notification-title, .tp-notification-title {    
+    color: #FFD700 !important; 
+    font-weight: 900 !important;    
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   7. AURA UNIVERSAL IMAGE PROTOCOL (GLOBAL GOLD GLOW & SHIMMER)
+   ========================================================== */
+.entry-content img, 
+.post-archive img, 
+.aura-blog-feed img,
+.attachment-post-thumbnail,
+.wp-block-image img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 12px !important; 
+    border: 2px solid #ff9900 !important;
+    box-shadow: 0 0 20px rgba(255, 153, 0, 0.4), 
+                0 0 5px rgba(255, 153, 0, 0.2) inset !important;
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.entry-content .wp-block-image::after,
+.entry-content .wp-caption::after,
+.aura-img-wrap::after { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.2) 1px, transparent 1px),
+        radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 90% 90%, rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px, 15px 15px;
+    border-radius: 12px;
+    mix-blend-mode: color-dodge;
+    animation: aura-glitter-drift 6s linear infinite;
+    pointer-events: none; 
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.entry-content img:hover, 
+.post-archive img:hover,
+.wp-block-image img:hover {
+    box-shadow: 0 0 35px rgba(255, 153, 0, 0.7), 
+                0 0 10px rgba(255, 153, 0, 0.4) inset !important;
+}
+
+@keyframes aura-glitter-drift {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5; 
+    }
+    100% {
+        background-position: 100px 100px, -50px 100px, 50px -100px;
+        opacity: 0.8;
+    }
+}
+
+/* ==========================================================
+   8. AURA MUSIC WIDGET ABSOLUTE QUARANTINE & INTERACTION LOCK
+   ========================================================== */
+#be-aura-widget,
+div#be-aura-widget {
+    position: fixed !important;
+    top: 50% !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    z-index: 2147483647 !important;
+    float: none !important;
+    margin: 0 !important;
+    clear: both !important;
+    contain: layout size style !important;
+    pointer-events: auto !important;
+    isolation: isolate !important;
+}
+
+/* Exclude the music widget itself from global photo borders */
+#be-aura-widget img {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+#be-aura-widget.is-collapsed {
+    width: 32px !important;
+    height: 110px !important;
+    min-width: 32px !important;
+    min-height: 110px !important;
+    background: #ff9900 !important;
+    border-radius: 0 12px 12px 0 !important;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.6) !important;
+    overflow: hidden !important;
+}
+
+/* Collapsed State Toggle Button */
+#be-aura-widget.is-collapsed .aura-toggle-circle {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 5 !important;
+    pointer-events: auto !important;
+}
+
+/* Expanded State Close/Minus Button */
+#be-aura-widget:not(.is-collapsed) .aura-toggle-circle {
+    position: absolute !important;
+    bottom: 15px !important;
+    right: 15px !important;
+    top: auto !important;
+    left: auto !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: #ff9900 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+}
+
+#be-aura-widget:not(.is-collapsed) #toggleIcon {
+    color: #000 !important;
+    font-size: 18px !important;
+    pointer-events: none !important;
+}
